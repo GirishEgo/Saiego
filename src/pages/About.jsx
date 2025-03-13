@@ -1,6 +1,11 @@
-const About = () => {
-  return <h1>About Us</h1>;
-};
+import React from 'react'
+import HeroSection from '../components/Hero/HeroSection';
 
-export default About;
+const About = () => {
+  return <div><h3>about us
+  </h3></div>;
+}
+
+export default About
+
 
