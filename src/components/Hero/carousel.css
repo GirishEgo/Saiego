@@ -38,7 +38,7 @@
   /* Black gradient from top left fading out toward bottom right */
   background: linear-gradient(
     to bottom right,
-    rgba(17, 17, 17, 0.773) 5%, /* Strong black at top left */
+    rgba(17, 17, 17, 0.773) 15%, /* Strong black at top left */
     rgba(0, 0, 0, 0.692) 30%, 
     rgba(0, 0, 0, 0.256)60%, 
     rgba(0, 0, 0, 0) 100% /* Clean at bottom right */
