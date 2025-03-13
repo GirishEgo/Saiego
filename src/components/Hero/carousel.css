@@ -1,0 +1,144 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  /* border-radius: 14px; */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  font-family: "Inter", sans-serif;
+}
+
+/* Slide */
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+  transition: transform 0.8s ease;
+}
+
+.slide:hover .carousel-image {
+  transform: scale(1.03);
+}
+
+/* Gradient Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Black gradient from top left fading out toward bottom right */
+  background: linear-gradient(
+    to bottom right,
+    rgba(17, 17, 17, 0.773) 10%, /* Strong black at top left */
+    rgba(0, 0, 0, 0.692) 30%, 
+    rgba(0, 0, 0, 0.256)60%, 
+    rgba(0, 0, 0, 0) 100% /* Clean at bottom right */
+  );
+
+  z-index: 1;
+}
+
+/* Text Overlay */
+.text-overlay {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  color: #e5d0cf;
+  z-index: 2;
+  padding: 20px 30px;
+  border-radius: 8px;
+  max-width: 500px;
+}
+
+.carousel-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.carousel-description {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #f0f0f0;
+  margin-bottom: 16px;
+}
+
+/* Input Styling */
+.carousel-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ffffff;
+  color: #333;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(171, 4, 4, 0.2);
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.carousel-input:focus {
+  background-color: #f0f0f0;
+}
+
+/* Hover Effects */
+.slide:hover .text-overlay {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .carousel {
+    height: 320px;
+  }
+
+  .text-overlay {
+    padding: 15px 20px;
+    width: 70%;
+  }
+
+  .carousel-title {
+    font-size: 2rem;
+  }
+
+  .carousel-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    height: 240px;
+  }
+
+  .text-overlay {
+    padding: 12px;
+    width: 90%;
+  }
+
+  .carousel-title {
+    font-size: 1.5rem;
+  }
+
+  .carousel-description {
+    font-size: 0.85rem;
+  }
+
+  .carousel-input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
