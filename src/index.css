@@ -3,7 +3,7 @@
   padding: 0;
 }
 body {
-  background-color: #E5D0CF;
+  background-color: #f2e4e3;
   /* background-color: #577D73; Dark Green */
   /* color: #E5D0CF; Soft Pink text */
   /* background: linear-gradient(180deg, #E5D0CF, #577D73); */
@@ -24,19 +24,27 @@ body {
 }
 
 .loader {
-  width: 50px;
-  height: 50px;
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid #3498db;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #577D73; /* Dark green color */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+
+    /* ✅ Centering the loader */
+    position: fixed; /* Fixed to viewport */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Ensure it's above other elements */
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
+

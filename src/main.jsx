@@ -8,10 +8,10 @@ import { LoaderProvider } from './context/LoaderContext.jsx';
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <LoaderProvider>
+    {/* <LoaderProvider> */}
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </LoaderProvider>
+    {/* </LoaderProvider> */}
   </StrictMode>
 );
