@@ -10,3 +10,8 @@
 .animate-spin {
   animation: spin 1s linear infinite;
 }
+
+.product-image{
+  mix-blend-mode: multiply;
+}
+
