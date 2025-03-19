@@ -1,10 +1,36 @@
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
 const Footer = () => {
+  const [showFooter, setShowFooter] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isBottom =
+        window.innerHeight + window.scrollY >= document.body.offsetHeight;
+      setShowFooter(isBottom);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <footer style={styles.footer}>
-      <p style={styles.text}>
-        © {new Date().getFullYear()} Saiego. All rights reserved.
-      </p>
-    </footer>
+    <AnimatePresence>
+      {showFooter && (
+        <motion.footer
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 50 }}
+          transition={{ duration: 0.5 }}
+          style={styles.footer}
+        >
+          <p style={styles.text}>
+            © {new Date().getFullYear()} Saiego. All rights reserved.
+          </p>
+        </motion.footer>
+      )}
+    </AnimatePresence>
   );
 };
 
@@ -14,10 +40,13 @@ const styles = {
     color: "#E5D0CF", // Soft Pink
     textAlign: "center",
     padding: "15px",
-    position: "fixed",
-    bottom: "0",
     width: "100%",
     fontFamily: "'Poppins', sans-serif",
+    position: "fixed",
+    bottom: "0",
+    left: "0",
+    zIndex: "100",
+    boxShadow: "0 -4px 10px rgba(0, 0, 0, 0.1)",
   },
   text: {
     margin: 0,
