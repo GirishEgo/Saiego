@@ -1,13 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
+import Products from "../../Data/Products";
 import "./Navbar.css";
 
-const products = [
-  { id: 1, name: "Product 1" },
-  { id: 2, name: "Product 2" },
-  { id: 3, name: "Product 3" },
-];
+
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -101,13 +98,13 @@ const Navbar = () => {
           Products ▾
           {dropdownOpen && (
             <ul className="dropdown-menu">
-              {products.map((product) => (
+              {Products.map((product) => (
                 <li key={product.id}>
                   <span
                     className="dropdown-item"
                     onClick={() => handleProductClick(product.id)}
                   >
-                    {product.name}
+                    {product.title}
                   </span>
                 </li>
               ))}
