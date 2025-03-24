@@ -7,7 +7,7 @@ import ProductDetails from "./components/products/ProductDetails";
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
-const Products = lazy(() => import("./pages/Products"));
+const Product = lazy(() => import("./pages/Products"));
 const Resources = lazy(() => import("./pages/Resources"));
 
 const AppContent = () => {
@@ -16,16 +16,20 @@ const AppContent = () => {
       fallback={
         <div className="loader-overlay">
           <div className="loader"></div>
-        </div> 
+        </div>
       }
     >
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/products" element={<Products />} />
+        {/* <Route path="/products/:id/" element={<Product />} /> */}
         <Route path="/resources" element={<Resources />} />
-        <Route path="/products/:id" element={<ProductDetails />} />
+        <Route path="/products/:productId" element={<Product />} />/
+        <Route
+          path="/products/:productId/:subProductId"
+          element={<ProductDetails />}
+        />
       </Routes>
     </Suspense>
   );

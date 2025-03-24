@@ -1,10 +1,9 @@
 import { useState, useEffect, useRef } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import Products from "../../Data/Products";
+import Control from "../../Data/Control";
 import "./Navbar.css";
-
-
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -98,14 +97,45 @@ const Navbar = () => {
           Products ▾
           {dropdownOpen && (
             <ul className="dropdown-menu">
-              {Products.map((product) => (
+              {Control.map((product) => (
                 <li key={product.id}>
                   <span
                     className="dropdown-item"
                     onClick={() => handleProductClick(product.id)}
                   >
-                    {product.title}
+                    {product.name}
                   </span>
+                  <ul className="subdrop-down">
+                    {product.subProducts.map((sub) => (
+                      <li className="sub-drop-down-list" key={sub.id}>
+                        {sub.subHeading ? ( // Check if it's a sub-heading section
+                          <>
+                            <p className="dropdown-heading">{sub.subHeading}</p>
+                            <ul className="subDeopDownlsit">
+                              {sub.subProducts.map((nestedSub) => (
+                                <li key={nestedSub.id}>
+                                  <Link
+                                    to={`/Products/${product.id}/${nestedSub.id}`}
+                                  >
+                                    {nestedSub.title}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </>
+                        ) : (
+                          <div className="linksContainer">
+                            <Link
+                              className="links"
+                              to={`/Products/${product.id}/${sub.id}`}
+                            >
+                              {sub.title}
+                            </Link>
+                          </div>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
                 </li>
               ))}
             </ul>
