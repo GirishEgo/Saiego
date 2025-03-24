@@ -6,11 +6,13 @@ import "./csss2.css";
 import Loader from "../Loader";
 
 const ProductDetails = () => {
-  const { id } = useParams();
-  const [product, setProduct] = useState(null);
+  const { productId, subProductId } = useParams(); // ✅ Get both category & subProduct ID
+  const [subProduct, setSubProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [activeImage, setActiveImage] = useState(null);
+console.log("Products Data:", Products);
+console.log("ProductId:", productId, "SubProductId:", subProductId);
 
   useEffect(() => {
     const loadData = async () => {
@@ -18,20 +20,30 @@ const ProductDetails = () => {
         setLoading(true);
         setError(null);
 
+        // ✅ Find the correct product category
         const selectedProduct = Products.find(
-          (item) => String(item.id) === String(id)
+          (product) => String(product.id) === String(productId)
         );
 
         if (!selectedProduct) {
-          throw new Error(`No product found with id: ${id}`);
+          throw new Error(`No product category found with ID: ${productId}`);
         }
 
-        // Load main product image
-        const productImg = await selectedProduct.productImg();
+        // ✅ Find the correct subProduct
+        const selectedSubProduct = selectedProduct.subProduct.find(
+          (sub) => String(sub.id) === String(subProductId)
+        );
 
-        // Load other images (nested under headings)
+        if (!selectedSubProduct) {
+          throw new Error(`No subProduct found with ID: ${subProductId}`);
+        }
+
+        // ✅ Load main image
+        const productImg = await selectedSubProduct.productImg();
+
+        // ✅ Load other images
         const otherImages = await Promise.all(
-          selectedProduct.otherImages.map(async (group) => {
+          selectedSubProduct.otherImages.map(async (group) => {
             const loadedImages = await Promise.all(
               group.images.map((img) => img().catch(() => null))
             );
@@ -42,8 +54,9 @@ const ProductDetails = () => {
           })
         );
 
-        setProduct({
-          ...selectedProduct,
+        // ✅ Set state with selected subProduct
+        setSubProduct({
+          ...selectedSubProduct,
           productImg,
           otherImages,
         });
@@ -55,21 +68,26 @@ const ProductDetails = () => {
     };
 
     loadData();
-  }, [id]);
+  }, [productId, subProductId]);
 
-  if (loading) return <div className="loader"><Loader/></div>;
+  if (loading)
+    return (
+      <div className="loader">
+        <Loader />
+      </div>
+    );
   if (error) return <div className="error">{error}</div>;
-  if (!product) return <div className="error">Product not found.</div>;
+  if (!subProduct) return <div className="error">Product not found.</div>;
 
   return (
     <div className="product-details">
       {/* ✅ Heading and Models */}
       <div className="header-section">
-        <h1 className="product-title">{product.title}</h1>
-        <p className="product-subtitle">{product.application || ""}</p>
-        {product.models?.length > 0 && (
+        <h1 className="product-title">{subProduct.title}</h1>
+        <p className="product-subtitle">{subProduct.application || ""}</p>
+        {subProduct.models?.length > 0 && (
           <div className="models">
-            {product.models.map((model, index) => (
+            {subProduct.models.map((model, index) => (
               <span key={index} className="model">
                 {model}
               </span>
@@ -80,11 +98,11 @@ const ProductDetails = () => {
 
       {/* ✅ Main Image */}
       <div className="product-content">
-        {product.productImg ? (
+        {subProduct.productImg ? (
           <div className="image-wrapper">
             <LazyImage
-              src={product.productImg}
-              alt={product.title}
+              src={subProduct.productImg}
+              alt={subProduct.title}
               className="product-main-image"
             />
           </div>
@@ -94,66 +112,61 @@ const ProductDetails = () => {
 
         {/* ✅ Right Side Data */}
         <div className="product-info">
-          {/* ✅ Description */}
-          {product.description && (
+          {subProduct.description && (
             <div className="product-section">
               <h2>Description</h2>
-              <p className="product-description">{product.description}</p>
+              <p className="product-description">{subProduct.description}</p>
             </div>
           )}
 
-          {/* ✅ Features */}
-          {product.features?.length > 0 && (
+          {subProduct.features?.length > 0 && (
             <div className="product-section">
-              <h2>{product.featuresH || "Features"}</h2>
+              <h2>{subProduct.featuresH || "Features"}</h2>
               <ul>
-                {product.features.map((feature, index) => (
+                {subProduct.features.map((feature, index) => (
                   <li key={index}>{feature}</li>
                 ))}
               </ul>
             </div>
           )}
 
-          {/* ✅ Working Principle */}
-          {product.workingDetails?.length > 0 && (
+          {subProduct.workingDetails?.length > 0 && (
             <div className="product-section">
-              <h2>{product.workingH || "Working Principle"}</h2>
+              <h2>{subProduct.workingH || "Working Principle"}</h2>
               <ul>
-                {product.workingDetails.map((detail, index) => (
+                {subProduct.workingDetails.map((detail, index) => (
                   <li key={index}>{detail}</li>
                 ))}
               </ul>
             </div>
           )}
 
-          {/* ✅ Construction */}
-          {product.constrution?.length > 0 && (
+          {subProduct.constrution?.length > 0 && (
             <div className="product-section">
-              <h2>{product.construtionH || "Construction"}</h2>
+              <h2>{subProduct.construtionH || "Construction"}</h2>
               <ul>
-                {product.constrution.map((detail, index) => (
+                {subProduct.constrution.map((detail, index) => (
                   <li key={index}>{detail}</li>
                 ))}
               </ul>
             </div>
           )}
 
-          {/* ✅ Recommendation */}
-          {product.recommendation && (
+          {subProduct.recommendation && (
             <div className="product-section">
               <h2>Recommendation</h2>
-              <p>{product.recommendation}</p>
+              <p>{subProduct.recommendation}</p>
             </div>
           )}
         </div>
       </div>
 
       {/* ✅ Other Images */}
-      {product.otherImages?.length > 0 && (
+      {subProduct.otherImages?.length > 0 && (
         <div className="other-images">
           <h2>Technical Specification</h2>
           <div className="otherimages-Container">
-            {product.otherImages.map((group, groupIndex) => (
+            {subProduct.otherImages.map((group, groupIndex) => (
               <div key={groupIndex} className="image-group">
                 <h3 className="group-heading">{group.heading}</h3>
                 <div className="group-images">

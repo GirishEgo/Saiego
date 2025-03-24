@@ -83,28 +83,85 @@
 .dropdown-menu {
   position: absolute;
   top: 40px;
-  left: 0;
+ right: -14pc;
   background: linear-gradient(135deg, #405d55 0%, #344B43 100%);
   border-radius: 12px;
   padding: 8px 0;
-  width: 400px;
+  width: 80vw;
+  /* max-width: 800px; */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateY(10px);
   z-index: 999;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   li{
-    list-style: none;
+    /* list-style: none; */
+    width: 30%;
+        list-style: none;
+     a{
+    color: #E5D0CF;
+    text-decoration: none;
+    white-space: nowrape;
   }
+  ul{
+    li{
+      width: 100%;
+    }
+  }
+  }
+
 }
 
+.linksContainer{
+  width: 100%;
+  margin: 15px;
+  border-bottom:1px solid #577D73;
+  /* white-space: nowrape; */
+  white-space: nowrap;
+
+}
+
+.subdrop-down{
+  padding: 20px;
+  border-radius: 8px;
+  ul{
+   border-radius: 0px 0px 10px 10px;
+        background-color: #364d45;
+        padding: 5px 0px;
+        /* list-style: circle; */
+        white-space: nowrap;
+        overflow: hidden;
+    li{
+      a{
+        margin: 10px;
+      }
+    
+    }
+  }
+}
+.dropdown-heading{
+  color: antiquewhite;
+  border-bottom: 2px solid white;
+  font-size: 20px;
+}
+.subDeopDownlsit{
+  margin-top: 0px;
+  li{
+    margin-bottom: 10px;
+  }
+}
 .nav-item:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
-
+.sub-drop-down-list{
+  width: 70%;
+}
 /* Dropdown Items */
 .dropdown-item {
   padding: 14px 20px;
@@ -160,7 +217,7 @@
     flex-direction: column;
     position: absolute;
     top: 50px;
-    left: 0;
+    right: 0;
     width: 90%;
     background: #405d55;
     padding: 20px;
@@ -215,8 +272,23 @@
     border: 2px solid #577D73;
     border-top: none;
     border-radius: 0 0 12px 12px;
+    flex-direction: column;
+    li{
+      width: 100%;
+    }
   }
 
+  .linksContainer {
+    text-align: justify;
+  }
+  .subDeopDownlsit{
+    margin-top: 10px;
+    text-align: justify;
+  }
+  .dropdown-heading{
+    font-size:25px;
+    
+  }
   .nav-item:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
