@@ -3,22 +3,31 @@ const Control = [
     id: "Heating",
     name: "Heating Accessories",
     subProducts: [
-      {id: "PTC-Enclosure-Heaters", title:" PTC Enclosure Heaters",},
-      {id: "COMBI-SPACE-HEATERS", title:" COMBI - SPACE HEATERS",},
-      {id: "HEAVY-DUTY-SLIM-SPACE-HEATER", title:" Heavy Duty Slim Space Heater",},
-      {id: "HAZARDOUS-AREA-THERMOSTAT", title:" Hazardous Area Thermostat",},
-      {id: "Space-Saving-Fan-Heaters", title:" SPACE - SAVING FAN HEATERS",},
-      // {id: "ENCLOSURE-THERMOSTAT", title:" Enclosure Thermostat",},
-      // {id: "Dual-THERMOSTAT", title:" Dual Thermostat",},
-      // {id: "Mechanical-HYGROSTAT", title:" mechanical hygrostat",},
-      // {id: "ELECTRONIC-HYGROSTAT", title:" Electronic Hygrostat",},
-      // {id: "ELECTRONIC-HYGROTHERM", title:" Electronic Hygrotherm",},
-      // {id: "ELECTRONIC-DC-THERMOSTAT", title:" Electronic DC Thermostat",},
-      // {id: "ELECTRONIC-THERMOSTAT", title:" Electronic Thermostat",},
-      // {id: "TPM-THERMOSTAT", title:" TEMPER - PROOF MECHANICAL THERMOSTAT",},
-      // {id: "T-P-DUAL_NO-NC_THERMOSTAT", title:" TEMPER - PROOF DUAL NO - NC THERMOSTAT",},
+      { id: "PTC-Enclosure-Heaters", title: " PTC Enclosure Heaters" },
+      { id: "COMBI-SPACE-HEATERS", title: " Combi-Space Heaters" },
+      {
+        id: "HEAVY-DUTY-SLIM-SPACE-HEATER",
+        title: " Heavy Duty Slim Space Heater",
+      },
+
+      {
+        id: "Hazardous-Area-Heater",
+        title: "Hazardous Area Heater",
+      },
+      { id: "Space-Saving-Fan-Heaters", title: " Space-Saving-Fan-Heaters" },
+
+      { id: "SpaceHeaters", title: " Space Heaters " },
+      {
+        id: "SMALL-SEMICONDUCTOR-HEATER",
+        title: "Small Semiconductor Heater",
+      },
+      {
+        id: "BOX-SPACE-HEATERS",
+        title: "Box Space Heaters",
+      },
     ],
   },
+
   {
     id: "Control",
     name: "Control",
@@ -27,45 +36,75 @@ const Control = [
         id: "Energy-Regulator",
         subHeading: "Energy Regulator",
         subProducts: [
-          { id: "ENCLOSURE-THERMOSTAT", title: "ENCLOSURE-THERMOSTAT" },
-          { id: "CONTROL-THERMO-2", title: "Temperature Controller" },
+          {
+            id: "SUNSIM",
+            title: "Sunsim",
+},
+          {
+            id: "SUNTEK",
+            title: "Suntek", },
+          {
+            id: "SUMO",
+            title: "Sumo",
+          }
         ],
       },
       {
-        id: "Capiccary-Thermostat",
-        subHeading: "Capiccary Thermostat",
+        id: "Capillary-Thermostats",
+        subHeading: "Capillary Thermostats",
         subProducts: [
-          { id: "HYDRO-1", title: "Humidity Controller" },
-          { id: "HYDRO-2", title: "Advanced Hygrostat" },
+          {
+            id: "COMPAQ",
+            title: "Compaq", },
+
+          { id: "Super-Deluxe", title: "Super Deluxe" },
+          { id: "SAI", title: "SAI" },
+          { id: "SUN", title: "SUN" },
         ],
       },
       {
-        id: "Enclosure-Thermostat",
-        subHeading: "Enclosure Thermostat",
+        id: "Enclosure-Thermostat-hygrostats",
+        subHeading: "Enclosure Thermostat & Hygrostats",
         subProducts: [
-          { id: "ENCLOSURE-THERMOSTAT", title: " Enclosure Thermostat", },
-          { id: "Dual-THERMOSTAT", title: " Dual Thermostat", },
-          { id: "Mechanical-HYGROSTAT", title: " mechanical hygrostat", },
-          { id: "ELECTRONIC-HYGROSTAT", title: " Electronic Hygrostat", },
-          { id: "ELECTRONIC-HYGROTHERM", title: " Electronic Hygrotherm", },
-          { id: "ELECTRONIC-DC-THERMOSTAT", title: " Electronic DC Thermostat", },
-          { id: "ELECTRONIC-THERMOSTAT", title: " Electronic Thermostat", },
-          { id: "TPM-THERMOSTAT", title: " TEMPER - PROOF MECHANICAL THERMOSTAT", },
-          { id: "T-P-DUAL_NO-NC_THERMOSTAT", title: " TEMPER - PROOF DUAL NO - NC THERMOSTAT", },
+          { id: "ENCLOSURE-THERMOSTAT", title: "Enclosure Thermostat" },
+          { id: "Dual-THERMOSTAT", title: "Dual Thermostat" },
+          { id: "Mechanical-HYGROSTAT", title: "Mechanical Hygrostat" },
+          { id: "ELECTRONIC-HYGROSTAT", title: "Electronic Hygrostat" },
+          { id: "ELECTRONIC-HYGROTHERM", title: "Electronic Hygrotherm" },
+          { id: "ELECTRONIC-DC-THERMOSTAT", title: "Electronic DC Thermostat" },
+          { id: "ELECTRONIC-THERMOSTAT", title: "Electronic Thermostat" },
+          {
+            id: "HAZARDOUS-AREA-THERMOSTAT",
+            title: " Hazardous Area Thermostat",
+          },
+          { id: "TPM-THERMOSTAT", title: "Temper-Proof Mechanical Thermostat" },
+          {
+            id: "T-P -DUAL_NO-NC_THERMOSTAT",
+            title: "Tempe-Proof Dual NO-NC Thermostat",
+          },
         ],
       },
     ],
   },
+
   {
-    id: "Other",
-    name: "Other Devices",
+    id: "Accessories",
+    name: "Accessories",
     subProducts: [
-      { id: "OTHER-1", title: "Device 1" },
-      { id: "OTHER-2", title: "Device 2" },
+      {
+        id: "PRESSURE-COMPENSATION-DEVICE",
+        title: "Pressure Compensation Device",
+      },
+      {
+        id: "DOCUMENT-POCKET",
+        title: "Document Pocket For Enclosure",
+      },
+      {
+        id: "LED-LIGHT-&-SWITCHGEAR",
+        title: "Led Light For PanelBord & Switchgear",
+      },
     ],
   },
-
-
 ];
 
 export default Control;
