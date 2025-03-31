@@ -336,14 +336,16 @@ background: #fffffff8;
 
 
 .otherimages-container {
-  display: flex;
+ display: flex;
   flex-wrap: wrap;
   gap: 16px;
+  justify-content: center;
 }
 
 .image-group {
-  width: 50%;
+  width: 40%;
 }
+
 
 .group-heading {
   font-size: 1.4rem;
