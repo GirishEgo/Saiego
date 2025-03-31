@@ -13,6 +13,8 @@ const ProductDetails = () => {
   const [activeImage, setActiveImage] = useState(null);
 console.log("Products Data:", Products);
 console.log("ProductId:", productId, "SubProductId:", subProductId);
+console.log("erroe",error);
+
 
   useEffect(() => {
     const loadData = async () => {
@@ -33,6 +35,8 @@ console.log("ProductId:", productId, "SubProductId:", subProductId);
         const selectedSubProduct = selectedProduct.subProduct.find(
           (sub) => String(sub.id) === String(subProductId)
         );
+        console.log(selectedSubProduct);
+        
 
         if (!selectedSubProduct) {
           throw new Error(`No subProduct found with ID: ${subProductId}`);
@@ -62,6 +66,8 @@ console.log("ProductId:", productId, "SubProductId:", subProductId);
         });
       } catch (err) {
         setError(err.message);
+        console.log(error);
+        
       } finally {
         setLoading(false);
       }
@@ -151,6 +157,26 @@ console.log("ProductId:", productId, "SubProductId:", subProductId);
               </ul>
             </div>
           )}
+          {subProduct.intended?.length > 0 && (
+            <div className="product-section">
+              <h2>{subProduct.intended || "Construction"}</h2>
+              <ul>
+                {subProduct.uses.map((detail, index) => (
+                  <li key={index}>{detail}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {subProduct.tests?.length > 0 && (
+            <div className="product-section">
+              <h2>ALSO AVAILABLE</h2>
+              <ul>
+                {subProduct.tests.map((detail, index) => (
+                  <li key={index}>{detail}</li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {subProduct.recommendation && (
             <div className="product-section">
@@ -165,11 +191,11 @@ console.log("ProductId:", productId, "SubProductId:", subProductId);
       {subProduct.otherImages?.length > 0 && (
         <div className="other-images">
           <h2>Technical Specification</h2>
-          <div className="otherimages-Container">
+          <div className="otherimages-container">
             {subProduct.otherImages.map((group, groupIndex) => (
               <div key={groupIndex} className="image-group">
                 <h3 className="group-heading">{group.heading}</h3>
-                <div className="group-images">
+                <div className="group-images masonry-layout">
                   {group.images.map((img, index) => (
                     <img
                       key={index}
