@@ -64,7 +64,7 @@ const AboutUs = () => {
       {aboutData.map((section, index) => (
         <div key={index} className="about-section">
           <div className="circle-top-right" />
-          <div className="circle-bottom-left"/>
+          <div className="circle-bottom-left" />
           <div className="section-content-container">
             <h3 className="section-title">{section.title}</h3>
             <p className="section-content">{section.content}</p>
@@ -82,8 +82,20 @@ const AboutUs = () => {
               viewBox="0 0 1440 320"
               className="wave-svg"
             >
+              <defs>
+                <linearGradient
+                  id="waveGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="10%" stopColor="#334f47" />
+                  <stop offset="60%" stopColor="#577d73" />
+                </linearGradient>
+              </defs>
               <path
-                fill="#577d73ab"
+                fill="url(#waveGradient)"
                 fillOpacity="1"
                 d={wavePaths[index % wavePaths.length]}
               ></path>
