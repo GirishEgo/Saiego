@@ -2,6 +2,7 @@ import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { lazy, Suspense, useEffect } from "react";
 import { useLoader } from "./context/LoaderContext";
 import ProductDetails from "./components/products/ProductDetails";
+import DisplaySubproducts from "./components/products/DisplaySubproducts";
 
 // ✅ Lazy load components
 const Home = lazy(() => import("./pages/Home"));
@@ -25,7 +26,7 @@ const AppContent = () => {
         <Route path="/contact" element={<Contact />} />
         {/* <Route path="/products/:id/" element={<Product />} /> */}
         <Route path="/resources" element={<Resources />} />
-        <Route path="/products/:productId" element={<Product />} />/
+        <Route path="/products/:productId" element={<DisplaySubproducts />} />/
         <Route
           path="/products/:productId/:subProductId"
           element={<ProductDetails />}

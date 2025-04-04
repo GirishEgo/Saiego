@@ -71,20 +71,25 @@ const Navbar = () => {
 
       {/* Nav Links */}
       <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-        <li
-          className={`nav-item ${location.pathname === "/" ? "active" : ""}`}
-          onClick={() => navigate("/")}
-        >
-          Home
-        </li>
-        <li
-          className={`nav-item ${
-            location.pathname === "/about" ? "active" : ""
-          }`}
-          onClick={() => navigate("/about")}
-        >
-          About
-        </li>
+        <Link to={"/"}>
+          <li
+            className={`nav-item ${location.pathname === "/" ? "active" : ""}`}
+            onClick={() => setMenuOpen(false)}
+          >
+            Home
+          </li>
+        </Link>
+        <Link to={"/about"}>
+          <li
+            className={`nav-item ${
+              location.pathname === "/about" ? "active" : ""
+            }`}
+            onClick={() => setMenuOpen(false)}
+          >
+            About
+          </li>
+        </Link>
+
         <li
           className={`nav-item ${
             location.pathname.includes("/products") ? "active" : ""
@@ -110,11 +115,14 @@ const Navbar = () => {
                       <li className="sub-drop-down-list" key={sub.id}>
                         {sub.subHeading ? ( // Check if it's a sub-heading section
                           <>
-                            <p className="dropdown-heading">{sub.subHeading}</p>
+                            <div className="dropdown-heading">
+                              {sub.subHeading}
+                            </div>
                             <ul className="subDeopDownlsit">
                               {sub.subProducts.map((nestedSub) => (
                                 <li key={nestedSub.id}>
                                   <Link
+                                    onClick={() => setMenuOpen(false)}
                                     to={`/Products/${product.id}/${nestedSub.id}`}
                                   >
                                     {nestedSub.title}
@@ -127,6 +135,7 @@ const Navbar = () => {
                           <div className="linksContainer">
                             <Link
                               className="links"
+                              onClick={() => setMenuOpen(false)}
                               to={`/Products/${product.id}/${sub.id}`}
                             >
                               {sub.title}
@@ -149,14 +158,16 @@ const Navbar = () => {
         >
           Resources
         </li>
-        <li
-          className={`nav-item ${
-            location.pathname === "/contact" ? "active" : ""
-          }`}
-          onClick={() => navigate("/contact")}
-        >
-          Contact
-        </li>
+        <Link to={"/contact"}>
+          <li
+            className={`nav-item ${
+              location.pathname === "/contact" ? "active" : ""
+            }`}
+            onClick={() => setMenuOpen(false)}
+          >
+            Contact
+          </li>
+        </Link>
       </ul>
     </nav>
   );

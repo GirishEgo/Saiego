@@ -1,8 +1,11 @@
 
 import { useNavigate, useParams } from "react-router-dom";
 import Products from "../Data/Products";
+import Control from "../Data/Control";
 const Product = () => {
   const { productId } = useParams();
+
+  
 
   const Productcategory = Products.find((prod) => prod.id === productId);
   if (!Productcategory) {
