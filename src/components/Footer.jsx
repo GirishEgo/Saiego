@@ -40,13 +40,11 @@ const styles = {
     color: "#E5D0CF", // Soft Pink
     textAlign: "center",
     padding: "15px",
-    width: "100%",
+    // width: "100%",
     fontFamily: "'Poppins', sans-serif",
-    position: "fixed",
-    bottom: "0",
-    left: "0",
     zIndex: "100",
     boxShadow: "0 -4px 10px rgba(0, 0, 0, 0.1)",
+    // Removed `position: fixed` so it appears only when scrolled to bottom
   },
   text: {
     margin: 0,
