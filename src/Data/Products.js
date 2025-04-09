@@ -61,7 +61,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemension",
             images: [
               async () =>
                 (
@@ -153,7 +153,7 @@ const Products = [
                 ],
               },
               {
-                heading: "Diagram",
+                heading: "Diemensions",
                 images: [
                   async () =>
                     (
@@ -245,7 +245,7 @@ const Products = [
                 ],
               },
               {
-                heading: "Diagram",
+                heading: "Diemensions",
                 images: [
                   async () =>
                     (
@@ -327,7 +327,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               async () =>
                 (
@@ -363,6 +363,235 @@ const Products = [
           },
         ],
 
+      },
+
+      //aluminum heaters data
+      {
+        id: "Aluminium-Space-Heaters",
+        title: "Aluminium Space Heaters ",
+        productImg: async () =>
+          (
+            await import(
+              "../assets/ptoductsImg/endfixingtype.jpeg"
+            )
+          ).default,
+        application: "For Panel Boards & Switchgear Industries",
+        models: ["SH", "SHISS", "SHIL"],
+        featuresH: "Features",
+        features: [
+          "Aluminum body for fast dissipation of heat into air",
+          "Perforated cover for protection",
+          "Quick and uniform heating",
+          "Withstands mechanical shock and vibration",
+          "Very good insulation resistance",
+        ],
+        description:
+          "'GIRISHEGO' Aluminium Space Heaters are ideal for prevention of condensation, corrosion, Leakage currents in LT. & H.T. Switchgears, Panel boards/ electronic instruments & panels etc",
+        workingH: "Working Principle & Features",
+        workingDetails: [
+          "Body is made of anodized heat sink grade extruded aluminium for fast dissipation of heat into air. High quality resistance heating element is insulated with mica for optimum insulation even in extreme humid conditions.",
+          "Resistance element and insulation are held tight in between aluminium parts and squeezed for quick and uniform heating. Heater can withstand much higher degree of mechanical shock and vibration. ",
+          "Elevated body provides for easy passage of heat directly to air, without heating panel body. An optional Perforated cover made of Powder coated M.S. sheet can be provided for extra safety",
+        ],
+        tests: [
+          // "High Voltage Test at 2kV/1Min",
+          // "Insulation Resistance > 10 Mega Ohms",
+          // "Power Rating within ±5%",
+        ],
+        intended: "Intended Use",
+        uses: [
+          "Prevention of condensation",
+          "corrosion",
+          "of Leakage currents in LT. & H.T. Switchgear panel boards, enclosures, switch boards, & electronic instruments etc",
+        ],
+        Installation: "Installation",
+        instructions: [
+          "In END FIXING type model one fixing oval holes of 6.5mmX22.5mm and two 6.5mm Holes are provided at each end.",
+          "In SIDE & MIDDLE FIXING type models one fixing oval hole of 6.5mmX22.5mm and Two 6.5mm Holes are provided in a bracket at Side Middle of the heater.",
+          "Installation can be done in vertical or horizontal position although horizontal mounting is preferred. Distance from surface of panel should be at least 10mm. and distance from plastic parts should be at least 50mm. ",
+          "Connection wire must be on the side or below to avoid warming up of the wire.",
+        ],
+        remark: "Remark",
+        recommendation:
+          "It is recommended to use a 'GIRISHEGO' thermostat to control the heater.",
+        otherImages: [
+          {
+            heading: "Technical Data",
+            images: [
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (1).png"
+                  )
+                ).default,
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (1).png"
+                  )
+                ).default,
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (1).png"
+                  )
+                ).default,
+            ],
+          },
+          {
+            heading: "Diemensions",
+
+            images: [
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (1).png"
+                  )
+                ).default,
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (1).png"
+                  )
+                ).default,
+            ],
+          },
+          {
+            heading: "Wiring Diagram",
+            images: [
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (1).png"
+                  )
+                ).default,
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (1).png"
+                  )
+                ).default,
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (1).png"
+                  )
+                ).default,
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (1).png"
+                  )
+                ).default,
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (1).png"
+                  )
+                ).default,
+
+
+            ],
+          },
+        ],
+      },
+
+      // CHPFH1
+      {
+        id: "Compact-High-Performance-Fan-Heater",
+        title: "Compact High Performance Fan Heater",
+        productImg: async () =>
+          (
+            await import(
+              "../assets/ptoductsImg/Compact High Performance Fan Heater images/img (1).png"
+            )
+          ).default,
+        application: "",
+        models: ["SCS0130 700W/900W/1200W"],
+        featuresH: "Features",
+        features: [
+          "Compact Design",
+          "Double Insulated",
+          "Din Rail & Screw mounting",
+          "High Heating Performance",
+          "Inbuilt Thermostat (Optional)",
+        ],
+        description:
+          "High-performance fan heater prevents condensation and frost, ensuring even air distribution. Features double insulation, contact protection, and optional thermostat.",
+        workingH: "Working Principle & Features",
+        workingDetails: [
+          "The compact, high-performance fan heater prevents condensation and frost while ensuring evenly distributed interior air temperature in enclosures containing electrical or electronic components.",
+          "Its plastic housing offers double insulation and contact protection. The fan heater is available with an integrated thermostat for precise temperature control.",
+          "Designed as a stationary unit, the SCS 0130 is intended for wall mounting, while the SCS 0030 is recommended for installation at the bottom of the enclosure.",
+        ],
+        tests: [],
+        intended: "",
+        uses: [],
+        Installation: "",
+        instructions: [],
+        remark: "",
+        recommendation: "",
+        otherImages: [
+          {
+            heading: "Technical Data",
+            images: [
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/Compact High Performance Fan Heater images/img (6).png"
+                  )
+                ).default,
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/Compact High Performance Fan Heater images/img (3).png"
+                  )
+                ).default,
+            ],
+          },
+          {
+            heading: "Connection Diagram",
+            images: [
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/Compact High Performance Fan Heater images/img (5).png"
+                  )
+                ).default,
+
+
+            ],
+          },
+          {
+            heading: "Diemensions",
+            images: [
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/Compact High Performance Fan Heater images/img (2).png"
+                  )
+                ).default,
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/Compact High Performance Fan Heater images/img (4).png"
+                  )
+                ).default,
+            ],
+          },
+         
+          // {
+          //   heading: "Aslo Avelable",
+          //   images: [
+          //     async () =>
+          //       (
+          //         await import(
+          //           "../assets/ptoductsImg/Compact High Performance Fan Heater images/img (5).png"
+          //         )
+          //       ).default,
+          //   ],
+          // },
+        ],
       },
      
       //fan heaters data
@@ -424,7 +653,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
            
             images: [
               async () =>
@@ -529,7 +758,7 @@ const Products = [
           },
 
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               async () =>
                 (
@@ -618,7 +847,7 @@ const Products = [
           },
 
           {
-            heading: "wiring diagram",
+            heading: "wiring Diemensions",
             images: [
               async () =>
                 (
@@ -692,7 +921,7 @@ const Products = [
           },
 
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               async () =>
                 (
@@ -859,7 +1088,7 @@ const Products = [
                       ],
                     },
                     {
-                      heading: "Diagram",
+                      heading: "Diemensions",
                       images: [
 
                         async () =>
@@ -929,7 +1158,7 @@ const Products = [
                       ],
                     },
                     {
-                      heading: "Diagram",
+                      heading: "Diemensions",
                       images: [
                         async () =>
                           (
@@ -992,7 +1221,7 @@ const Products = [
                       ],
                     },
                     {
-                      heading: "Diagram",
+                      heading: "Diemensions",
                       images: [
                         async () =>
                           (
@@ -1078,7 +1307,7 @@ const Products = [
                       ],
                     },
                     {
-                      heading: "Diagram",
+                      heading: "Diemensions",
                       images: [
                         async () =>
                           (
@@ -1166,7 +1395,7 @@ const Products = [
                       ],
                     },
                     {
-                      heading: "Diagram",
+                      heading: "Diemensions",
                       images: [
                         async () =>
                           (
@@ -1249,7 +1478,7 @@ const Products = [
                       ],
                     },
                     {
-                      heading: "Diagram",
+                      heading: "Diemensions",
                       images: [
                         async () =>
                           (
@@ -1328,11 +1557,6 @@ const Products = [
                               "../assets/ptoductsImg/TEMPER-PROOF MECHANICAL THERMOSTAT IMAGES/IMGS (2).png"
                             )
                           ).default,
-                      ],
-                    },
-                    {
-                      heading: "Product View",
-                      images: [
                         async () =>
                           (
                             await import(
@@ -1342,7 +1566,7 @@ const Products = [
                       ],
                     },
                     {
-                      heading: "Wiring Diagram",
+                      heading: "Diemensions",
                       images: [
                         async () =>
                           (
@@ -1356,7 +1580,12 @@ const Products = [
                               "../assets/ptoductsImg/TEMPER-PROOF MECHANICAL THERMOSTAT IMAGES/IMGS (5).png"
                             )
                           ).default,
-                        async () =>
+                      ],
+                    },
+                    {
+                      heading: "Wiring Diagram",
+                      images: [
+                      async () =>
                           (
                             await import(
                               "../assets/ptoductsImg/TEMPER-PROOF MECHANICAL THERMOSTAT IMAGES/IMGS (6).png"
@@ -1410,18 +1639,24 @@ const Products = [
                         async () =>
                           (
                             await import(
-                              "../assets/ptoductsImg/TEMPER-PROOF DUAL NO-NC THERMOSTAT IMAGES/IMGS (2).png"
+                              "../assets/ptoductsImg/TEMPER-PROOF DUAL NO-NC THERMOSTAT IMAGES/IMGS (1).png"
+                            )
+                          ).default,
+                        async () =>
+                          (
+                            await import(
+                              "../assets/ptoductsImg/TEMPER-PROOF DUAL NO-NC THERMOSTAT IMAGES/IMGS (5).png"
                             )
                           ).default,
                       ],
                     },
                     {
-                      heading: "Product View",
+                      heading: "Dimensional",
                       images: [
                         async () =>
                           (
                             await import(
-                              "../assets/ptoductsImg/TEMPER-PROOF DUAL NO-NC THERMOSTAT IMAGES/IMGS (1).png"
+                              "../assets/ptoductsImg/TEMPER-PROOF DUAL NO-NC THERMOSTAT IMAGES/IMGS (4).png"
                             )
                           ).default,
                       ],
@@ -1432,15 +1667,16 @@ const Products = [
                         async () =>
                           (
                             await import(
-                              "../assets/ptoductsImg/TEMPER-PROOF DUAL NO-NC THERMOSTAT IMAGES/IMGS (4).png"
+                              "../assets/ptoductsImg/TEMPER-PROOF DUAL NO-NC THERMOSTAT IMAGES/IMGS (2).png"
                             )
                           ).default,
-                        async () =>
-                          (
-                            await import(
-                              "../assets/ptoductsImg/TEMPER-PROOF DUAL NO-NC THERMOSTAT IMAGES/IMGS (5).png"
-                            )
-                          ).default,
+                       
+                       
+                      ],
+                    },
+                    {
+                      heading: "Connection Diagram",
+                      images: [
                         async () =>
                           (
                             await import(
@@ -1509,7 +1745,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               // async () =>
               //   (
@@ -1610,7 +1846,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
              
               async () =>
@@ -1716,7 +1952,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               async () =>
                 (
@@ -1818,7 +2054,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               async () =>
                 (
@@ -1926,7 +2162,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               async () =>
                 (
@@ -2046,7 +2282,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               async () =>
                 (
@@ -2164,7 +2400,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               async () =>
                 (
@@ -2272,7 +2508,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               async () =>
                 (
@@ -2377,7 +2613,7 @@ const Products = [
         recommendation: "",
         otherImages: [
           {
-            heading: "Technical Data",
+            heading: "SDA-084",
             images: [
               async () =>
                 (
@@ -2385,11 +2621,6 @@ const Products = [
                     "../assets/ptoductsImg/PRESSURE COMPENSATION DEVICE images/img (2).png"
                   )
                 ).default,
-            ],
-          },
-          {
-            heading: "Diagram",
-            images: [
               async () =>
                 (
                   await import(
@@ -2399,7 +2630,7 @@ const Products = [
             ],
           },
           {
-            heading: "Wiring Diagram",
+            heading: "SDA-284",
             images: [
               async () =>
                 (
@@ -2415,6 +2646,23 @@ const Products = [
                 ).default,
             ],
           },
+          // {
+          //   heading: "Wiring Diagram",
+          //   images: [
+          //     async () =>
+          //       (
+          //         await import(
+          //           "../assets/ptoductsImg/PRESSURE COMPENSATION DEVICE images/img (4).png"
+          //         )
+          //       ).default,
+          //     async () =>
+          //       (
+          //         await import(
+          //           "../assets/ptoductsImg/PRESSURE COMPENSATION DEVICE images/img (5).png"
+          //         )
+          //       ).default,
+          //   ],
+          // },
         ],      },
       // DOCUMENT POCKET FOR ENCLOSURE
       {
@@ -2459,34 +2707,41 @@ const Products = [
               async () =>
                 (
                   await import(
-                    "../assets/ptoductsImg/DOCUMENT POCKET FOR ENCLOSURE/img (2).png"
-                  )
-                ).default,
-            ],
-          },
-          {
-            heading: "Diagram",
-            images: [
-              async () =>
-                (
-                  await import(
                     "../assets/ptoductsImg/DOCUMENT POCKET FOR ENCLOSURE/img (3).png"
                   )
                 ).default,
             ],
           },
           {
-            heading: "Wiring Diagram",
+            heading: "Diemensions",
             images: [
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/DOCUMENT POCKET FOR ENCLOSURE/img (2).png"
+                  )
+                ).default,
               async () =>
                 (
                   await import(
                     "../assets/ptoductsImg/DOCUMENT POCKET FOR ENCLOSURE/img (4).png"
                   )
                 ).default,
-             
+
             ],
           },
+          // {
+          //   heading: "Wiring Diagram",
+          //   images: [
+          //     async () =>
+          //       (
+          //         await import(
+          //           "../assets/ptoductsImg/DOCUMENT POCKET FOR ENCLOSURE/img (4).png"
+          //         )
+          //       ).default,
+             
+          //   ],
+          // },
         ],      },
       // LED LIGHT FOR PANELBOARD & SWITCHGEAR
       {
@@ -2533,7 +2788,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               async () =>
                 (
