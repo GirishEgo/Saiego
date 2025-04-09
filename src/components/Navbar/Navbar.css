@@ -164,6 +164,17 @@
   transform: translateX(5px);
   }
 }
+
+.resdropdowm{
+/* background: red; */
+display: flex;
+flex-direction: column;
+width: 299px;
+left: 0%;
+li{
+  width: auto;
+}
+}
 .nav-item:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
