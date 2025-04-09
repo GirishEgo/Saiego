@@ -48,12 +48,12 @@ const wavePaths = [
 ];
 
 const images = [
-  "https://img.freepik.com/free-vector/teamwork-concept-landing-page_52683-20165.jpg",
-  "https://img.freepik.com/free-vector/industrial-concept-illustration_114360-8906.jpg",
-  "https://img.freepik.com/free-vector/quality-control-concept-illustration_114360-6930.jpg",
-  "https://img.freepik.com/free-vector/business-vision-concept-illustration_114360-8201.jpg",
-  "https://img.freepik.com/free-vector/mission-statement-concept-illustration_114360-7897.jpg",
-  "https://img.freepik.com/free-vector/sustainability-concept-illustration_114360-8769.jpg",
+  "https://img.freepik.com/free-vector/meeting-question-concept-illustration_114360-19816.jpg?uid=R194030063&ga=GA1.1.1463399089.1735449957&semt=ais_country_boost&w=740",
+  "https://img.freepik.com/free-vector/electric-power_1284-19036.jpg?uid=R194030063&ga=GA1.1.1463399089.1735449957&semt=ais_hybrid&w=740",
+  "https://img.freepik.com/free-vector/product-quality-concept-illustration_114360-7401.jpg?uid=R194030063&ga=GA1.1.1463399089.1735449957&semt=ais_hybrid&w=740",
+  "https://img.freepik.com/free-vector/virtual-reality-illustration-concept_114360-888.jpg?uid=R194030063&ga=GA1.1.1463399089.1735449957&semt=ais_hybrid&w=740",
+  "https://img.freepik.com/free-vector/goal-achievement-teamwork-business-concept-career-growth-cooperation-development-project_107791-29.jpg?uid=R194030063&ga=GA1.1.1463399089.1735449957&semt=ais_hybrid&w=740",
+  "https://img.freepik.com/free-vector/save-planet-concept-with-people-taking-care-earth_23-2148522570.jpg?uid=R194030063&ga=GA1.1.1463399089.1735449957&semt=ais_hybrid&w=740",
 ];
 
 
@@ -63,8 +63,13 @@ const AboutUs = () => {
       <h2 className="about-heading">About Us</h2>
       {aboutData.map((section, index) => (
         <div key={index} className="about-section">
-          <div className="circle-top-right" />
-          <div className="circle-bottom-left" />
+          {/* <div className="circle-top-right" />
+          <div className="circle-bottom-left" /> */}
+          <div className="wave">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <div className="section-content-container">
             <h3 className="section-title">{section.title}</h3>
             <p className="section-content">{section.content}</p>
@@ -76,31 +81,30 @@ const AboutUs = () => {
             className="about-image"
           />
           {/* SVG Wave Background */}
-          <div className="wave-container">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1440 320"
-              className="wave-svg"
-            >
-              <defs>
-                <linearGradient
-                  id="waveGradient"
-                  x1="0%"
-                  y1="0%"
-                  x2="100%"
-                  y2="100%"
-                >
-                  <stop offset="10%" stopColor="#334f47" />
-                  <stop offset="60%" stopColor="#577d73" />
-                </linearGradient>
-              </defs>
-              <path
-                fill="url(#waveGradient)"
-                fillOpacity="1"
-                d={wavePaths[index % wavePaths.length]}
-              ></path>
-            </svg>
-          </div>
+
+          {/* <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 320"
+                className="wave-svg"
+              >
+                <defs>
+                  <linearGradient
+                    id="waveGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="10%" stopColor="#334f47" />
+                    <stop offset="60%" stopColor="#577d73" />
+                  </linearGradient>
+                </defs>
+                <path
+                  fill="url(#waveGradient)"
+                  fillOpacity="1"
+                  d={wavePaths[index % wavePaths.length]}
+                ></path>
+              </svg> */}
         </div>
       ))}
     </div>
