@@ -11,9 +11,9 @@ const ProductDetails = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [activeImage, setActiveImage] = useState(null);
-console.log("Products Data:", Products);
-console.log("ProductId:", productId, "SubProductId:", subProductId);
-console.log("erroe",error);
+// console.log("Products Data:", Products);
+// console.log("ProductId:", productId, "SubProductId:", subProductId);
+// console.log("erroe",error);
 
 
   useEffect(() => {
@@ -190,7 +190,7 @@ console.log("erroe",error);
       {/* ✅ Other Images */}
       {subProduct.otherImages?.length > 0 && (
         <div className="other-images">
-          <h2>Technical Specification</h2>
+          <h2 class="section-heading">Technical Specification</h2>
           <div className="otherimages-container">
             {subProduct.otherImages.map((group, groupIndex) => (
               <div key={groupIndex} className="image-group">
