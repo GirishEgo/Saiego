@@ -4,14 +4,19 @@ import "./CatalogPage.css";
 const CatalogPage = () => {
   const pdfs = [
     {
-      title: "Space Heaters and Stem Thermostats",
-      pdfUrl: "/catalogs/GIRISH EGO PANEL HEATING CATALOGS.pdf",
-      imageUrl: "/catalogs/GEC-CAT-21-01-23-pages-images-0.jpg",
+      title: "Saiego New Catalogue",
+      pdfUrl: "/catalogs/SaiegoCatalogs.pdf",
+      imageUrl: "/catalogs/SaiegoPDFS (1).jpg",
     },
     {
-      title: "Enclosure Heaters , Din Rail Thermostats and Hygrostats",
-      pdfUrl: "/catalogs/GIRISH-EGO-CONTROLLING CATALOGS.pdf",
-      imageUrl: "/catalogs/GEC New Catalog 04 02 2025AA-pages-1.jpg",
+      title: "Saiego Capillary Thermostat Catalogue",
+      pdfUrl: "/catalogs/SaiegoCatalogs (2).pdf",
+      imageUrl: "/catalogs/SaiegoPDFS (2).jpg",
+    },
+    {
+      title: "Energy Regulator Catalogue",
+      pdfUrl: "/catalogs/SaiegoCatalogs (3).pdf",
+      imageUrl: "/catalogs/SaiegoPDFS (3).jpg",
     },
   ];
 
@@ -27,7 +32,7 @@ const CatalogPage = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // trigger on mount
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -38,11 +43,16 @@ const CatalogPage = () => {
         <div className="pdf-item" key={index}>
           <h3>{pdf.title}</h3>
           <div className="catalog-holder">
-            <img
-              src={pdf.imageUrl}
-              alt={`Preview of ${pdf.title}`}
-              className="pdf-preview-image"
-            />
+            {/* Preview opens PDF in new tab */}
+            <a href={pdf.pdfUrl} target="_blank" rel="noopener noreferrer">
+              <img
+                src={pdf.imageUrl}
+                alt={`Preview of ${pdf.title}`}
+                className="pdf-preview-image"
+              />
+            </a>
+
+            {/* Actual download button */}
             <a href={pdf.pdfUrl} download className="download-btn">
               Download PDF
             </a>
