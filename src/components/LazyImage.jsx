@@ -15,6 +15,9 @@ const LazyImageContent = ({ src, alt, className }) => {
       onLoad={() => setLoaded(true)}
       onError={() => setError(true)}
       loading="lazy"
+      title={alt}
+      width="auto"
+      height="auto"
     />
   );
 };
