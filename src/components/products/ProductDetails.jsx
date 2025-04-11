@@ -197,13 +197,14 @@ const ProductDetails = () => {
                 <h3 className="group-heading">{group.heading}</h3>
                 <div className="group-images masonry-layout">
                   {group.images.map((img, index) => (
-                    <img
-                      key={index}
-                      src={img}
-                      alt={`${group.heading} - ${index + 1}`}
-                      className="gallery-image"
-                      onClick={() => setActiveImage(img)}
-                    />
+                    <div onClick={() => setActiveImage(img)}  >
+                      <LazyImage
+                        key={index}
+                        src={img}
+                        alt={`${group.heading} - ${index + 1}`}
+                        className="gallery-image"
+                      />
+                    </div>
                   ))}
                 </div>
               </div>
