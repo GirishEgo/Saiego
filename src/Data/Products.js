@@ -26,8 +26,8 @@ const Products = [
           "DIN rail mounted",
           "Quick installation",
         ],
-        description:
-          "Prevents condensation and maintains minimum temperature with an aluminum body for even heat distribution. Easy installation with pressure clamp connectors and mounting holes.",
+        description: "This product is designed to stop condensation from forming, which helps keep the surface dry and safe. It also helps maintain a steady minimum temperature to protect whatever it’s being used with. The body is made of aluminum, which spreads heat evenly across the surface, making it more efficient. Installing it is simple and quick because it comes with pressure clamp connectors and ready-made mounting holes that make it easy to fix in place.",
+
         workingH: "Working Principle & Features",
         workingDetails: [
           "These heaters are used in enclosures where damage from condensation must be prevented, or where the temperature must be maintained above a minimum value.",
@@ -61,7 +61,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemension",
             images: [
               async () =>
                 (
@@ -110,8 +110,8 @@ const Products = [
               "Built-in Thermostat",
               "Stainless steel cover",
             ],
-            description:
-              "'GIRISHEGO' Combi Space Heaters with built-in capillary Thermostat are ideal for prevention of condensation, corrosion & Leakage currents in L.T. & H.T. Switchgear panel boards/electronic instruments & panels etc.",
+            description: "The 'SAIEGO' Combi Space Heaters come with a built-in capillary thermostat, making them a reliable solution for protecting sensitive electrical and electronic equipment. These heaters are specially designed to prevent the build-up of condensation, which can lead to corrosion, moisture-related damage, and leakage currents. They are ideal for use in both Low Tension (L.T.) and High Tension (H.T.) switchgear panel boards, as well as in electronic instruments, control panels, and similar applications. By maintaining a dry and controlled environment, these heaters help improve equipment lifespan, enhance safety, and ensure stable performance under varying environmental conditions.\n\n",
+
             workingH: "Working Principle & Features",
             workingDetails: [
               "In this, a long life and sturdy extruded aluminium sheathed, mica insulated heater and an accurate capillary thermostat are place in a Rust resistant steel perforated body.  ",
@@ -153,7 +153,7 @@ const Products = [
                 ],
               },
               {
-                heading: "Diagram",
+                heading: "Diemensions",
                 images: [
                   async () =>
                     (
@@ -209,7 +209,7 @@ const Products = [
               "Withstands mechanical shock and vibration",
               "Very good insulation resistance",
             ],
-            description:"'SAIEGO' make SJ-III model is a slim & Heavy duty space heater, it is encased in a specially designed Aluminum broad heat sink channel having a Perforated Protection cover for evenly distributed temperature within the enclosure/cabinet. It is highly recommended for continuous use for prevention of condensation, corrosion, Leakage currents in L.T. & H.T. Switchgears, Panel boards / electronic instruments & panels etc. Its is specially designed for continuos use.",
+            description: "The 'SAIEGO' SJ-III model is a slim and heavy-duty space heater, built for long-lasting and efficient performance. It features a specially designed broad aluminum heat sink channel that helps spread heat evenly inside enclosures or cabinets. The unit is covered with a perforated protective shield to ensure safe and consistent heat distribution. This heater is ideal for continuous use and is highly recommended for preventing issues like condensation, corrosion, and leakage currents. It is perfect for use in both Low Tension (L.T.) and High Tension (H.T.) switchgear panels, control boards, and sensitive electronic instruments where reliability and safety are essential.",
             workingH: "Working Principle & Features",
             workingDetails: [
               "Heater body is made of anodized heat sink grade extruded aluminium for fast dissipation of heat into air.",
@@ -245,7 +245,7 @@ const Products = [
                 ],
               },
               {
-                heading: "Diagram",
+                heading: "Diemensions",
                 images: [
                   async () =>
                     (
@@ -295,8 +295,8 @@ const Products = [
           "Din Rail & Screw mounting Ready to use with Strain relief",
           "Maintenance Free",
         ],
-        description:
-          "Compact convection heater prevents condensation, temperature fluctuations, and frost in hazardous areas.",
+        description: "This compact convection heater is specifically designed to operate in hazardous areas, providing reliable protection against condensation, temperature swings, and frost. It helps maintain a stable internal climate by gently circulating warm air within the enclosure, preventing moisture build-up that could lead to damage or malfunctions. By avoiding sudden temperature changes and frost formation, it ensures the safe and efficient operation of electrical and electronic equipment. Its small and space-saving design allows for easy installation in tight or confined spaces, making it ideal for use in industrial cabinets, control panels, and other sensitive environments where safety and temperature control are critical.",
+
         workingH: "Working Principle & Features",
         workingDetails: [
           "Compact convection heater is for use in hazardous areas for prevention of formation of condensation, temperature fluctuations, and for protection against frost in control and switch cabinets, as well as in measuring equipment.",
@@ -327,7 +327,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               async () =>
                 (
@@ -364,6 +364,250 @@ const Products = [
         ],
 
       },
+
+      //aluminum heaters data
+      {
+        id: "Aluminium-Space-Heaters",
+        title: "Aluminium Space Heaters ",
+        productImg: async () =>
+          (
+            await import(
+              "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (1).jpg"
+            )
+          ).default,
+        application: "For Panel Boards & Switchgear Industries",
+        models: ["SH", "SHISS", "SHIL"],
+        featuresH: "Features",
+        features: [
+          "Aluminum body for fast dissipation of heat into air",
+          "Perforated cover for protection",
+          "Quick and uniform heating",
+          "Withstands mechanical shock and vibration",
+          "Very good insulation resistance",
+        ],
+        description: "The 'SAIEGO' Aluminium Space Heaters are specially designed to prevent condensation, corrosion, and leakage currents in electrical systems. These heaters are ideal for use in both Low Tension (L.T.) and High Tension (H.T.) switchgear panels, control boards, and electronic instruments. By keeping the internal environment dry and maintaining a stable temperature, these heaters help protect sensitive equipment from moisture damage and electrical faults. Their aluminum construction ensures efficient and even heat distribution. Whether in industrial panels or delicate electronic systems, the SAIEGO space heaters play a key role in improving equipment reliability, extending lifespan, and ensuring smooth, uninterrupted performance.",
+
+        workingH: "Working Principle & Features",
+        workingDetails: [
+          "Body is made of anodized heat sink grade extruded aluminium for fast dissipation of heat into air. High quality resistance heating element is insulated with mica for optimum insulation even in extreme humid conditions.",
+          "Resistance element and insulation are held tight in between aluminium parts and squeezed for quick and uniform heating. Heater can withstand much higher degree of mechanical shock and vibration. ",
+          "Elevated body provides for easy passage of heat directly to air, without heating panel body. An optional Perforated cover made of Powder coated M.S. sheet can be provided for extra safety",
+        ],
+        tests: [
+          // "High Voltage Test at 2kV/1Min",
+          // "Insulation Resistance > 10 Mega Ohms",
+          // "Power Rating within ±5%",
+        ],
+        intended: "Intended Use",
+        uses: [
+          "Prevention of condensation",
+          "corrosion",
+          "of Leakage currents in LT. & H.T. Switchgear panel boards, enclosures, switch boards, & electronic instruments etc",
+        ],
+        Installation: "Installation",
+        instructions: [
+          "In END FIXING type model one fixing oval holes of 6.5mmX22.5mm and two 6.5mm Holes are provided at each end.",
+          "In SIDE & MIDDLE FIXING type models one fixing oval hole of 6.5mmX22.5mm and Two 6.5mm Holes are provided in a bracket at Side Middle of the heater.",
+          "Installation can be done in vertical or horizontal position although horizontal mounting is preferred. Distance from surface of panel should be at least 10mm. and distance from plastic parts should be at least 50mm. ",
+          "Connection wire must be on the side or below to avoid warming up of the wire.",
+        ],
+        remark: "Remark",
+        recommendation:
+          "It is recommended to use a 'GIRISHEGO' thermostat to control the heater.",
+        otherImages: [
+          
+          {
+            heading: "Diemensions",
+            images: [
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (3).png"
+                  )
+                ).default,
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (9).png"
+                  )
+                ).default,
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (10).png"
+                  )
+                ).default,
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (13).png"
+                  )
+                ).default,
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (14).png"
+                  )
+                ).default,
+
+
+            ],
+          },
+          {
+            heading: "Also Avalible",
+
+            images: [
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (2).jpg"
+                  )
+                ).default,
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (4).jpg"
+                  )
+                ).default,
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (5).jpg"
+                  )
+                ).default,
+              
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (1).jpg"
+                  )
+                ).default,
+            ],
+          },
+          {
+            heading: "Technical Data",
+            images: [
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (5).png"
+                  )
+                ).default,
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (6).png"
+                  )
+                ).default,
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (15).png"
+                  )
+                ).default,
+            ],
+          },
+         
+        ],
+      },
+
+      // CHPFH1
+      {
+        id: "Compact-High-Performance-Fan-Heater",
+        title: "Compact High Performance Fan Heater",
+        productImg: async () =>
+          (
+            await import(
+              "../assets/ptoductsImg/Compact High Performance Fan Heater images/img (1).png"
+            )
+          ).default,
+        application: "",
+        models: ["SCS0130 700W/900W/1200W"],
+        featuresH: "Features",
+        features: [
+          "Compact Design",
+          "Double Insulated",
+          "Din Rail & Screw mounting",
+          "High Heating Performance",
+          "Inbuilt Thermostat (Optional)",
+        ],
+        description: "This high-performance fan heater is designed to effectively prevent condensation, frost build-up, and uneven temperatures inside electrical enclosures or control panels. It helps maintain a stable and dry environment by ensuring continuous and even distribution of warm air. The heater features double insulation for added safety, along with contact protection to prevent accidental touches, making it safer to operate in sensitive areas. It also comes with an optional built-in thermostat that allows temperature regulation based on specific needs. Ideal for use in various industrial and electronic applications, this fan heater helps enhance equipment performance and reliability over time.",
+
+        workingH: "Working Principle & Features",
+        workingDetails: [
+          "The compact, high-performance fan heater prevents condensation and frost while ensuring evenly distributed interior air temperature in enclosures containing electrical or electronic components.",
+          "Its plastic housing offers double insulation and contact protection. The fan heater is available with an integrated thermostat for precise temperature control.",
+          "Designed as a stationary unit, the SCS 0130 is intended for wall mounting, while the SCS 0030 is recommended for installation at the bottom of the enclosure.",
+        ],
+        tests: [],
+        intended: "",
+        uses: [],
+        Installation: "",
+        instructions: [],
+        remark: "",
+        recommendation: "",
+        otherImages: [
+          {
+            heading: "Technical Data",
+            images: [
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/Compact High Performance Fan Heater images/img (6).png"
+                  )
+                ).default,
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/Compact High Performance Fan Heater images/img (3).png"
+                  )
+                ).default,
+            ],
+          },
+          {
+            heading: "Connection Diagram",
+            images: [
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/Compact High Performance Fan Heater images/img (5).png"
+                  )
+                ).default,
+
+
+            ],
+          },
+          {
+            heading: "Diemensions",
+            images: [
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/Compact High Performance Fan Heater images/img (2).png"
+                  )
+                ).default,
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/Compact High Performance Fan Heater images/img (4).png"
+                  )
+                ).default,
+            ],
+          },
+         
+          // {
+          //   heading: "Aslo Avelable",
+          //   images: [
+          //     async () =>
+          //       (
+          //         await import(
+          //           "../assets/ptoductsImg/Compact High Performance Fan Heater images/img (5).png"
+          //         )
+          //       ).default,
+          //   ],
+          // },
+        ],
+      },
      
       //fan heaters data
       {
@@ -385,8 +629,7 @@ const Products = [
           "Temperature safety cut-out",
           "DIN rail mounted",
         ],
-        description:
-          "Compact high-performance fan heater prevents condensation and ensures even air distribution in enclosures. Available with or without a fan.",
+        description: "This compact, high-performance fan heater is specially designed to prevent condensation and maintain a stable temperature inside electrical enclosures and control cabinets. It ensures even air circulation, which helps avoid moisture build-up that could damage sensitive equipment. The heater is available in two options — with or without a built-in fan, depending on your specific needs. The fan-assisted model offers faster and more efficient heat distribution, while the fanless version provides silent operation for quieter environments. Its small size makes it easy to install, even in tight spaces, making it an excellent choice for maintaining dry and safe conditions in industrial and electronic applications.",
         workingH: "Working Principle & Features",
         workingDetails: [
           "The compact high-performance fan heater prevents formation of condensation in control or systems and provides an evenly distributed interior air temperature in enclosures.",
@@ -424,7 +667,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
            
             images: [
               async () =>
@@ -464,7 +707,7 @@ const Products = [
         productImg: async () =>
           (
             await import(
-              "../assets/ptoductsImg/space_Heaters_Img/spaceheaters.jpeg"
+              "../assets/ptoductsImg/aluminumheratersimg/alunimu-heaters-Img (6).jpg"
             )
           ).default,
         application: "For Panel Boards & Switchgear Industries",
@@ -476,8 +719,7 @@ const Products = [
           "Withstands mechanical shock and vibration",
           "Very good insulation resistance",
         ],
-        description:
-          "'GIRISHEGO' Range of Space Heaters are ideal for prevention of condensation, corrosion & Leakage currents in LT. & H.T. Switchgear panel boards/ electronic instruments & panels etc.",
+        description: "The 'SAIEGO' range of space heaters is designed to effectively prevent issues caused by moisture, such as condensation, corrosion, and leakage currents. These heaters are perfect for use in Low Tension (L.T.) and High Tension (H.T.) switchgear panel boards, as well as in electronic instruments and control panels. By maintaining a consistent temperature and keeping the internal area dry, they help protect sensitive components from damage, improve equipment life, and reduce maintenance needs. With easy installation and efficient performance, SAIEGO space heaters are a reliable solution for keeping enclosures safe and operational in various industrial and electrical environments.",
         workingH: "Working Principle & Features",
         workingDetails: [
           "Specially developed design with a stainless steel sheathed cartridge heating element in a perforated sheet metal enclosure.",
@@ -529,7 +771,7 @@ const Products = [
           },
 
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               async () =>
                 (
@@ -554,7 +796,7 @@ const Products = [
         productImg: async () =>
           (
             await import(
-              "../assets/ptoductsImg/boxtypeheatersimg/boxtypespace.jpeg"
+              "../assets/ptoductsImg/boxtypeheatersimg/boxtypespace.jpg"
             )
           ).default,
         application: "For Panel Boards & Switchgear Industries",
@@ -566,8 +808,7 @@ const Products = [
           "Withstands mechanical shock and vibration",
           "Very good insulation resistance",
         ],
-        description:
-          "'GIRISHEGO' Range of Space Heaters are ideal for prevention of condensation, corrosion. Leakage currents in LT. & H.T. Switchgear panel boards/ electronic instruments & panels etc.",
+        description: "The 'SAIEGO' range of space heaters is specially designed to prevent condensation, corrosion, and leakage currents in electrical systems. These heaters are ideal for use in Low Tension (L.T.) and High Tension (H.T.) switchgear panel boards, as well as in electronic instruments, control panels, and enclosures. By maintaining a consistent internal temperature and keeping moisture away, these heaters help protect delicate electrical components from damage. This not only improves the reliability and performance of the equipment but also extends its lifespan. Compact, efficient, and easy to install, SAIEGO space heaters are a dependable choice for a wide range of industrial applications.",
         workingH: "Working Principle & Features",
         workingDetails: [
           "Specially developed design with a stainless steel sheathed cartridge heating element in a perforated sheet metal enclosure.",
@@ -618,7 +859,7 @@ const Products = [
           },
 
           {
-            heading: "wiring diagram",
+            heading: "wiring Diemensions",
             images: [
               async () =>
                 (
@@ -658,8 +899,7 @@ const Products = [
           "Dynamic Heating",
           "Energy Saving & Compact",
         ],
-        description:
-          "Small heaters prevent condensation and maintain minimum operating temperature in compact enclosures like camera housings.",
+        description: "Small heaters are designed to prevent condensation and maintain a minimum operating temperature inside compact and enclosed spaces, such as camera housings and other sensitive electronic equipment. In environments where temperature drops or humidity is present, condensation can easily form, leading to moisture buildup and potential damage to internal components. These compact heaters help regulate the temperature, keeping the enclosure dry and ensuring the equipment works efficiently and reliably. They are especially useful in outdoor or industrial settings where weather and environmental factors can affect device performance. Easy to install and energy-efficient, they provide consistent thermal protection.",
         workingH: "Working Principle & Features",
         workingDetails: [
           "These small heaters are designed to ensure prevention of condensation along with minimum operating temperature in small enclosures like camera enclosures, etc.",
@@ -692,7 +932,7 @@ const Products = [
           },
 
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               async () =>
                 (
@@ -746,8 +986,7 @@ const Products = [
                     "Colour Coded Temperature knobs",
                     "Din Rail Mountable",
                   ],
-                  description:
-                    "'GIRISHEGO' thermostats are ideal for temperature control of space heaters used in LT & HT switchgear & panel boards etc.",
+        description: "'SAIEGO' thermostats are specially designed for accurate temperature control in space heaters used within Low Tension (LT) and High Tension (HT) switchgear systems and panel boards. These thermostats help maintain the right operating temperature by switching the heater on or off as needed, ensuring consistent performance and protecting electrical components from issues caused by temperature fluctuations. They are highly reliable for use in industrial environments where precise temperature management is essential to prevent condensation, corrosion, and electrical failures. Easy to mount and adjust, SAIEGO thermostats offer an efficient solution for long-term temperature regulation in enclosed electrical setups.",
                   workingH: "Thermostat (NC):",
                   workingDetails: [
                     "Thermostat opens on temperature rise - for regulating heaters or for switching signal devices. Čomes with red temperature knob.",
@@ -824,9 +1063,8 @@ const Products = [
                     "Each with wide adjustable temperature range",
                     "Actual size DIN rail mountable",
                   ],
-                  description:
-                    "ZSR-011 features two separate thermostats for independent heating and cooling control, with wide adjustment ranges and color-coded functions.",
-                  workingH: "Principle of Operation",
+                  description: "The ZSR-011 model is equipped with two separate thermostats, allowing independent control for both heating and cooling functions within an electrical enclosure or panel. This dual-control system ensures that the temperature stays within a safe and desired range, preventing overheating or excessive cooling. Each thermostat has a wide adjustment range, giving users flexibility to set precise temperature limits according to their needs. The thermostats also come with color-coded controls – one for heating and the other for cooling – making it easy to identify and operate. This makes the ZSR-011 an ideal choice for efficient and reliable climate regulation.",
+                 workingH: "Principle of Operation",
                   workingDetails: [
                     "The ZSR-011 houses two separate thermostats, allowing the independent control of heating and cooling or other equipment. Both thermostats offer wide adjustment ranges and are color coded for easy function recognition.",
                   ],
@@ -859,7 +1097,7 @@ const Products = [
                       ],
                     },
                     {
-                      heading: "Diagram",
+                      heading: "Diemensions",
                       images: [
 
                         async () =>
@@ -900,8 +1138,7 @@ const Products = [
                     "High switching capacity",
                     "DIN rail mountable",
                   ],
-                  description:
-                    "MSFR-012 regulates enclosure humidity by activating heaters at set levels to prevent condensation and corrosion. Can also control cooling fans and warning devices.",
+                  description: "The MSFR-012 is a smart humidity controller designed to regulate moisture levels inside enclosures or panel boards. It works by automatically activating space heaters when the humidity goes above a certain level. This helps to prevent condensation, which can cause problems like corrosion, rust, or electrical leakage. By keeping the internal environment dry, the MSFR-012 ensures the safe and smooth operation of sensitive electronic equipment. In addition to heaters, it can also be used to control cooling fans or warning devices, making it a versatile solution for protecting electrical systems in changing climate conditions.",
                   workingH: "Principle of Operation",
                   workingDetails: [
                     "The MSFR-012 is designed to control the relative air humidity inside of enclosures. When connected to an enclosure heater (de-humidifier), it will turn the heater on at the set humidity level in order to raise the dew point.",
@@ -929,7 +1166,7 @@ const Products = [
                       ],
                     },
                     {
-                      heading: "Diagram",
+                      heading: "Diemensions",
                       images: [
                         async () =>
                           (
@@ -963,8 +1200,7 @@ const Products = [
                     "Clip Fixing",
                     "Temperature-compensated",
                   ],
-                  description:
-                    "ESFR-012 electronic hygrostat controls humidity in enclosures by activating heaters to prevent condensation. Features an LED indicator for operation status.",
+                  description:"The ESFR-012 is an electronic hygrostat specially designed to control humidity levels inside enclosures or cabinets. When the humidity rises above a certain point, it automatically turns on connected heaters to reduce moisture and prevent condensation, which can lead to corrosion, rust, or short circuits in electrical equipment. This helps in protecting sensitive components and ensures long-lasting performance. The device also comes with a built-in LED indicator that clearly shows when the hygrostat is operating, making it easy to monitor the status at a glance. It’s a reliable and efficient solution for moisture management in control panels and switchgear.",
                   workingH: "Principle of Operation",
                   workingDetails: [
                     "The ESFR-012 electronic hygrostat senses the relative humidity in an enclosure with electric/electronic components and turns on a heater at the set point, helping prevent the formation of condensation in the enclosure.",
@@ -992,7 +1228,7 @@ const Products = [
                       ],
                     },
                     {
-                      heading: "Diagram",
+                      heading: "Diemensions",
                       images: [
                         async () =>
                           (
@@ -1050,8 +1286,7 @@ const Products = [
                     "DIN rail mounted",
                     "Temperature-compensated",
                   ],
-                  description:
-                    "Electronic sensor controls heater and fan operation based on ambient temperature and humidity.",
+                  description: "This electronic sensor is designed to automatically control the operation of heaters and fans based on the surrounding temperature and humidity levels. It continuously monitors the environment inside enclosures, panels, or cabinets, and activates the heater when it's too cold or humid, helping to prevent condensation, corrosion, or electrical faults. When it gets too warm, the sensor turns on the fan to cool down the internal space. This smart control system helps maintain a stable and safe environment for sensitive electrical or electronic equipment, ensuring better performance and longer lifespan.",
                   workingH: "Principle of Operation",
                   workingDetails: [
                     "Electronic temperature and humidity sensor can control the on & off of the heater and fan according to ambient temperature and relative humidity.",
@@ -1078,7 +1313,7 @@ const Products = [
                       ],
                     },
                     {
-                      heading: "Diagram",
+                      heading: "Diemensions",
                       images: [
                         async () =>
                           (
@@ -1137,8 +1372,7 @@ const Products = [
                     "Changeover contact",
                     "DIN rail mounted",
                   ],
-                  description:
-                    "ET 011 electronic thermostat regulates DC 24V equipment with low hysteresis, controlling heating, cooling, and signal devices through a change-over contact.",
+                  description: "The ET 011 electronic thermostat is specially designed to regulate DC 24V equipment with high precision and low hysteresis. It efficiently controls heating, cooling, and signal devices by using a change-over contact, which automatically switches based on the surrounding temperature. This thermostat ensures that the internal environment of enclosures or panels remains stable and safe, helping to prevent issues like overheating, condensation, or frost. Its electronic sensing mechanism provides accurate temperature control, making it suitable for use in switchgear, control cabinets, and electronic systems. Overall, it offers reliable, energy-efficient temperature management in compact and sensitive setups.",
                   workingH: "Principle of Operation",
                   workingDetails: [
                     "Electronic thermostat for regulating high-performance DC 24V equipment. Heating or cooling appliances as well as signal devices can be switched via the potential-free change-over contact.",
@@ -1166,7 +1400,7 @@ const Products = [
                       ],
                     },
                     {
-                      heading: "Diagram",
+                      heading: "Diemensions",
                       images: [
                         async () =>
                           (
@@ -1221,8 +1455,7 @@ const Products = [
                     "High switching capacity",
                     "DIN rail mounted",
                   ],
-                  description:
-                    "Electronic thermostats control heater operation based on ambient temperature.",
+                  description: "Electronic thermostats are smart devices that automatically control the operation of heaters by sensing the ambient temperature around them. When the temperature drops below a set level, the thermostat activates the heater to warm up the area. Once the desired temperature is reached, it switches the heater off, helping maintain a stable and comfortable environment. This not only ensures energy efficiency, but also protects sensitive equipment from condensation, frost, or overheating. These thermostats are commonly used in electrical enclosures, switchgear panels, and control cabinets to keep everything working smoothly and safely.",
                   workingH: "Principle of Operation",
                   workingDetails: [
                     "Electronic Thermostats can control the on & off of the heater according to the ambient temperature.",
@@ -1249,7 +1482,7 @@ const Products = [
                       ],
                     },
                     {
-                      heading: "Diagram",
+                      heading: "Diemensions",
                       images: [
                         async () =>
                           (
@@ -1301,9 +1534,8 @@ const Products = [
                   models: ["SFTO-011", "SFTS-011"],
                   featuresH: "features",
                   features: ["Small Size", "Default Temp. Setting ", "Easy to install"],
-                  description:
-                    "Tamperproof thermostats regulate heaters or signal devices based on temperature changes, with pre-set contact breakers for SFTO-011 and contact makers for SFTS-011.",
-                  workingH: "Tamperproof (Pre-set) Thermostat SFTO-011",
+                  description: "Tamperproof thermostats are specially designed to control heaters or signal devices based on changes in surrounding temperature. These thermostats come with factory-set temperature limits, meaning users cannot accidentally change the settings — making them ideal for secure or sensitive applications. The SFTO-011 model includes a contact breaker, which automatically disconnects the heater when the temperature gets too high, helping prevent overheating. On the other hand, the SFTS-011 model acts as a contact maker, turning on devices like signal indicators when the temperature rises. These thermostats are perfect for environments where safety, reliability, and tamper resistance are essential.",
+                 workingH: "Tamperproof (Pre-set) Thermostat SFTO-011",
                   workingDetails: [
                     "Contact breaker/NC (red casing) for regulating heaters or for switching signal devices when temperature has fallen below the minimum value. The contact opens when temperature is rising.",
                   ],
@@ -1328,11 +1560,6 @@ const Products = [
                               "../assets/ptoductsImg/TEMPER-PROOF MECHANICAL THERMOSTAT IMAGES/IMGS (2).png"
                             )
                           ).default,
-                      ],
-                    },
-                    {
-                      heading: "Product View",
-                      images: [
                         async () =>
                           (
                             await import(
@@ -1342,7 +1569,7 @@ const Products = [
                       ],
                     },
                     {
-                      heading: "Wiring Diagram",
+                      heading: "Diemensions",
                       images: [
                         async () =>
                           (
@@ -1356,7 +1583,12 @@ const Products = [
                               "../assets/ptoductsImg/TEMPER-PROOF MECHANICAL THERMOSTAT IMAGES/IMGS (5).png"
                             )
                           ).default,
-                        async () =>
+                      ],
+                    },
+                    {
+                      heading: "Wiring Diagram",
+                      images: [
+                      async () =>
                           (
                             await import(
                               "../assets/ptoductsImg/TEMPER-PROOF MECHANICAL THERMOSTAT IMAGES/IMGS (6).png"
@@ -1386,8 +1618,7 @@ const Products = [
                     "High switching capacity",
                     "Clip Fixing",
                   ],
-                  description:
-                    "Two thermostats in one casing for independent control of heaters and cooling equipment with temperature offset, featuring tamper-proof pre-set contacts.",
+                  description: "This device features two thermostats housed in a single casing, allowing you to independently control both heating and cooling equipment. One thermostat can be set to activate heaters when the temperature drops, while the other can trigger cooling systems or fans when it rises. It also comes with a built-in temperature offset to ensure accurate switching between heating and cooling without overlap. The thermostats include tamper-proof, pre-set contacts, meaning they are factory-set and cannot be easily adjusted, which helps maintain safety and consistency in sensitive environments like switchgear panels or electronic enclosures.",
                   workingH: "Two thermostats in one casing:",
                   workingDetails: [
                     "Tamper-proof (pre-set) thermostat/contact breaker (NC) for regulating heaters or switching signal devices when the temperature falls below the minimum value. The contact opens when the temperature rises.",
@@ -1410,18 +1641,24 @@ const Products = [
                         async () =>
                           (
                             await import(
-                              "../assets/ptoductsImg/TEMPER-PROOF DUAL NO-NC THERMOSTAT IMAGES/IMGS (2).png"
+                              "../assets/ptoductsImg/TEMPER-PROOF DUAL NO-NC THERMOSTAT IMAGES/IMGS (1).png"
+                            )
+                          ).default,
+                        async () =>
+                          (
+                            await import(
+                              "../assets/ptoductsImg/TEMPER-PROOF DUAL NO-NC THERMOSTAT IMAGES/IMGS (5).png"
                             )
                           ).default,
                       ],
                     },
                     {
-                      heading: "Product View",
+                      heading: "Dimensional",
                       images: [
                         async () =>
                           (
                             await import(
-                              "../assets/ptoductsImg/TEMPER-PROOF DUAL NO-NC THERMOSTAT IMAGES/IMGS (1).png"
+                              "../assets/ptoductsImg/TEMPER-PROOF DUAL NO-NC THERMOSTAT IMAGES/IMGS (4).png"
                             )
                           ).default,
                       ],
@@ -1432,15 +1669,16 @@ const Products = [
                         async () =>
                           (
                             await import(
-                              "../assets/ptoductsImg/TEMPER-PROOF DUAL NO-NC THERMOSTAT IMAGES/IMGS (4).png"
+                              "../assets/ptoductsImg/TEMPER-PROOF DUAL NO-NC THERMOSTAT IMAGES/IMGS (2).png"
                             )
                           ).default,
-                        async () =>
-                          (
-                            await import(
-                              "../assets/ptoductsImg/TEMPER-PROOF DUAL NO-NC THERMOSTAT IMAGES/IMGS (5).png"
-                            )
-                          ).default,
+                       
+                       
+                      ],
+                    },
+                    {
+                      heading: "Connection Diagram",
+                      images: [
                         async () =>
                           (
                             await import(
@@ -1473,8 +1711,7 @@ const Products = [
           "High switching capacity",
           "Clip mounted",
         ],
-        description:
-          "Compact mechanical thermostat for regulating and monitoring heaters in hazardous areas. Features high accuracy, long lifespan, and direct control of heaters.",
+        description: "This compact mechanical thermostat is designed for reliable regulation and monitoring of heaters in hazardous and sensitive areas such as control panels and enclosures. It offers high switching accuracy and a long operational lifespan, making it ideal for continuous industrial use. With its direct heater control capability, it eliminates the need for additional relays or controllers, simplifying installation and reducing system complexity. The thermostat is built for durability and consistent performance in environments prone to temperature fluctuations or condensation, helping to maintain optimal operating conditions and prevent damage to sensitive electrical or electronic components.",
         workingH: "Principle of Operation",
         workingDetails: [
           "Compact small mechanical thermostat for temperature regulation and monitoring of heaters, for example in transmitter cabinets, control panels, and measuring equipment which are deployed in areas with explosion hazard.",
@@ -1509,7 +1746,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               // async () =>
               //   (
@@ -1571,7 +1808,7 @@ const Products = [
           "All Brass Terminals",
           "Extra Heavy contacts",
         ],
-        description: "‘Saiego’ range of Energy regulators are designed to control the heat from zero to full by simply turning the knob.These are used in OTG., drying cabinets, wash boilers, boiling rings, hot plates, grills, boilers, Thermoplastic / Thermosetting moulding machines, oil baths, switchgear & panel board and other domestic, commercial & industrial heating equipments.",
+        description: "The ‘Saiego’ range of Energy Regulators is engineered to provide precise and efficient heat control, allowing users to easily adjust the heating output from zero to maximum with a simple turn of the knob. These regulators are widely used across various applications, including OTGs, drying cabinets, wash boilers, boiling rings, hot plates, grills, boilers, and specialized industrial machinery such as thermoplastic and thermosetting molding machines, oil baths, and switchgear and panel boards. Their versatility makes them ideal for use in domestic, commercial, and industrial heating equipment, offering reliable performance, energy efficiency, and easy integration into existing systems for optimal temperature regulation.",
         workingH: "Principle & Features",
         workingDetails: [
           ": These have snap action switch which opens and closes the load circuit at precise time intervals.",
@@ -1610,7 +1847,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
              
               async () =>
@@ -1677,7 +1914,7 @@ const Products = [
           "All Brass Terminals",
           "Extra Heavy contacts",
         ],
-        description: "‘Saiego’ range of Energy regulators are designed to control the heat from zero to full by simply turning the knob.These are used in OTG., drying cabinets, wash boilers, boiling rings, hot plates, grills, boilers, Thermoplastic / Thermosetting moulding machines, oil baths, switchgear & panel board and other domestic, commercial & industrial heating equipments.",
+        description: "The ‘Saiego’ range of Energy Regulators is thoughtfully designed to provide seamless and precise control of heat output, ranging from zero to full intensity, with just a simple turn of the knob. These high-performance regulators are highly versatile and widely utilized across a variety of heating applications. They are commonly used in OTGs (Oven Toaster Grills), drying cabinets, wash boilers, boiling rings, hot plates, grills, and industrial boilers. Additionally, they are well-suited for thermoplastic and thermosetting moulding machines, oil baths, switchgear panels, and control boards. These energy regulators are ideal for domestic, commercial, and industrial heating systems, ensuring efficiency and dependable temperature regulation.",
         workingH: "Principle & Features",
         workingDetails: [
           "These have snap action switch which opens and closes the load circuit at precise time intervals.",
@@ -1716,7 +1953,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               async () =>
                 (
@@ -1783,7 +2020,7 @@ const Products = [
           "Heavy duty contacts",
           "Large dial & knob",
         ],
-        description: "‘Saiego’ range of Energy regulators are designed to control the heat from zero to full by simply turning the knob.These are used in OTG., drying cabinets, wash boilers, boiling rings, hot plates, grills, boilers, Thermoplastic / Thermosetting moulding machines, oil baths, switchgear & panel board and other domestic, commercial & industrial heating equipments.",
+        description: "The ‘Saiego’ range of Energy Regulators is engineered to provide precise and efficient heat control, allowing users to adjust the temperature from zero to full simply by turning a knob. This intuitive operation makes them highly reliable and user-friendly. These regulators are widely used in various heating applications such as OTGs (oven toaster grills), drying cabinets, wash boilers, boiling rings, hot plates, grills, and industrial boilers. They are also ideal for use in thermoplastic and thermosetting moulding machines, oil baths, switchgear, and panel boards. Designed for domestic, commercial, and industrial environments, Saiego energy regulators ensure consistent performance and dependable heat management across different systems.",
         workingH: "Principle & Features",
         workingDetails: [
           "These have snap action switch which opens and closes the load circuit at precise time intervals.",
@@ -1818,7 +2055,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               async () =>
                 (
@@ -1885,7 +2122,7 @@ const Products = [
           "Precise temperature control",
           "fast reaction time",
         ],
-        description: "COMPAQ model Capillary Thermostats are designed for accurate and reliable temperature control for Domestic appliances, Commercial and Industrial Heating Equipments.This instrument keeps constant within the differential the temperature of any fluid or solids heated by electricity, gas or oil.",
+        description: "The COMPAQ model Capillary Thermostats are specifically designed to deliver precise and dependable temperature regulation for a wide range of applications. These thermostats are ideal for domestic appliances, as well as commercial and industrial heating equipment, ensuring reliable operation and safety. Engineered to maintain the temperature of fluids or solids heated by electricity, gas, or oil, the thermostat works by keeping the temperature constant within a set differential range. Whether used in boilers, ovens, heating tanks, or other heating systems, the COMPAQ Capillary Thermostat ensures consistent thermal control, enhancing performance, safety, and energy efficiency across various environments.",
         workingH: "Principle & Features",
         workingDetails: [
           "A rise in temperature causes the expansion of liquid within the bulb and capillary.",
@@ -1926,7 +2163,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               async () =>
                 (
@@ -2005,7 +2242,7 @@ const Products = [
           "Precise temperature control",
           "fast reaction time",
         ],
-        description: "SUN model Capillary Thermostats are designed for accurate and reliable temperature control for Domestic appliances, Commercial and Industrial Heating Equipments. This instrument keeps constant within the differential the temperature of any fluid or solids heated by electricity, gas or oil.",
+        description: "The SUN model Capillary Thermostats are engineered for precise and dependable temperature regulation, making them suitable for domestic appliances, as well as commercial and industrial heating equipment. These thermostats ensure consistent temperature control by maintaining the desired temperature range within a defined differential. Whether used to control the heating of fluids or solid materials, they function efficiently with systems powered by electricity, gas, or oil. Their robust design and high accuracy make them ideal for applications like boilers, hot plates, ovens, heating baths, and other heating units. The SUN model ensures stable operation, improved safety, and enhanced energy efficiency in various environments.",
         workingH: "Principle & Features",
         workingDetails: [
           "A rise in temperature causes the expansion of liquid within the bulb and capillary. ",
@@ -2046,7 +2283,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               async () =>
                 (
@@ -2126,7 +2363,7 @@ const Products = [
           "Precise temperature control",
           "fast reaction time",
         ],
-        description: "SDLX model Capillary Thermostats are designed for accurate and reliable temperature control for Domestic appliances, Commercial and Industrial Heating Equipments.This instrument keeps constant within the differential the temperature of any fluid or solids heated by electricity, gas or oil.",
+        description: "The SDLX model Capillary Thermostats are expertly designed for accurate and dependable temperature control across a wide range of domestic appliances, as well as commercial and industrial heating equipment. Built for precision, these thermostats maintain a consistent temperature within a defined differential, making them ideal for managing the heating of both fluids and solid materials. Compatible with electric, gas, or oil-based heating systems, the SDLX model ensures stable performance and enhanced safety. Whether used in boilers, ovens, water heaters, drying cabinets, or industrial processing units, this thermostat offers reliable temperature regulation, improving efficiency and extending the life of heating systems.",
         workingH: "Principle & Features",
         workingDetails: [
           "A rise in temperature causes the expansion of liquid within the bulb and capillary. ",
@@ -2164,7 +2401,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               async () =>
                 (
@@ -2234,7 +2471,7 @@ const Products = [
           "Precise temperature control",
           "fast reaction time",
         ],
-        description: " SDLX model Capillary Thermostats are designed for accurate and reliable temperature control for Domestic appliances, Commercial and Industrial Heating Equipments.This instrument keeps constant within the differential the temperature of any fluid or solids heated by electricity, gas or oil.",
+        description: "The SDLX model Capillary Thermostats are engineered for precise and dependable temperature regulation in a variety of applications, including domestic appliances, commercial systems, and industrial heating equipment. These thermostats are built to ensure consistent performance and long-term reliability. They maintain the temperature of fluids or solids within a set differential range, providing excellent control whether the heating source is electricity, gas, or oil. Designed with durability and safety in mind, the SDLX model is ideal for use in boilers, ovens, dryers, water baths, and processing machinery, offering efficient energy usage and enhanced protection against overheating or temperature fluctuations.",
         workingH: "Principle & Features",
         workingDetails: [
           " A rise in temperature causes the expansion of liquid within the bulb and capillary.", 
@@ -2272,7 +2509,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               async () =>
                 (
@@ -2347,8 +2584,7 @@ const Products = [
           "Waterproof Membrane (SDA-284)",
           "Easy to Install",
         ],
-        description:
-          "Pressure compensation plug ensures a protected environment for electrical components by regulating pressure and preventing dust, humidity, and water ingress.",
+        description: "The pressure compensation plug is an essential component designed to safeguard sensitive electrical and electronic enclosures. It effectively regulates internal pressure caused by temperature fluctuations, ensuring that components remain protected from potential damage. By allowing air to flow freely while blocking external contaminants, the plug prevents the ingress of dust, humidity, and water, thereby maintaining a clean and dry internal environment. This is particularly important in harsh or outdoor conditions, where equipment is exposed to extreme weather elements. The plug also helps in avoiding condensation buildup, enhancing the lifespan and reliability of the components inside the enclosure.",
         workingH: "Principle of Operation",
         workingDetails: [
           "It has become more important to provide a protected enclosure environment for crucial electrical and electronic components.",
@@ -2377,7 +2613,7 @@ const Products = [
         recommendation: "",
         otherImages: [
           {
-            heading: "Technical Data",
+            heading: "SDA-084",
             images: [
               async () =>
                 (
@@ -2385,11 +2621,6 @@ const Products = [
                     "../assets/ptoductsImg/PRESSURE COMPENSATION DEVICE images/img (2).png"
                   )
                 ).default,
-            ],
-          },
-          {
-            heading: "Diagram",
-            images: [
               async () =>
                 (
                   await import(
@@ -2399,7 +2630,7 @@ const Products = [
             ],
           },
           {
-            heading: "Wiring Diagram",
+            heading: "SDA-284",
             images: [
               async () =>
                 (
@@ -2415,6 +2646,23 @@ const Products = [
                 ).default,
             ],
           },
+          // {
+          //   heading: "Wiring Diagram",
+          //   images: [
+          //     async () =>
+          //       (
+          //         await import(
+          //           "../assets/ptoductsImg/PRESSURE COMPENSATION DEVICE images/img (4).png"
+          //         )
+          //       ).default,
+          //     async () =>
+          //       (
+          //         await import(
+          //           "../assets/ptoductsImg/PRESSURE COMPENSATION DEVICE images/img (5).png"
+          //         )
+          //       ).default,
+          //   ],
+          // },
         ],      },
       // DOCUMENT POCKET FOR ENCLOSURE
       {
@@ -2435,8 +2683,7 @@ const Products = [
           "Holding for documents on cabinet and enclosure",
           "Easy to install onto cabinet and enclosure",
         ],
-        description:
-          "This versatile document pocket is ideal for storing important documents in enclosures or server cabinets, offering easy mounting and secure attachment in harsh environments.",
+        description: "This versatile document pocket is specifically designed for the convenient and secure storage of essential documents, manuals, or wiring diagrams inside electrical enclosures, control panels, or server cabinets. Built to withstand demanding industrial conditions, it offers a durable and reliable solution for keeping important paperwork organized and protected. The pocket features easy mounting options such as adhesive strips or screws, ensuring quick and firm attachment to metal or plastic surfaces. Its robust construction ensures that documents remain clean, dry, and easily accessible even in harsh environments, making it an ideal accessory for maintenance, troubleshooting, and day-to-day operational use.",
         workingH: "Principle of Operation",
         workingDetails: [
           "This document pocket is suitable for use with any enclosure or server cabinet.",
@@ -2459,34 +2706,41 @@ const Products = [
               async () =>
                 (
                   await import(
-                    "../assets/ptoductsImg/DOCUMENT POCKET FOR ENCLOSURE/img (2).png"
-                  )
-                ).default,
-            ],
-          },
-          {
-            heading: "Diagram",
-            images: [
-              async () =>
-                (
-                  await import(
                     "../assets/ptoductsImg/DOCUMENT POCKET FOR ENCLOSURE/img (3).png"
                   )
                 ).default,
             ],
           },
           {
-            heading: "Wiring Diagram",
+            heading: "Diemensions",
             images: [
+              async () =>
+                (
+                  await import(
+                    "../assets/ptoductsImg/DOCUMENT POCKET FOR ENCLOSURE/img (2).png"
+                  )
+                ).default,
               async () =>
                 (
                   await import(
                     "../assets/ptoductsImg/DOCUMENT POCKET FOR ENCLOSURE/img (4).png"
                   )
                 ).default,
-             
+
             ],
           },
+          // {
+          //   heading: "Wiring Diagram",
+          //   images: [
+          //     async () =>
+          //       (
+          //         await import(
+          //           "../assets/ptoductsImg/DOCUMENT POCKET FOR ENCLOSURE/img (4).png"
+          //         )
+          //       ).default,
+             
+          //   ],
+          // },
         ],      },
       // LED LIGHT FOR PANELBOARD & SWITCHGEAR
       {
@@ -2507,8 +2761,7 @@ const Products = [
           "Long service life non flicker & can start by low voltage",
           "Energy Saving with Opal Cover, Or with Striate Cover",
         ],
-        description:
-          "T5 Fluorescent Cabinet Lamp offering high brightness, long service life, energy saving, and reliable operation at low voltage.",
+        description: "The T5 Fluorescent Cabinet Lamp is an ideal lighting solution designed to deliver high brightness and excellent illumination within electrical enclosures, cabinets, and control panels. Known for its energy efficiency, this lamp consumes significantly less power while providing consistent lighting performance. It features a long service life, reducing maintenance needs and ensuring reliable operation even under low-voltage conditions. The compact and slim design allows for easy installation in tight spaces, while its durable construction makes it suitable for use in industrial and commercial environments. With low heat emission and stable output, the T5 cabinet lamp is perfect for continuous lighting applications.",
         workingH: "",
         workingDetails: [],
         construtionH: "",
@@ -2533,7 +2786,7 @@ const Products = [
             ],
           },
           {
-            heading: "Diagram",
+            heading: "Diemensions",
             images: [
               async () =>
                 (

@@ -11,9 +11,9 @@ const ProductDetails = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [activeImage, setActiveImage] = useState(null);
-console.log("Products Data:", Products);
-console.log("ProductId:", productId, "SubProductId:", subProductId);
-console.log("erroe",error);
+// console.log("Products Data:", Products);
+// console.log("ProductId:", productId, "SubProductId:", subProductId);
+// console.log("erroe",error);
 
 
   useEffect(() => {
@@ -190,20 +190,21 @@ console.log("erroe",error);
       {/* ✅ Other Images */}
       {subProduct.otherImages?.length > 0 && (
         <div className="other-images">
-          <h2>Technical Specification</h2>
+          <h2 class="section-heading">Technical Specification</h2>
           <div className="otherimages-container">
             {subProduct.otherImages.map((group, groupIndex) => (
               <div key={groupIndex} className="image-group">
                 <h3 className="group-heading">{group.heading}</h3>
                 <div className="group-images masonry-layout">
                   {group.images.map((img, index) => (
-                    <img
-                      key={index}
-                      src={img}
-                      alt={`${group.heading} - ${index + 1}`}
-                      className="gallery-image"
-                      onClick={() => setActiveImage(img)}
-                    />
+                    <div onClick={() => setActiveImage(img)}  >
+                      <LazyImage
+                        key={index}
+                        src={img}
+                        alt={`${group.heading} - ${index + 1}`}
+                        className="gallery-image"
+                      />
+                    </div>
                   ))}
                 </div>
               </div>

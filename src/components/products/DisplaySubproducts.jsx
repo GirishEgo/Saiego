@@ -1,102 +1,165 @@
 import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useParams, Link } from "react-router-dom";
 import Control from "../../Data/Control";
 import Product from "../../Data/Products";
 import LazyImage from "../LazyImage";
+import { useLoader } from "../../context/LoaderContext";
 import "./DisplaySubproducts.css";
+import ProductCard from "./ProductCard";
+
+// Animation variants
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5 },
+  },
+};
+
+// Product card component
+// const ProductCard = ({ to, img, title, description }) => (
+//   <motion.div
+//     className="product-card"
+//     variants={itemVariants}
+//     initial="hidden"
+//     animate="visible"
+//   >
+//     <Link to={to} className="product-link">
+//       {img && <LazyImage src={img} alt={title} className="product-image" />}
+//       <h4>{title}</h4>
+//       <p>
+//         {description?.split(" ").slice(0, 20).join(" ")}...
+//         <span className="read-more"> Read more</span>
+//       </p>
+//     </Link>
+//   </motion.div>
+// );
 
 const DisplaySubproducts = () => {
   const { productId } = useParams();
-  const [productCards, setProductCards] = useState([]);
+  const [finalLayout, setFinalLayout] = useState(null);
+  const { showLoader, hideLoader } = useLoader();
 
   useEffect(() => {
-    const extractAllProductIds = (items) => {
-      let ids = [];
-      for (const item of items) {
-        if (item.id) ids.push(item.id);
-        if (item.subProduct || item.subProducts) {
-          const nested = extractAllProductIds(
-            item.subProduct || item.subProducts
-          );
-          ids = ids.concat(nested);
+    const matchedCategory = Control.find((cat) => cat.id === productId);
+    if (!matchedCategory) return;
+
+    const findProduct = (id) => {
+      for (const cat of Product) {
+        if (Array.isArray(cat.subProduct)) {
+          const match = cat.subProduct.find((item) => item.id === id);
+          if (match) return match;
         }
       }
-      return ids;
+      return null;
     };
 
-    const loadImagesAndProducts = async () => {
-      const matchedCategory = Control.find((cat) => cat.id === productId);
-      if (!matchedCategory) return;
+    const processSubProducts = async () => {
+      showLoader();
+      const updatedCategory = { ...matchedCategory };
 
-      const productIds = extractAllProductIds([matchedCategory]);
+      const enrichItem = async (item) => {
+        const product = findProduct(item.id);
+        let resolvedImg = null;
 
-      const matchedProducts = await Promise.all(
-        productIds.map(async (id) => {
-          const product = Product.find((p) => p.id === id);
-          if (!product) return null;
-
-          if (product.subProduct && Array.isArray(product.subProduct)) {
-            const updatedSubProducts = await Promise.all(
-              product.subProduct.map(async (sub) => {
-                const resolvedImg = sub.productImg
-                  ? await sub.productImg()
-                  : null;
-                return {
-                  ...sub,
-                  resolvedImg,
-                };
-              })
-            );
-            return {
-              ...product,
-              subProduct: updatedSubProducts,
-            };
+        if (product?.productImg) {
+          try {
+            resolvedImg = await product.productImg();
+          } catch (err) {
+            console.error("Image loading error for", item.id, err);
           }
+        }
 
-          return product;
-        })
-      );
+        return {
+          ...item,
+          title: item.title || product?.title || "",
+          description: product?.description || "",
+          resolvedImg,
+        };
+      };
 
-      setProductCards(matchedProducts.filter(Boolean));
+      if (updatedCategory.subProducts) {
+        updatedCategory.subProducts = await Promise.all(
+          updatedCategory.subProducts.map(async (subItem) => {
+            if (subItem.subProducts) {
+              const nested = await Promise.all(
+                subItem.subProducts.map(enrichItem)
+              );
+              return { ...subItem, subProducts: nested };
+            }
+            return await enrichItem(subItem);
+          })
+        );
+      }
+
+      setFinalLayout(updatedCategory);
+      hideLoader();
     };
 
-    loadImagesAndProducts();
+    processSubProducts();
   }, [productId]);
 
-  
+  if (!finalLayout) return null;
 
   return (
     <div className="product-wrapper">
-      {productCards.length === 0 ? (
-        <p>No products available</p>
-      ) : (
-        <>
-          <h2 className="category-title">{productCards[0]?.name}</h2>
-          <div className="product-group">
-            {productCards.map(
-              (p, idx) =>
-                p.subProduct &&
-                p.subProduct.map((subP, i) => (
-                  <Link
-                    to={`/Products/${p.id}/${subP.id}`}
-                    key={`${idx}-${i}`}
-                    className="product-card"
-                  >
-                    {subP.resolvedImg && (
-                      <LazyImage
-                        src={subP.resolvedImg}
-                        alt={subP.title || "Product"}
-                        className="product-image"
-                      />
-                    )}
-                    <h3>{subP.title}</h3>
-                    <p>{subP.description}</p>
-                  </Link>
-                ))
-            )}
-          </div>
-        </>
-      )}
+      <h2 className="category-title">
+        {finalLayout.name || finalLayout.title}
+      </h2>
+
+      <motion.div
+        className="product-group"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <AnimatePresence>
+          {finalLayout.subProducts?.map((item, idx) =>
+            item.subProducts ? (
+              <div key={idx} className="subcategory-group">
+                <h3 className="subcategory-title">
+                  {item.subHeading || item.title}
+                </h3>
+                <motion.div
+                  className="product-group"
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  {item.subProducts.map((subP) => (
+                    <ProductCard
+                      key={subP.id}
+                      to={`/Products/${finalLayout.id}/${subP.id}`}
+                      img={subP.resolvedImg}
+                      title={subP.title}
+                      description={subP.description}
+                    />
+                  ))}
+                </motion.div>
+              </div>
+            ) : (
+              <ProductCard
+                key={item.id}
+                to={`/Products/${finalLayout.id}/${item.id}`}
+                img={item.resolvedImg}
+                title={item.title}
+                description={item.description}
+              />
+            )
+          )}
+        </AnimatePresence>
+      </motion.div>
     </div>
   );
 };

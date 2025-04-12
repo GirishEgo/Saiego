@@ -1,7 +1,13 @@
 const Control = [
   {
     id: "Heating",
-    name: "Heating Accessories",
+    name: "Heating",
+    catImg: async() =>
+(
+  await import(
+    "../assets/ptoductsImg/LED LIGHT FOR PANELBOARD & SWITCHGEARimgas/img (2).png"
+  )
+).default,
     subProducts: [
       { id: "PTC-Enclosure-Heaters", title: " PTC Enclosure Heaters" },
       { id: "COMBI-SPACE-HEATERS", title: " Combi-Space Heaters" },
@@ -14,6 +20,13 @@ const Control = [
         id: "Hazardous-Area-Heater",
         title: "Hazardous Area Heater",
       },
+     { id: "Aluminium-Space-Heaters",
+      title: "Aluminium Space Heaters ",},
+
+      {
+        id: "Compact-High-Performance-Fan-Heater",
+        title: "Compact High Performance Fan Heater",
+},
       { id: "Space-Saving-Fan-Heaters", title: " Space-Saving-Fan-Heaters" },
 
       { id: "SpaceHeaters", title: " Space Heaters " },
@@ -31,6 +44,12 @@ const Control = [
   {
     id: "Control",
     name: "Control",
+    catImg: async () =>
+      (
+        await import(
+          "../assets/ptoductsImg/LED LIGHT FOR PANELBOARD & SWITCHGEARimgas/img (2).png"
+        )
+      ).default,
     subProducts: [
       {
         id: "Energy-Regulator",
@@ -90,6 +109,12 @@ const Control = [
   {
     id: "Accessories",
     name: "Accessories",
+    catImg: async () =>
+      (
+        await import(
+          "../assets/ptoductsImg/LED LIGHT FOR PANELBOARD & SWITCHGEARimgas/img (2).png"
+        )
+      ).default,
     subProducts: [
       {
         id: "PRESSURE-COMPENSATION-DEVICE",

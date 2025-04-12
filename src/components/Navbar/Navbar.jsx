@@ -4,6 +4,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 import Products from "../../Data/Products";
 import Control from "../../Data/Control";
 import "./Navbar.css";
+import Res_Support from "../../Data/Res_Support"; // adjust the path as needed
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,6 +13,10 @@ const Navbar = () => {
   const dropdownRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
+  const [resDropdownOpen, setResDropdownOpen] = useState(false);
+  const resDropdownRef = useRef(null);
+
+  const toggleResDropdown = () => setResDropdownOpen(!resDropdownOpen);
 
   // Toggle entire menu (for mobile)
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -25,7 +30,9 @@ const Navbar = () => {
     setMenuOpen(false);
     setDropdownOpen(false);
   };
-
+ const handleResourceClick = (id) => {
+   navigate(`/resources/${id}`);
+ };
   // Handle clicking outside to close menu and dropdown
   const handleClickOutside = (event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -115,7 +122,10 @@ const Navbar = () => {
                       <li className="sub-drop-down-list" key={sub.id}>
                         {sub.subHeading ? ( // Check if it's a sub-heading section
                           <>
-                            <div className="dropdown-heading">
+                            <div
+                              onClick={() => handleProductClick(product.id)}
+                              className="dropdown-heading"
+                            >
                               {sub.subHeading}
                             </div>
                             <ul className="subDeopDownlsit">
@@ -150,14 +160,34 @@ const Navbar = () => {
             </ul>
           )}
         </li>
+
+        {/* Resources Dropdown */}
         <li
           className={`nav-item ${
-            location.pathname === "/resources" ? "active" : ""
+            location.pathname.includes("/resources") ? "active" : ""
           }`}
-          onClick={() => navigate("/resources")}
+          ref={resDropdownRef}
+          onMouseEnter={() => setResDropdownOpen(true)}
+          onMouseLeave={() => setResDropdownOpen(false)}
+          onClick={toggleResDropdown}
         >
-          Resources
+          Resources ▾
+          {resDropdownOpen && (
+            <ul className="dropdown-menu resdropdowm">
+              {Res_Support.map((item) => (
+                <li key={item.id}>
+                  <span
+                    className="dropdown-item"
+                    onClick={() => handleResourceClick(item.id)}
+                  >
+                    {item.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          )}
         </li>
+
         <Link to={"/contact"}>
           <li
             className={`nav-item ${
