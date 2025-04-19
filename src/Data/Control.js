@@ -5,7 +5,7 @@ const Control = [
     catImg: async() =>
 (
   await import(
-    "../assets/ptoductsImg/LED LIGHT FOR PANELBOARD & SWITCHGEARimgas/img (2).png"
+    "../assets/hompage-cardimgs/2.png"
   )
 ).default,
     subProducts: [
@@ -47,7 +47,7 @@ const Control = [
     catImg: async () =>
       (
         await import(
-          "../assets/ptoductsImg/LED LIGHT FOR PANELBOARD & SWITCHGEARimgas/img (2).png"
+          "../assets/hompage-cardimgs/1.png"
         )
       ).default,
     subProducts: [
@@ -112,7 +112,7 @@ const Control = [
     catImg: async () =>
       (
         await import(
-          "../assets/ptoductsImg/LED LIGHT FOR PANELBOARD & SWITCHGEARimgas/img (2).png"
+          "../assets/hompage-cardimgs/3.png"
         )
       ).default,
     subProducts: [
