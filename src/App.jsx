@@ -4,6 +4,7 @@ import { LoaderProvider } from "./context/LoaderContext";
 import { CallProvider } from "./context/CallContext";
 import Loader from "./components/Loader";
 import AppContent from "./AppContent";
+import WhatsAppButton from "./components/whatsappButton/WhatsAppButton";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <CallProvider>
         <Loader />
         <Navbar />
+        <WhatsAppButton/>
         <AppContent />
         <Footer />
       </CallProvider>
