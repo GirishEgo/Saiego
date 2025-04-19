@@ -80,7 +80,7 @@ const Carousel = () => {
             >
               {slides[currentIndex].description}
             </motion.p>
-            <motion.input
+            {/* <motion.input
               type="text"
               placeholder="Enter your address, city or ZIP code"
               className="carousel-input"
@@ -88,7 +88,7 @@ const Carousel = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-            />
+            /> */}
           </div>
         </motion.div>
       </AnimatePresence>
