@@ -1,0 +1,191 @@
+/* Initial hidden state */
+.fade-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Visible state */
+.fade-in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ...existing styles below... */
+
+.home-about-section {
+  padding: 4rem 2rem;
+  background: #f5f5f5;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  max-width: 1000px;
+  margin: 3rem auto;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about-icon-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 800px;
+}
+
+.about-icon {
+  font-size: 100px;
+  color: #577D73;
+  position: relative;
+  padding: 30px;
+  border-radius: 50%;
+  background: #1f1f1f;
+  box-shadow:
+    6px 6px 12px rgba(0, 0, 0, 0.4),
+    -6px -6px 12px rgba(255, 255, 255, 0.05),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.1),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.4);
+  transform-style: preserve-3d;
+  animation:
+    float3D 6s ease-in-out infinite,
+    floatUpDown 4s ease-in-out infinite;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  will-change: transform;
+}
+
+/* Floating 3D rotation */
+@keyframes float3D {
+  0%, 100% {
+    transform: rotateX(8deg) rotateY(-8deg);
+  }
+  50% {
+    transform: rotateX(-8deg) rotateY(8deg);
+  }
+}
+
+/* Floating up and down */
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Hover - slight rotate */
+.about-icon:hover {
+  transform: rotateX(20deg) rotateY(20deg) scale(1.05);
+}
+
+/* Shine effect after click */
+.about-icon.clicked::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: shine 1s ease;
+  z-index: 2;
+  pointer-events: none;
+  filter: blur(1px);
+}
+
+@keyframes shine {
+  0% { left: -75%; }
+  100% { left: 125%; }
+}
+
+/* Bounce + Shake */
+.about-icon.clicked {
+  animation: jumpAndShake 0.6s ease;
+}
+
+@keyframes jumpAndShake {
+  0% { transform: translateY(0) rotate(0deg); }
+  20% { transform: translateY(-20px) rotate(-5deg); }
+  40% { transform: translateY(0) rotate(5deg); }
+  60% { transform: translateY(-10px) rotate(-3deg); }
+  80% { transform: translateY(0) rotate(3deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+
+.about-content {
+  flex: 2;
+  text-align: left;
+  max-width: 600px;
+}
+
+.about-heading {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.about-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.about-btn {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #577D73;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.about-btn:hover {
+  background-color: #446259;
+  transform: scale(1.05);
+}
+
+.about-btn.secondary {
+  background-color: #E5D0CF;
+  color: #333;
+}
+
+.about-btn.secondary:hover {
+  background-color: #d1bcbc;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .about-icon {
+    font-size: 80px;
+  }
+}
