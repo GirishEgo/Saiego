@@ -4,6 +4,8 @@ import Products from "../../Data/Products";
 import LazyImage from "../LazyImage";
 import "./csss2.css";
 import Loader from "../Loader";
+import SEO from "../SEO/SEO"
+import seoData from "../SEO/SeoData";
 
 const ProductDetails = () => {
   const { productId, subProductId } = useParams(); // ✅ Get both category & subProduct ID
@@ -35,7 +37,7 @@ const ProductDetails = () => {
         const selectedSubProduct = selectedProduct.subProduct.find(
           (sub) => String(sub.id) === String(subProductId)
         );
-        console.log(selectedSubProduct);
+        // console.log(selectedSubProduct);
         
 
         if (!selectedSubProduct) {
@@ -85,144 +87,172 @@ const ProductDetails = () => {
   if (error) return <div className="error">{error}</div>;
   if (!subProduct) return <div className="error">Product not found.</div>;
 
+  const seoInfo = seoData.find((seo) => seo.id === subProductId)?.seoInfo?.[0] ?? "Not Found";
+  console.log(seoInfo);
+  
+
+    
+
   return (
-    <div className="product-details">
-      {/* ✅ Heading and Models */}
-      <div className="header-section">
-        <h1 className="product-title">{subProduct.title}</h1>
-        <p className="product-subtitle">{subProduct.application || ""}</p>
-        {subProduct.models?.length > 0 && (
-          <div className="models">
-            {subProduct.models.map((model, index) => (
-              <span key={index} className="model">
-                {model}
-              </span>
-            ))}
-          </div>
-        )}
-      </div>
-
-      {/* ✅ Main Image */}
-      <div className="product-content">
-        {subProduct.productImg ? (
-          <div className="image-wrapper">
-            <LazyImage
-              src={subProduct.productImg}
-              alt={subProduct.title}
-              className="product-main-image"
-            />
-          </div>
-        ) : (
-          <div className="placeholder">No Image Available</div>
-        )}
-
-        {/* ✅ Right Side Data */}
-        <div className="product-info">
-          {subProduct.description && (
-            <div className="product-section">
-              <h2>Description</h2>
-              <p className="product-description">{subProduct.description}</p>
-            </div>
-          )}
-
-          {subProduct.features?.length > 0 && (
-            <div className="product-section">
-              <h2>{subProduct.featuresH || "Features"}</h2>
-              <ul>
-                {subProduct.features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {subProduct.workingDetails?.length > 0 && (
-            <div className="product-section">
-              <h2>{subProduct.workingH || "Working Principle"}</h2>
-              <ul>
-                {subProduct.workingDetails.map((detail, index) => (
-                  <li key={index}>{detail}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {subProduct.constrution?.length > 0 && (
-            <div className="product-section">
-              <h2>{subProduct.construtionH || "Construction"}</h2>
-              <ul>
-                {subProduct.constrution.map((detail, index) => (
-                  <li key={index}>{detail}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-          {subProduct.intended?.length > 0 && (
-            <div className="product-section">
-              <h2>{subProduct.intended || "Construction"}</h2>
-              <ul>
-                {subProduct.uses.map((detail, index) => (
-                  <li key={index}>{detail}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-          {subProduct.tests?.length > 0 && (
-            <div className="product-section">
-              <h2>ALSO AVAILABLE</h2>
-              <ul>
-                {subProduct.tests.map((detail, index) => (
-                  <li key={index}>{detail}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {subProduct.recommendation && (
-            <div className="product-section">
-              <h2>Recommendation</h2>
-              <p>{subProduct.recommendation}</p>
+    <>
+      <SEO
+        title={seoInfo.title}
+        description={seoInfo.description}
+        keywords={seoInfo.keywords}
+        siteName={seoInfo.siteName}
+        image={subProduct[0]?.productImg}
+        // url={seoInfo.url}
+        product={seoInfo.product}
+        breadcrumb={seoInfo.breadcrumb}
+        faqs={seoInfo.faqs}
+      />
+      <div className="product-details">
+        {/* ✅ Heading and Models */}
+        <div className="header-section">
+          <h1 className="product-title">{subProduct.title}</h1>
+          <p className="product-subtitle">{subProduct.application || ""}</p>
+          {subProduct.models?.length > 0 && (
+            <div className="models">
+              {subProduct.models.map((model, index) => (
+                <span key={index} className="model">
+                  {model}
+                </span>
+              ))}
             </div>
           )}
         </div>
-      </div>
 
-      {/* ✅ Other Images */}
-      {subProduct.otherImages?.length > 0 && (
-        <div className="other-images">
-          <h2 class="section-heading">Technical Specification</h2>
-          <div className="otherimages-container">
-            {subProduct.otherImages.map((group, groupIndex) => (
-              <div key={groupIndex} className="image-group">
-                <h3 className="group-heading">{group.heading}</h3>
-                <div className="group-images masonry-layout">
-                  {group.images.map((img, index) => (
-                    <div onClick={() => setActiveImage(img)}  >
-                      <LazyImage
-                        key={index}
-                        src={img}
-                        alt={`${group.heading} - ${index + 1}`}
-                        className="gallery-image"
-                      />
-                    </div>
-                  ))}
-                </div>
+        {/* ✅ Main Image */}
+        <div className="product-content">
+          {subProduct.productImg ? (
+            <div className="image-wrapper">
+              <LazyImage
+                src={subProduct.productImg}
+                alt={subProduct.title}
+                className="product-main-image"
+              />
+            </div>
+          ) : (
+            <div className="placeholder">No Image Available</div>
+          )}
+
+          {/* ✅ Right Side Data */}
+          <div className="product-info">
+            {subProduct.description && (
+              <div className="product-section">
+                <h2>Description</h2>
+                <p className="product-description">{subProduct.description}</p>
               </div>
-            ))}
+            )}
+
+            {subProduct.features?.length > 0 && (
+              <div className="product-section">
+                <h2>{subProduct.featuresH || "Features"}</h2>
+                <ul>
+                  {subProduct.features.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {subProduct.workingDetails?.length > 0 && (
+              <div className="product-section">
+                <h2>{subProduct.workingH || "Working Principle"}</h2>
+                <ul>
+                  {subProduct.workingDetails.map((detail, index) => (
+                    <li key={index}>{detail}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {subProduct.constrution?.length > 0 && (
+              <div className="product-section">
+                <h2>{subProduct.construtionH || "Construction"}</h2>
+                <ul>
+                  {subProduct.constrution.map((detail, index) => (
+                    <li key={index}>{detail}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {subProduct.intended?.length > 0 && (
+              <div className="product-section">
+                <h2>{subProduct.intended || "Construction"}</h2>
+                <ul>
+                  {subProduct.uses.map((detail, index) => (
+                    <li key={index}>{detail}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {subProduct.tests?.length > 0 && (
+              <div className="product-section">
+                <h2>ALSO AVAILABLE</h2>
+                <ul>
+                  {subProduct.tests.map((detail, index) => (
+                    <li key={index}>{detail}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {subProduct.recommendation && (
+              <div className="product-section">
+                <h2>Recommendation</h2>
+                <p>{subProduct.recommendation}</p>
+              </div>
+            )}
           </div>
         </div>
-      )}
 
-      {/* ✅ Image Overlay */}
-      {activeImage && (
-        <div className="image-overlay active">
-          <img src={activeImage} alt="Expanded view" className="large-image" />
-          <button className="close-button" onClick={() => setActiveImage(null)}>
-            ✕
-          </button>
-        </div>
-      )}
-    </div>
+        {/* ✅ Other Images */}
+        {subProduct.otherImages?.length > 0 && (
+          <div className="other-images">
+            <h2 className="section-heading">Technical Specification</h2>
+            <div className="otherimages-container">
+              {subProduct.otherImages.map((group, groupIndex) => (
+                <div key={groupIndex} className="image-group">
+                  <h3 className="group-heading">{group.heading}</h3>
+                  <div className="group-images masonry-layout">
+                    {group.images.map((img, index) => (
+                      <div
+                        key={`${group.heading}-${index}`} // better uniqueness
+                        onClick={() => setActiveImage(img)}
+                      >
+                        <LazyImage
+                          src={img}
+                          alt={`${group.heading} - ${index + 1}`}
+                          className="gallery-image"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* ✅ Image Overlay */}
+        {activeImage && (
+          <div className="image-overlay active">
+            <img
+              src={activeImage}
+              alt="Expanded view"
+              className="large-image"
+            />
+            <button
+              className="close-button"
+              onClick={() => setActiveImage(null)}
+            >
+              ✕
+            </button>
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 

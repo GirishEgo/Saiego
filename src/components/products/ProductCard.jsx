@@ -23,18 +23,14 @@ const ProductCard = ({ to, img, title, description }) => (
     <Link to={to} className="product-link">
       {img && <LazyImage src={img} alt={title} className="product-image" />}
       <h4>{title}</h4>
-      <p>
-        {description ? (
-          <>
-            {description.split(" ").slice(0, 20).join(" ")}...
-            <span className="read-more"> Read more</span>
-          </>
-        ) : (
-          <Link to={to} className="click-here-button">
-            Click here
-          </Link>
-        )}
-      </p>
+      {description ? (
+        <p>
+          {description.split(" ").slice(0, 20).join(" ")}...
+          <span className="read-more"> Read more</span>
+        </p>
+      ) : (
+        <span className="click-to-view">Click to view</span>
+      )}
     </Link>
   </motion.div>
 );
