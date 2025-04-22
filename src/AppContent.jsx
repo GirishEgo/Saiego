@@ -12,12 +12,14 @@ const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Product = lazy(() => import("./pages/Products"));
 const Resources = lazy(() => import("./pages/Resources"));
-// const CalculatorPAnnel = lazy(() => import("./components/ResourcespagesComponents/calculator/PanelSpaceHeatersCalculato"));
-// const CatalogPage = lazy(() =>import("./components/ResourcespagesComponents/download-catalog/CatalogPage"));
 
-
-
+// ✅ Footer import
+import Footer from "./components/footer/Footer"; // adjust path as per your project structure
+ 
 const AppContent = () => {
+   const location = useLocation();
+   const hideFooterRoutes = ["/resources/catalogue-download"];
+   const shouldShowFooter = !hideFooterRoutes.includes(location.pathname);
   return (
     <Suspense
       fallback={
@@ -26,25 +28,30 @@ const AppContent = () => {
         </div>
       }
     >
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+      <>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
 
-        <Route path="/resources" element={<Resources />}>
+          <Route path="/resources" element={<Resources />}>
+            <Route
+              path="heat-calculator"
+              element={<PanelSpaceHeatersCalculator />}
+            />
+            <Route path="catalogue-download" element={<CatalogPage />} />
+          </Route>
+
+          <Route path="/products/:productId" element={<DisplaySubproducts />} />
           <Route
-            path="heat-calculator"
-            element={<PanelSpaceHeatersCalculator />}
+            path="/products/:productId/:subProductId"
+            element={<ProductDetails />}
           />
-          <Route path="catalogue-download" element={<CatalogPage />} />
-        </Route>
+        </Routes>
 
-        <Route path="/products/:productId" element={<DisplaySubproducts />} />
-        <Route
-          path="/products/:productId/:subProductId"
-          element={<ProductDetails />}
-        />
-      </Routes>
+        {/* ✅ Render Footer below all routes */}
+        {shouldShowFooter && <Footer />}
+      </>
     </Suspense>
   );
 };

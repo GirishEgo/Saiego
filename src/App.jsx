@@ -1,10 +1,12 @@
 import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import { LoaderProvider } from "./context/LoaderContext";
 import { CallProvider } from "./context/CallContext";
 import Loader from "./components/Loader";
 import AppContent from "./AppContent";
 import WhatsAppButton from "./components/whatsappButton/WhatsAppButton";
+// import FooterWrapper from "./components/FooterWrapper";
+import Footer from "./components/footer/Footer";
 
 const App = () => {
   return (
@@ -20,7 +22,7 @@ const App = () => {
         <Navbar />
         <WhatsAppButton/>
         <AppContent />
-        <Footer />
+        {/* <Footer /> */}
       </CallProvider>
     </LoaderProvider>
   );
