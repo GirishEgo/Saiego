@@ -2,12 +2,10 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #25D366;
-  color: white;
-  padding: 15px;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  z-index: 999;
+  background-color: transparent; /* remove background if using image */
+  border: none;
+  z-index: 1000;
+  cursor: pointer;
   transition: transform 0.3s ease;
 }
 
@@ -16,5 +14,6 @@
 }
 
 .whatsapp-logo {
-  font-size: 36px;
+  width: 70px;
+  height: 70px;
 }
