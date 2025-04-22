@@ -30,6 +30,11 @@ const Navbar = () => {
     setMenuOpen(false);
     setDropdownOpen(false);
   };
+  const handleSubProductClick = (id,subid) => {
+    navigate(`/products/${id}/${subid}`);
+    setMenuOpen(false);
+    setDropdownOpen(false);
+  };
  const handleResourceClick = (id) => {
    navigate(`/resources/${id}`);
  };
@@ -64,7 +69,7 @@ const Navbar = () => {
     <nav className="navbar" ref={menuRef}>
       {/* Left Side - Logo & Brand */}
       <div className="logo-container">
-        <h2 className="brand">Saiego</h2>
+        <h1 className="brand">Saiego</h1>
       </div>
 
       {/* Hamburger Menu */}
@@ -130,26 +135,25 @@ const Navbar = () => {
                             </div>
                             <ul className="subDeopDownlsit">
                               {sub.subProducts.map((nestedSub) => (
-                                <li key={nestedSub.id}>
-                                  <Link
-                                    onClick={() => setMenuOpen(false)}
-                                    to={`/Products/${product.id}/${nestedSub.id}`}
-                                  >
-                                    {nestedSub.title}
-                                  </Link>
-                                </li>
+                                <Link
+                                  onClick={() => setMenuOpen(false)}
+                                  to={`/Products/${product.id}/${nestedSub.id}`}
+                                >
+                                  <li key={nestedSub.id}>{nestedSub.title}</li>
+                                </Link>
                               ))}
                             </ul>
                           </>
                         ) : (
-                          <div className="linksContainer">
-                            <Link
-                              className="links"
-                              onClick={() => setMenuOpen(false)}
-                              to={`/Products/${product.id}/${sub.id}`}
-                            >
-                              {sub.title}
-                            </Link>
+                          <div
+                            className="linksContainer"
+                            // onClick={() => setMenuOpen(false)}
+                            onClick={() =>
+                              handleSubProductClick(product.id, sub.id)
+                            }
+                            // to={`/Products/${}/${}`}
+                          >
+                            {sub.title}
                           </div>
                         )}
                       </li>

@@ -110,14 +110,18 @@
     white-space: nowrape;
   }
   ul{
+    /* padding: 5px; */
     li{
-      width: 100%;margin-bottom: 10px;
+      width: 100%;
+    padding: 10px;
     }
   }
   }
 
 }
-
+.Sublink{
+  width: 100%;
+}
 .linksContainer{
   /* width: 100%; */
   margin: 10px;
@@ -328,8 +332,11 @@ li{
     text-align: justify;
   }
   .dropdown-heading{
-    font-size:25px;
+    font-size:15px;
     
+  }
+  .sub-drop-down-list{
+    width: 90%;
   }
   .nav-item:hover .dropdown-menu {
     opacity: 1;
