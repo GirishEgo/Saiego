@@ -13,8 +13,8 @@ import img5 from "./certifat-images/certImgjpg (3).jpg";
 const Certifiat = () => {
      const certificates = [
        { src: img1, name: "ISO Certification" },
-       { src: img2, name: "BIS Certification" },
-       { src: img3, name: "ISI Certification" },
+      //  { src: img2, name: "BIS Certification" },
+      //  { src: img3, name: "ISI Certification" },
        { src: img4, name: "RoHS Certification" },
        { src: img5, name: "CE Certification" },
      ];
