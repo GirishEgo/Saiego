@@ -16,6 +16,9 @@
 .logo-container {
   display: flex;
   align-items: center;
+  a{
+    text-decoration: none;
+  }
 }
 
 .brand {
@@ -120,9 +123,9 @@
 
 .linksContainer{
   /* width: 100%; */
-  margin: 10px;
+  /* margin: 10px; */
   /* border: 1ps solid red; */
- 
+ padding: 10px;
   /* white-space: nowrape; */
   white-space: nowrap;
 
@@ -156,8 +159,11 @@
   margin-top: 0px;
   li{
     /* margin-bottom: 10px; */
-    border-bottom: 1px solid rgb(87, 112, 101);
-    padding-top: 10px;
+    /* list-style: square; */
+    border-bottom: 1px solid rgb(104, 133, 120);
+    padding: 10px;
+    text-align: left;
+    /* background-color: #577D73; */
     transition: background 0.3s ease, transform 0.2s ease;
   }
   li:hover{
@@ -324,11 +330,12 @@ li{
   }
    
   .subDeopDownlsit{
-    margin-top: 10px;
+    margin-top: 0px;
     text-align: justify;
   }
   .dropdown-heading{
-    font-size:25px;
+    font-size:18px;
+    text-align: start;
     
   }
   .nav-item:hover .dropdown-menu {

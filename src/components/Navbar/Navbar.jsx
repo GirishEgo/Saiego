@@ -30,6 +30,11 @@ const Navbar = () => {
     setMenuOpen(false);
     setDropdownOpen(false);
   };
+  const handleSubProductClick = (id,subid) => {
+    navigate(`/products/${id}/${subid}`);
+    setMenuOpen(false);
+    setDropdownOpen(false);
+  };
  const handleResourceClick = (id) => {
    navigate(`/resources/${id}`);
  };
@@ -63,8 +68,11 @@ const Navbar = () => {
   return (
     <nav className="navbar" ref={menuRef}>
       {/* Left Side - Logo & Brand */}
+
       <div className="logo-container">
-        <h2 className="brand">Saiego</h2>
+        <Link to={"/"}>
+          <h2 className="brand">Saiego</h2>
+        </Link>
       </div>
 
       {/* Hamburger Menu */}
@@ -109,8 +117,8 @@ const Navbar = () => {
           Products ▾
           {dropdownOpen && (
             <ul className="dropdown-menu">
-              {Control.map((product) => (
-                <li key={product.id}>
+              {Control.map((product, pi) => (
+                <li key={pi}>
                   <span
                     className="dropdown-item"
                     onClick={() => handleProductClick(product.id)}
@@ -118,8 +126,8 @@ const Navbar = () => {
                     {product.name}
                   </span>
                   <ul className="subdrop-down">
-                    {product.subProducts.map((sub) => (
-                      <li className="sub-drop-down-list" key={sub.id}>
+                    {product.subProducts.map((sub, subi) => (
+                      <li className="sub-drop-down-list" key={subi}>
                         {sub.subHeading ? ( // Check if it's a sub-heading section
                           <>
                             <div
@@ -129,27 +137,32 @@ const Navbar = () => {
                               {sub.subHeading}
                             </div>
                             <ul className="subDeopDownlsit">
-                              {sub.subProducts.map((nestedSub) => (
-                                <li key={nestedSub.id}>
-                                  <Link
-                                    onClick={() => setMenuOpen(false)}
-                                    to={`/Products/${product.id}/${nestedSub.id}`}
-                                  >
-                                    {nestedSub.title}
-                                  </Link>
+                              {sub.subProducts.map((nestedSub, nesti) => (
+                                <li
+                                  key={nesti}
+                                  onClick={() =>
+                                    handleSubProductClick(
+                                      product.id,
+                                      nestedSub.id
+                                    )
+                                  }
+                                  to={`/Products/${product.id}/${nestedSub.id}`}
+                                >
+                                  {nestedSub.title}
                                 </li>
                               ))}
                             </ul>
                           </>
                         ) : (
-                          <div className="linksContainer">
-                            <Link
-                              className="links"
-                              onClick={() => setMenuOpen(false)}
-                              to={`/Products/${product.id}/${sub.id}`}
-                            >
-                              {sub.title}
-                            </Link>
+                          <div
+                            className="linksContainer"
+                            // className="links"
+                            onClick={() =>
+                              handleSubProductClick(product.id, sub.id)
+                            }
+                            // to={`/Products/${product.id}/${sub.id}`}
+                          >
+                            {sub.title}
                           </div>
                         )}
                       </li>
@@ -174,8 +187,8 @@ const Navbar = () => {
           Resources ▾
           {resDropdownOpen && (
             <ul className="dropdown-menu resdropdowm">
-              {Res_Support.map((item) => (
-                <li key={item.id}>
+              {Res_Support.map((item, i) => (
+                <li key={i}>
                   <span
                     className="dropdown-item"
                     onClick={() => handleResourceClick(item.id)}
