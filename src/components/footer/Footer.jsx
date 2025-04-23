@@ -81,8 +81,8 @@ const Footer = () => {
         viewport={{ once: true }}
       >
         <ul>
-          {navLinks.map((link) => (
-            <li key={link.id}>
+          {navLinks.map((link, li) => (
+            <li key={li}>
               <a href={link.href}>{link.name}</a>
             </li>
           ))}
@@ -112,8 +112,8 @@ const Footer = () => {
         transition={{ duration: 0.8, delay: 0.9 }}
         viewport={{ once: true }}
       >
-        {contactInfo.map((info) => (
-          <div key={info.id}>
+        {contactInfo.map((info, infoix) => (
+          <div key={infoix}>
             <div className="contact-footerholder">
               {info.label}:
               {info.values ? (

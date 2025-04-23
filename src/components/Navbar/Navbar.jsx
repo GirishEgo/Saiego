@@ -114,8 +114,8 @@ const Navbar = () => {
           Products ▾
           {dropdownOpen && (
             <ul className="dropdown-menu">
-              {Control.map((product) => (
-                <li key={product.id}>
+              {Control.map((product, key) => (
+                <li key={key}>
                   <span
                     className="dropdown-item"
                     onClick={() => handleProductClick(product.id)}
@@ -123,8 +123,8 @@ const Navbar = () => {
                     {product.name}
                   </span>
                   <ul className="subdrop-down">
-                    {product.subProducts.map((sub) => (
-                      <li className="sub-drop-down-list" key={sub.id}>
+                    {product.subProducts.map((sub, subi) => (
+                      <li className="sub-drop-down-list" key={subi}>
                         {sub.subHeading ? ( // Check if it's a sub-heading section
                           <>
                             <div
@@ -134,12 +134,13 @@ const Navbar = () => {
                               {sub.subHeading}
                             </div>
                             <ul className="subDeopDownlsit">
-                              {sub.subProducts.map((nestedSub) => (
+                              {sub.subProducts.map((nestedSub, ix) => (
                                 <Link
+                                  key={ix}
                                   onClick={() => setMenuOpen(false)}
                                   to={`/Products/${product.id}/${nestedSub.id}`}
                                 >
-                                  <li key={nestedSub.id}>{nestedSub.title}</li>
+                                  <li>{nestedSub.title}</li>
                                 </Link>
                               ))}
                             </ul>
@@ -178,8 +179,8 @@ const Navbar = () => {
           Resources ▾
           {resDropdownOpen && (
             <ul className="dropdown-menu resdropdowm">
-              {Res_Support.map((item) => (
-                <li key={item.id}>
+              {Res_Support.map((item, i) => (
+                <li key={i}>
                   <span
                     className="dropdown-item"
                     onClick={() => handleResourceClick(item.id)}
