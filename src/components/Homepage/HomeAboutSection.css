@@ -11,8 +11,7 @@
   transform: translateY(0);
 }
 
-/* ...existing styles below... */
-
+/* Main section */
 .home-about-section {
   padding: 4rem 2rem;
   background: #f5f5f5;
@@ -22,7 +21,8 @@
   margin: 3rem auto;
 }
 
-.about-container {
+/* Container */
+.home-about-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,7 +30,8 @@
   gap: 2rem;
 }
 
-.about-icon-wrapper {
+/* Icon wrapper */
+.home-about-icon-wrapper {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -38,7 +39,8 @@
   perspective: 800px;
 }
 
-.about-icon {
+/* Icon styling */
+.home-about-icon {
   font-size: 100px;
   color: #577D73;
   position: relative;
@@ -58,6 +60,37 @@
   overflow: hidden;
   cursor: pointer;
   will-change: transform;
+}
+
+/* Hover effect */
+.home-about-icon:hover {
+  transform: rotateX(20deg) rotateY(20deg) scale(1.05);
+}
+
+/* Click shine effect */
+.home-about-icon.home-about-icon-clicked::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: shine 1s ease;
+  z-index: 2;
+  pointer-events: none;
+  filter: blur(1px);
+}
+
+/* Click animation */
+.home-about-icon.home-about-icon-clicked {
+  animation: jumpAndShake 0.6s ease;
 }
 
 /* Floating 3D rotation */
@@ -80,42 +113,13 @@
   }
 }
 
-/* Hover - slight rotate */
-.about-icon:hover {
-  transform: rotateX(20deg) rotateY(20deg) scale(1.05);
-}
-
-/* Shine effect after click */
-.about-icon.clicked::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -75%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.4) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  transform: skewX(-20deg);
-  animation: shine 1s ease;
-  z-index: 2;
-  pointer-events: none;
-  filter: blur(1px);
-}
-
+/* Shine animation */
 @keyframes shine {
   0% { left: -75%; }
   100% { left: 125%; }
 }
 
-/* Bounce + Shake */
-.about-icon.clicked {
-  animation: jumpAndShake 0.6s ease;
-}
-
+/* Bounce + shake animation */
 @keyframes jumpAndShake {
   0% { transform: translateY(0) rotate(0deg); }
   20% { transform: translateY(-20px) rotate(-5deg); }
@@ -125,32 +129,33 @@
   100% { transform: translateY(0) rotate(0deg); }
 }
 
-
-.about-content {
+/* Content */
+.home-about-content {
   flex: 2;
   text-align: left;
   max-width: 600px;
 }
 
-.about-heading {
+.home-about-heading {
   font-size: 2rem;
   color: #333;
   margin-bottom: 1rem;
 }
 
-.about-description {
+.home-about-description {
   font-size: 1.1rem;
   color: #666;
   margin-bottom: 1.5rem;
 }
 
-.about-buttons {
+/* Buttons */
+.home-about-buttons {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
-.about-btn {
+.home-about-btn {
   padding: 0.5rem 1.25rem;
   font-size: 0.95rem;
   border: none;
@@ -161,31 +166,32 @@
   transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
-.about-btn:hover {
+.home-about-btn:hover {
   background-color: #446259;
   transform: scale(1.05);
 }
 
-.about-btn.secondary {
+.home-about-btn-secondary {
   background-color: #E5D0CF;
   color: #333;
 }
 
-.about-btn.secondary:hover {
+.home-about-btn-secondary:hover {
   background-color: #d1bcbc;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
-  .about-container {
+  .home-about-container {
     flex-direction: column;
     text-align: center;
   }
 
-  .about-content {
+  .home-about-content {
     text-align: center;
   }
 
-  .about-icon {
+  .home-about-icon {
     font-size: 80px;
   }
 }
