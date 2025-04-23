@@ -162,6 +162,7 @@
   .contact-leftSide,
   .contact-rightSide {
     width: 100%;
+    flex-direction: column;
   }
 
   .contact-details-section {
