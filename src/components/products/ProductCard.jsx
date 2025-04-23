@@ -30,13 +30,12 @@ const ProductCard = ({ to, img, title, description }) => (
             <span className="read-more"> Read more</span>
           </>
         ) : (
-          <Link to={to} className="click-here-button">
-            Click here
-          </Link>
+          <span className="click-here-button">Click here</span>
         )}
       </p>
     </Link>
   </motion.div>
 );
+
 
 export default ProductCard;
