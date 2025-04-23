@@ -137,9 +137,9 @@ const DisplaySubproducts = () => {
                   initial="hidden"
                   animate="visible"
                 >
-                  {item.subProducts.map((subP) => (
+                  {item.subProducts.map((subP, subix) => (
                     <ProductCard
-                      key={subP.id}
+                      key={subix}
                       to={`/Products/${finalLayout.id}/${subP.id}`}
                       img={subP.resolvedImg}
                       title={subP.title}
