@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import './cetficat.css'
 
 import img1 from "./certifat-images/certImg (1).png";
-import img2 from "./certifat-images/certImg (2).png";
-import img3 from "./certifat-images/certImgjpg (1).jpg";
+// import img2 from "./certifat-images/certImg (2).png";
+// import img3 from "./certifat-images/certImgjpg (1).jpg";
 import img4 from "./certifat-images/certImgjpg (2).jpg";
 import img5 from "./certifat-images/certImgjpg (3).jpg";
  
@@ -13,8 +13,8 @@ import img5 from "./certifat-images/certImgjpg (3).jpg";
 const Certifiat = () => {
      const certificates = [
        { src: img1, name: "ISO Certification" },
-       { src: img2, name: "BIS Certification" },
-       { src: img3, name: "ISI Certification" },
+      //  { src: img2, name: "BIS Certification" },
+      //  { src: img3, name: "ISI Certification" },
        { src: img4, name: "RoHS Certification" },
        { src: img5, name: "CE Certification" },
      ];

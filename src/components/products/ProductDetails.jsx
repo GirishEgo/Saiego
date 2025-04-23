@@ -94,7 +94,7 @@ const ProductDetails = () => {
         {subProduct.models?.length > 0 && (
           <div className="models">
             {subProduct.models.map((model, index) => (
-              <span key={index} className="model">
+              <span key={model + index} className="model">
                 {model}
               </span>
             ))}
@@ -190,16 +190,18 @@ const ProductDetails = () => {
       {/* ✅ Other Images */}
       {subProduct.otherImages?.length > 0 && (
         <div className="other-images">
-          <h2 class="section-heading">Technical Specification</h2>
+          <h2 className="section-heading">Technical Specification</h2>
           <div className="otherimages-container">
             {subProduct.otherImages.map((group, groupIndex) => (
               <div key={groupIndex} className="image-group">
                 <h3 className="group-heading">{group.heading}</h3>
                 <div className="group-images masonry-layout">
                   {group.images.map((img, index) => (
-                    <div onClick={() => setActiveImage(img)}  >
+                    <div
+                      key={`${groupIndex}-${index}`}
+                      onClick={() => setActiveImage(img)}
+                    >
                       <LazyImage
-                        key={index}
                         src={img}
                         alt={`${group.heading} - ${index + 1}`}
                         className="gallery-image"

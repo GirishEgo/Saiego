@@ -6,21 +6,20 @@ import "./HomeAboutSection.css";
 
 const HomeAboutSection = () => {
   const iconRef = useRef();
-
-  const handleClick = () => {
-    const icon = iconRef.current;
-    icon.classList.remove("clicked");
-    void icon.offsetWidth; // Force reflow
-    icon.classList.add("clicked");
-
-    setTimeout(() => {
-      icon.classList.remove("clicked");
-    }, 600); // Match animation time
-  };
-
   const navigate = useNavigate();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, threshold: 0.3 });
+
+  const handleClick = () => {
+    const icon = iconRef.current;
+    icon.classList.remove("home-about-icon-clicked");
+    void icon.offsetWidth; // Force reflow
+    icon.classList.add("home-about-icon-clicked");
+
+    setTimeout(() => {
+      icon.classList.remove("home-about-icon-clicked");
+    }, 600); // Match animation time
+  };
 
   return (
     <motion.section
@@ -30,13 +29,13 @@ const HomeAboutSection = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="home-about-section"
     >
-      <div className="about-container">
-        <div className="about-icon-wrapper" onClick={handleClick}>
-          <FaInfoCircle className="about-icon" ref={iconRef} />
+      <div className="home-about-container">
+        <div className="home-about-icon-wrapper" onClick={handleClick}>
+          <FaInfoCircle className="home-about-icon" ref={iconRef} />
         </div>
-        <div className="about-content">
-          <h2 className="about-heading">Know More About Us</h2>
-          <p className="about-description">
+        <div className="home-about-content">
+          <h2 className="home-about-heading">Know More About Us</h2>
+          <p className="home-about-description">
             Established in 1989, Sai Egotherm India is a pioneer in
             manufacturing and exporting thermostats, space heaters, and advanced
             heating control systems. With over 40 years of expertise, we deliver
@@ -44,12 +43,15 @@ const HomeAboutSection = () => {
             control solutions — trusted for reliability, precision, and on-time
             delivery.
           </p>
-          <div className="about-buttons">
-            <button className="about-btn" onClick={() => navigate("/about")}>
+          <div className="home-about-buttons">
+            <button
+              className="home-about-btn"
+              onClick={() => navigate("/about")}
+            >
               Read More
             </button>
             <button
-              className="about-btn secondary"
+              className="home-about-btn home-about-btn-secondary"
               onClick={() => navigate("/resources/catalogue-download")}
             >
               Resource Catalog

@@ -1,7 +1,7 @@
 // FooterWrapper.jsx
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion"; // optional for animation
-import Footer from "./Footer"; // your actual footer component
+import Footer from "./footer/Footer"; // your actual footer component
 
 const FooterWrapper = () => {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
@@ -31,7 +31,9 @@ const FooterWrapper = () => {
           transition={{ duration: 0.8 }}
         >
           <Footer />
+         
         </motion.div>
+        
       )}
     </>
   );

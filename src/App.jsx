@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer";
+import Footer from "./components/footer/Footer";
 import { LoaderProvider } from "./context/LoaderContext";
 import { CallProvider } from "./context/CallContext";
 import Loader from "./components/Loader";
@@ -20,7 +20,7 @@ const App = () => {
         <Navbar />
         <WhatsAppButton/>
         <AppContent />
-        <Footer />
+        {/* <Footer /> */}
       </CallProvider>
     </LoaderProvider>
   );

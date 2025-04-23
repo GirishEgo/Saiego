@@ -1,6 +1,5 @@
 import React from "react";
 import "./whatsappbutton.css";
-import { PiWhatsappLogoBold } from "react-icons/pi"; // or use FaWhatsapp from react-icons/fa
 
 const WhatsAppButton = () => {
   const phoneNumber = "9769281724";
@@ -13,7 +12,9 @@ const WhatsAppButton = () => {
         rel="noopener noreferrer"
         className="whatsapp-button"
       >
-        <PiWhatsappLogoBold
+        <img
+          src="/whatsapp.png"
+          alt="WhatsApp"
           className="whatsapp-logo"
           title="Contact us on WhatsApp"
         />
@@ -23,3 +24,4 @@ const WhatsAppButton = () => {
 };
 
 export default WhatsAppButton;
+  

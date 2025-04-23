@@ -1,51 +1,103 @@
-import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
-import { lazy, Suspense, useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { useLoader } from "./context/LoaderContext";
-import ProductDetails from "./components/products/ProductDetails";
+import Footer from "./components/footer/Footer";
+import Loader from "./components/Loader";
+// import FooterWrapper from "./components/FooterWrapper";
 import DisplaySubproducts from "./components/products/DisplaySubproducts";
-import PanelSpaceHeatersCalculator from "./components/ResourcespagesComponents/calculator/PanelSpaceHeatersCalculato";
-import CatalogPage from "./components/ResourcespagesComponents/download-catalog/CatalogPage";
+import ScrollToTop from "./components/ScrollToTop";
 
-// ✅ Lazy load components
+// Lazy load pages
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Product = lazy(() => import("./pages/Products"));
 const Resources = lazy(() => import("./pages/Resources"));
-// const CalculatorPAnnel = lazy(() => import("./components/ResourcespagesComponents/calculator/PanelSpaceHeatersCalculato"));
-// const CatalogPage = lazy(() =>import("./components/ResourcespagesComponents/download-catalog/CatalogPage"));
-
-
+const PanelSpaceHeatersCalculator = lazy(() =>
+  import(
+    "./components/ResourcespagesComponents/calculator/PanelSpaceHeatersCalculato"
+  )
+);
+const CatalogPage = lazy(() =>
+  import("./components/ResourcespagesComponents/download-catalog/CatalogPage")
+);
+// const DisplaySubproducts = lazy(() =>
+//   import("./components/products/DisplaySubproducts")
+// );
+const ProductDetails = lazy(() =>
+  import("./components/products/ProductDetails")
+);
+const FooterWrapper = lazy(() => import("./components/FooterWrapper"));
 
 const AppContent = () => {
+  const location = useLocation();
+  const { loading } = useLoader();
+
+  // // Optional: Show loader on route change
+  // useEffect(() => {
+  //   showLoader();
+  //   const timeout = setTimeout(() => {
+  //     hideLoader();
+  //   }, 800); // adjust time depending on transition need
+
+  //   return () => clearTimeout(timeout);
+  // }, [location.pathname]);
+
+  const hideFooterRoutes = [
+    "/resources/heat-calculator",
+    "/resources/catalogue-download",
+  ];
+  const shouldShowFooter = !hideFooterRoutes.includes(location.pathname);
+  const [showFooter, setShowFooter] = useState(false);
+
+ useEffect(() => {
+   setShowFooter(false); // hide immediately on route change
+
+   if (shouldShowFooter) {
+     const timer = setTimeout(() => {
+       setShowFooter(true);
+     }, 1500); // or whatever delay you want
+
+     return () => clearTimeout(timer);
+   }
+ }, [location.pathname, shouldShowFooter]);
+
   return (
-    <Suspense
-      fallback={
-        <div className="loader-overlay">
-          <div className="loader"></div>
-        </div>
-      }
-    >
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+    <>
+      <ScrollToTop />
+      <Loader />
 
-        <Route path="/resources" element={<Resources />}>
+      <Suspense
+        fallback={
+          <div className="loader-overlay">
+            <div className="loader"></div>
+          </div>
+        }
+      >
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+
+          <Route path="/resources" element={<Resources />}>
+            <Route
+              path="heat-calculator"
+              element={<PanelSpaceHeatersCalculator />}
+            />
+            <Route path="catalogue-download" element={<CatalogPage />} />
+          </Route>
+
+          <Route path="/products/:productId" element={<DisplaySubproducts />} />
           <Route
-            path="heat-calculator"
-            element={<PanelSpaceHeatersCalculator />}
+            path="/products/:productId/:subProductId"
+            element={<ProductDetails />}
           />
-          <Route path="catalogue-download" element={<CatalogPage />} />
-        </Route>
+        </Routes>
+      </Suspense>
 
-        <Route path="/products/:productId" element={<DisplaySubproducts />} />
-        <Route
-          path="/products/:productId/:subProductId"
-          element={<ProductDetails />}
-        />
-      </Routes>
-    </Suspense>
+      {/* ✅ Show footer only after loading finishes */}
+      {!loading && showFooter && <FooterWrapper />}
+    </>
   );
 };
 
