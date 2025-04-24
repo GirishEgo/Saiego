@@ -145,12 +145,16 @@
   opacity: 1;
   transform: scale(1);
 }
-.product-card {
-    width: 250px;
-  }
+
   .subcategory-title{
     font-size: 1.5rem;
   }
+
+@media (max-width:425px){
+ .contact-footerholder{
+    border: none;
+  }
+}
 
 @media (max-width:325px){
   .product-card {
@@ -159,4 +163,5 @@
    .subcategory-title{
     font-size: 1.5rem;
   }
+ 
 }

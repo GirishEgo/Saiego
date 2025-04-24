@@ -150,7 +150,7 @@ const DisplaySubproducts = () => {
               </div>
             ) : (
               <ProductCard
-                key={subix}
+                key={idx}
                 to={`/Products/${finalLayout.id}/${item.id}`}
                 img={item.resolvedImg}
                 title={item.title}
