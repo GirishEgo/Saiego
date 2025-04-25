@@ -38,6 +38,10 @@ const Control = [
         id: "BOX-SPACE-HEATERS",
         title: "Box Space Heaters",
       },
+      {
+        id: "TOUCH-SAFE-HEATER",
+        title: "Touch-Safe Heater",
+},
     ],
   },
 
