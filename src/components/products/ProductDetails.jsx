@@ -99,7 +99,7 @@ console.log("this is SEOIFO ", seoInfo);
 
   return (
     <>
-      <SEO
+      {/* <SEO
         title={seoInfo.title}
         description={seoInfo.description}
         keywords={seoInfo.keywords}
@@ -109,7 +109,7 @@ console.log("this is SEOIFO ", seoInfo);
         product={seoInfo.product}
         // breadcrumb={breadcrumb}
         faqs={seoInfo.faqs}
-      />
+      /> */}
       <div className="product-details">
         {/* ✅ Heading and Models */}
         <div className="header-section">

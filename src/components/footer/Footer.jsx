@@ -22,8 +22,8 @@ const Footer = () => {
 
   const navLinks = [
     { id: 1, name: "Home", href: "/" },
-    { id: 2, name: "About Us", href: "/About-us" },
-    { id: 3, name: "Contact Us", href: "/Contact-us" },
+    { id: 2, name: "About Us", href: "/about" },
+    { id: 3, name: "Contact Us", href: "/contact" },
   ];
 
   const contactInfo = [

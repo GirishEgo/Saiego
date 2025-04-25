@@ -390,7 +390,7 @@ body {
   max-height: 850px;
   overflow: auto;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 12px;
   margin-bottom: 35px;
 align-items: center;

@@ -5,6 +5,7 @@ import { CallProvider } from "./context/CallContext";
 import Loader from "./components/Loader";
 import AppContent from "./AppContent";
 import WhatsAppButton from "./components/whatsappButton/WhatsAppButton";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   return (
@@ -18,7 +19,8 @@ const App = () => {
       <CallProvider>
         <Loader />
         <Navbar />
-        <WhatsAppButton/>
+        <ToastContainer />
+        <WhatsAppButton />
         <AppContent />
         {/* <Footer /> */}
       </CallProvider>

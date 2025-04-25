@@ -1,16 +1,12 @@
-import React from "react";
 import { useLoader } from "../context/LoaderContext";
+// import "./Loader.css"; // your custom styles
 
-const Loader = () => {
+export default function Loader() {
   const { loading } = useLoader();
 
-  if (!loading) return null;
-
-  return (
+  return loading ? (
     <div className="loader-overlay">
-      <div className="loader"></div>
+      <div className="loader" />
     </div>
-  );
-};
-
-export default Loader;
+  ) : null;
+}
