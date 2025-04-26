@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
@@ -83,7 +84,7 @@ const Footer = () => {
         <ul>
           {navLinks.map((link) => (
             <li key={link.id}>
-              <a href={link.href}>{link.name}</a>
+              <Link to={link.href}>{link.name}</Link>
             </li>
           ))}
         </ul>
