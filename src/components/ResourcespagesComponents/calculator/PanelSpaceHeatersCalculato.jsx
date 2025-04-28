@@ -2,10 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./calculator.css";
 import Form from "../../Form/Form";
+import { useCall } from "../../../context/CallContext";
 // import Form from "../../../../Components/Form/Form";
 // import SEO from "../../../../Components/SEO/SEO";
 
 const PanelSpaceHeatersCalculator = () => {
+  const {isMobile}=useCall()
   const formFields = [
     {
       type: "text",
@@ -99,7 +101,7 @@ const PanelSpaceHeatersCalculator = () => {
             formheading="Fill the Form"
             formbutton="Calculate"
             formFields={formFields}
-            popupMessage="Sorry for the inconvenience. Kindly call us for a better experience."
+            popupMessage={`Sorry for the inconvenience. Kindly ${isMobile ? "Call":"Mail"} us for a better experience.`}
             onSubmit={(data) => data}
           />
         </motion.div>

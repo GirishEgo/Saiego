@@ -5,10 +5,10 @@ const CallContext = createContext();
 
 export const CallProvider = ({ children }) => {
   const [showPopup, setShowPopup] = useState(false);
-
+ const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
   const handleCall = (phoneNumber) => {
-    const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-     console.log(phoneNumber);
+    //  console.log(isMobile);
+
     if (!isMobile) {
       toast.warning(
         "You are using a desktop/laptop. Please use a mobile phone to make a call.",
@@ -28,8 +28,7 @@ export const CallProvider = ({ children }) => {
     }
 
     if (!phoneNumber) return;
-   
-    
+
     window.location.href = `tel:${phoneNumber}`;
 
     setTimeout(() => {
@@ -38,7 +37,9 @@ export const CallProvider = ({ children }) => {
   };
 
   return (
-    <CallContext.Provider value={{ handleCall, setShowPopup, showPopup }}>
+    <CallContext.Provider
+      value={{ handleCall, setShowPopup, showPopup, isMobile }}
+    >
       {children}
     </CallContext.Provider>
   );
