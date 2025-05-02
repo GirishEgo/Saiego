@@ -86,4 +86,34 @@ box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;}
   }
 }
 
-
+.All_products-holder{
+  h1{
+    text-align: center;
+    font-size: 5rem;
+    /* color: rgb(70, 119, 70); */
+    padding:  15px 0;
+    text-align: center;
+    color: #38553a;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+   
+  }
+  h1::before,h2::after {
+  content: "";
+  display: block;
+  width: 20vw; /* Adjust as needed */
+  height: 3px;
+  background-color: red;
+  margin: 5px auto;
+}
+}
+.AllProductdisplay{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  .product-card{
+    margin: 20px;
+    .product-link{
+      text-decoration: none;
+    }
+  }
+}
