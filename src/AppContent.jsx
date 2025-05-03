@@ -94,6 +94,7 @@ const AppContent = () => {
             element={<ProductDetails />}
           />
           <Route path="/resources" element={<Resources />}>
+            <Route index element={<Navigate to="error404" />} />
             <Route
               path="heat-calculator"
               element={<PanelSpaceHeatersCalculator />}
@@ -102,7 +103,7 @@ const AppContent = () => {
           </Route>
 
           {/* This route renders the 404 page */}
-          <Route path="/error404" element={<Erroe404/>} />
+          <Route path="/error404" element={<Erroe404 />} />
 
           {/* Catch-all route: redirects unmatched URLs to /error404 */}
           <Route path="*" element={<Navigate to="/error404" />} />
