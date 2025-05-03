@@ -71,7 +71,7 @@ const Navbar = () => {
 
       <div className="logo-container">
         <Link to={"/"}>
-          <h2 className="brand">Saiego</h2>
+          <p className="brand">Saiego</p>
         </Link>
       </div>
 
