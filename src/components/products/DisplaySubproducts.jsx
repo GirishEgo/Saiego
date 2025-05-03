@@ -114,9 +114,9 @@ const DisplaySubproducts = () => {
 
   return (
     <div className="product-wrapper">
-      <h2 className="category-title">
+      <h1 className="category-title">
         {finalLayout.name || finalLayout.title}
-      </h2>
+      </h1>
 
       <motion.div
         className="product-group"
