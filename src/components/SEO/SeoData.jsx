@@ -10,13 +10,13 @@ const seoData = [
           "'Saiego' Space Heaters prevent condensation and corrosion in LT & HT Switchgear panels.",
         keywords:
           "space heaters, industrial heaters, panel board heaters, switchgear heating, condensation prevention, electronic panel heating, Saiego heaters",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/space-heaters",
         product: {
           name: "SPACE HEATERS (Perforated Body)",
           description:
             "Prevents condensation and corrosion in LT & HT Switchgear panels.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -69,13 +69,13 @@ const seoData = [
           "'Saiego' Aluminium Space Heaters prevent condensation and corrosion in LT & HT Switchgear panels.",
         keywords:
           "aluminium space heaters, industrial heaters, fast heat dissipation, electronic panel heating, switchgear heating, condensation prevention, Saiego heaters",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/aluminium-space-heaters",
         product: {
           name: "Aluminium Space Heaters",
           description:
             "Fast heat dissipation with an anodized aluminum body, ideal for LT & HT Switchgear panels.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -123,13 +123,13 @@ const seoData = [
           "'Saiego' Box Type Space Heaters prevent condensation and corrosion in LT & HT Switchgear panels with a larger surface area for heat dissipation.",
         keywords:
           "box type space heaters, industrial heaters, heat dissipation, electronic panel heating, switchgear heating, condensation prevention, Saiego heaters",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/box-space-heaters",
         product: {
           name: "BOX TYPE SPACE HEATERS",
           description:
             "Large surface area for heat dissipation, preventing condensation and corrosion in LT & HT Switchgear panels.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -178,13 +178,13 @@ const seoData = [
           "Prevents condensation and maintains minimum temperature with an aluminum body for even heat distribution. Easy installation with pressure clamp connectors.",
         keywords:
           "PTC enclosure heaters, industrial heaters, panel board heaters, switchgear heating, condensation prevention, energy-saving heaters, Saiego heaters",
-        siteName: "Girish Ego Controls",
-        url: "https://yourwebsite.com/products/ptc-enclosure-heaters",
+        siteName: "Saiegotherm India.",
+        url: "https://yourwebsite.com/products/Heating/PTC-Enclosure-Heaters",
         product: {
           name: "PTC Enclosure Heaters",
           description:
             "Prevents condensation and maintains minimum temperature with an aluminum body for even heat distribution.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -232,13 +232,13 @@ const seoData = [
           "Compact design with a built-in capillary thermostat. Ideal for preventing condensation, corrosion & leakage currents in LT & HT Switchgear panels, enclosures, and electronic instruments.",
         keywords:
           "Combi space heaters, industrial heaters, panel board heaters, built-in thermostat heaters, corrosion prevention, switchgear heating, Saiego heaters",
-        siteName: "Girish Ego Controls",
-        url: "https://yourwebsite.com/products/combi-space-heaters",
+        siteName: "Saiegotherm India.",
+        url: "https://yourwebsite.com/products/Heating/COMBI-SPACE-HEATERS",
         product: {
           name: "COMBI-SPACE HEATERS",
           description:
             "Compact and efficient space heater with a built-in capillary thermostat, stainless steel cover, and rust-resistant body.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -248,7 +248,7 @@ const seoData = [
           { name: "Products", url: "https://yourwebsite.com/products" },
           {
             name: "COMBI-SPACE HEATERS",
-            url: "https://yourwebsite.com/products/combi-space-heaters",
+            url: "https://yourwebsite.com/products/Heating/COMBI-SPACE-HEATERS",
           },
         ],
         faqs: [
@@ -287,13 +287,13 @@ const seoData = [
           "Slim and heavy-duty space heater designed for continuous use. Features a perforated aluminum cover for even temperature distribution and fast heat dissipation.",
         keywords:
           "Heavy duty space heater, slim space heater, continuous use heater, switchgear heating, condensation prevention, industrial heaters, Saiego heaters",
-        siteName: "Girish Ego Controls",
-        url: "https://yourwebsite.com/products/heavy-duty-slim-space-heater",
+        siteName: "Saiegotherm India.",
+        url: "https://yourwebsite.com/products/Heating/HEAVY-DUTY-SLIM-SPACE-HEATER",
         product: {
           name: "Heavy Duty Slim Space Heater",
           description:
             "Slim & heavy-duty space heater with an anodized heat sink aluminum body and a perforated cover for uniform heating.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -303,7 +303,7 @@ const seoData = [
           { name: "Products", url: "https://yourwebsite.com/products" },
           {
             name: "Heavy Duty Slim Space Heater",
-            url: "https://yourwebsite.com/products/heavy-duty-slim-space-heater",
+            url: "https://yourwebsite.com/products/Heating/HEAVY-DUTY-SLIM-SPACE-HEATER",
           },
         ],
         faqs: [
@@ -333,7 +333,7 @@ const seoData = [
   },
   //fan heaters data
   {
-    id: "SPACE-SAVING-FAN-HEATERS",
+    id: "Space-Saving-Fan-Heaters",
     seoInfo: [
       {
         title: "Space-Saving Fan Heaters - Compact & High Airflow Heating",
@@ -341,13 +341,13 @@ const seoData = [
           "Compact high-performance fan heater designed to prevent condensation and ensure even air distribution in enclosures. Available with or without a fan.",
         keywords:
           "Space-saving fan heaters, industrial fan heaters, condensation prevention, panel heating, switchgear heating, enclosure heaters, Saiego heaters",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/space-saving-fan-heaters",
         product: {
           name: "Space-Saving Fan Heaters",
           description:
             "Compact high-performance fan heater that prevents condensation and provides even air distribution in enclosures.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -387,7 +387,7 @@ const seoData = [
   },
   //Hazardous Area Heater
   {
-    id: "HAZARDOUS-AREA-HEATER",
+    id: "Hazardous-Area-Heater",
     seoInfo: [
       {
         title: "Hazardous Area Heater - Safe Heating for Hazardous Locations",
@@ -395,13 +395,13 @@ const seoData = [
           "Compact convection heater designed to prevent condensation, temperature fluctuations, and frost in hazardous areas. Ideal for control panels, switch cabinets, and measuring equipment.",
         keywords:
           "Hazardous area heater, explosion-proof heater, industrial convection heater, hazardous environment heating, switchgear heater, Saiego heaters",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/hazardous-area-heater",
         product: {
           name: "Hazardous Area Heater",
           description:
             "Compact convection heater prevents condensation, temperature fluctuations, and frost in hazardous areas.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -442,7 +442,7 @@ const seoData = [
 
   // CHPFH1
   {
-    id: "COMPACT-HIGH-PERFORMANCE-FAN-HEATER",
+    id: "Compact-High-Performance-Fan-Heater",
     seoInfo: [
       {
         title:
@@ -451,13 +451,13 @@ const seoData = [
           "High-performance fan heater prevents condensation and frost, ensuring even air distribution in enclosures. Features double insulation, contact protection, and an optional thermostat.",
         keywords:
           "Compact fan heater, high-performance enclosure heater, condensation prevention, frost protection, industrial heating, Saiego heaters",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/compact-high-performance-fan-heater",
         product: {
           name: "Compact High-Performance Fan Heater",
           description:
             "Prevents condensation and frost while ensuring even air distribution. Features double insulation and optional thermostat.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -508,13 +508,13 @@ const seoData = [
           "Compact semiconductor heater prevents condensation and maintains minimum operating temperature in small enclosures like camera housings. Energy-efficient and temperature-limiting design.",
         keywords:
           "Small semiconductor heater, compact enclosure heater, condensation prevention, camera housing heater, energy-efficient heating, Saiego heaters",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/small-semiconductor-heater",
         product: {
           name: "Small Semiconductor Heater",
           description:
             "Prevents condensation and maintains minimum operating temperature in small enclosures like camera housings. Energy-efficient and temperature-limiting design.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -564,13 +564,13 @@ const seoData = [
           "High-precision 'DLX' Thermostat ensures accurate temperature control of space heaters used in LT & HT switchgear and panel boards. Reliable, durable, and easy to install.",
         keywords:
           "DLX thermostat, panel board thermostat, switchgear temperature control, industrial thermostat, LT & HT switchgear, Saiego thermostat",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/dlx-thermostat",
         product: {
           name: "'DLX' Thermostat",
           description:
             "Ideal for temperature control of space heaters in LT & HT switchgear and panel boards, ensuring accurate and consistent heating.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -608,6 +608,66 @@ const seoData = [
       },
     ],
   },
+  //touch and safe
+  {
+  id: "TOUCH-SAFE-HEATER",
+  seoInfo: [
+    {
+      title: "Touch-Safe Heater – Compact Enclosure Heater with Safe Surface Temperature",
+      description:
+        "Reliable touch-safe enclosure heater with low surface temperature and high convection efficiency. Ideal for electrical cabinets, control panels, and sensitive electronic components. Available in models from 50W to 150W.",
+      keywords:
+        "Touch-safe heater, enclosure heater, low surface temperature heater, electrical panel heater, industrial cabinet heater, Saiego heaters, SCSF 060, DIN rail mounting heater, control panel heating",
+      siteName: "Saiegotherm India.",
+      url: "https://yourwebsite.com/products/touch-safe-heater",
+      product: {
+        name: "Touch-Safe Heater",
+        description:
+          "Touch-safe heater designed for enclosures with electrical/electronic components, ensuring safety, compactness, and efficient heat convection. Available in SCSF 060 model (50W to 150W).",
+        brand: "Saiegotherm India.",
+        price: "Contact for pricing",
+        currency: "INR",
+        availability: "InStock",
+      },
+      breadcrumb: [
+        { name: "Home", url: "https://yourwebsite.com/" },
+        { name: "Products", url: "https://yourwebsite.com/products" },
+        {
+          name: "Touch-Safe Heater",
+          url: "https://yourwebsite.com/products/touch-safe-heater",
+        },
+      ],
+      faqs: [
+        {
+          question: "What is a touch-safe heater?",
+          answer:
+            "A touch-safe heater is designed with a low surface temperature to prevent accidental burns while effectively preventing condensation and ensuring a warm airflow in electrical enclosures.",
+        },
+        {
+          question: "Where can the touch-safe heater be used?",
+          answer:
+            "It is ideal for use in electrical cabinets, control panels, switchgear, and other enclosures with sensitive electronic components.",
+        },
+        {
+          question: "What is the model available for the touch-safe heater?",
+          answer:
+            "The available model is SCSF 060, offering power ratings from 50W to 150W for various heating needs.",
+        },
+        {
+          question: "Does the heater support direct thermostat integration?",
+          answer:
+            "Yes, the touch-safe heater can be directly connected to thermostats and hygrostats and is also available in a version with a plug-in thermostat that requires no additional wiring.",
+        },
+        {
+          question: "What are the key features of the touch-safe heater?",
+          answer:
+            "Compact size, wide voltage range, double insulation, low surface temperature, and easy DIN rail mounting for quick installation.",
+        },
+      ],
+    },
+  ],
+},
+
   // round heatrs data
   {
     id: "Round-Thermostat",
@@ -619,13 +679,13 @@ const seoData = [
           "Saiego Round Thermostats ensure precise temperature control in panel boards, switchgear, and industrial heating applications. Available in multiple voltage and stem length options.",
         keywords:
           "round thermostat, panel board thermostat, switchgear thermostat, industrial thermostat, temperature control thermostat, Saiego thermostat, space heater thermostat",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/round-thermostat",
         product: {
           name: "Round Thermostat - Saiego",
           description:
             "A high-precision round thermostat designed for temperature control in LT & HT switchgear, panel boards, and industrial heating applications. Available in various models and voltage ratings.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -679,13 +739,13 @@ const seoData = [
           "Saiego Stem Thermostats are designed for panel boards, switchgear, and various heating applications. Available in multiple models and stem lengths for precise temperature control.",
         keywords:
           "stem thermostat, panel board thermostat, switchgear thermostat, industrial thermostat, heating system thermostat, temperature control thermostat, Saiego thermostat",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/stem-thermostat",
         product: {
           name: "Stem Thermostat - Saiego",
           description:
             "A range of high-precision stem thermostats for controlling temperature in domestic, industrial, and commercial heating systems. Ideal for water heaters, ovens, boilers, switchgear, and panel boards.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -739,13 +799,13 @@ const seoData = [
           "Saiego Enclosure Thermostats are compact and ideal for temperature control in LT & HT switchgear, panel boards, and enclosures. Available in Normally Closed (NC) and Normally Open (NO) variants.",
         keywords:
           "enclosure thermostat, KSTO-011, KSTS-011, panel board thermostat, LT HT switchgear thermostat, temperature control thermostat, DIN rail thermostat",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/enclosure-thermostat",
         product: {
           name: "Enclosure Thermostat - KSTO-011/KSTS-011",
           description:
             "Compact and efficient thermostats for temperature regulation in electrical enclosures, panel boards, and switchgear. NC (red knob) for heaters, NO (blue knob) for fans and cooling devices.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -802,13 +862,13 @@ const seoData = [
           "The ZSR-011 Dual Thermostat features two separate thermostats (NC & NO) for independent heating and cooling control. It offers wide adjustment ranges and DIN rail mounting for easy installation.",
         keywords:
           "dual thermostat, ZSR-011, heating and cooling control, independent thermostats, NC and NO thermostats, DIN rail thermostat, industrial temperature control",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/dual-thermostat",
         product: {
           name: "Dual Thermostat - ZSR-011",
           description:
             "The ZSR-011 features two independent thermostats—one Normally Closed (NC) and one Normally Open (NO)—for precise heating and cooling control with wide temperature adjustment ranges.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -864,13 +924,13 @@ const seoData = [
           "The MSFR-012 Mechanical Hygrostat prevents condensation and corrosion in enclosures by regulating humidity levels. It features an adjustable relative humidity range, high switching capacity, and DIN rail mounting.",
         keywords:
           "mechanical hygrostat, MSFR-012, humidity control, enclosure humidity regulator, condensation prevention, industrial hygrostat, DIN rail mountable hygrostat",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/mechanical-hygrostat",
         product: {
           name: "Mechanical Hygrostat",
           description:
             "The MSFR-012 Mechanical Hygrostat regulates humidity levels in enclosures by activating heaters at set humidity levels to prevent condensation and corrosion.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -927,13 +987,13 @@ const seoData = [
           "The ESFR-012 Electronic Hygrostat prevents condensation in enclosures by regulating humidity levels. Features adjustable relative humidity, LED indicator, and high switching capacity.",
         keywords:
           "electronic hygrostat, ESFR-012, humidity control, enclosure humidity regulator, condensation prevention, industrial hygrostat, temperature-compensated hygrostat",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/electronic-hygrostat",
         product: {
           name: "Electronic Hygrostat",
           description:
             "The ESFR-012 Electronic Hygrostat regulates humidity levels to prevent condensation in enclosures with electric or electronic components.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -990,13 +1050,13 @@ const seoData = [
           "Advanced electronic hygrotherm for precise temperature and humidity control. Features adjustable settings, LED status indicator, and high switching capacity for industrial applications.",
         keywords:
           "electronic hygrotherm, ESTF-012, temperature and humidity control, industrial hygrostat, DIN rail thermostat, electronic climate control",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/electronic-hygrotherm",
         product: {
           name: "Electronic Hygrotherm",
           description:
             "A high-performance electronic sensor that controls heaters and fans based on ambient temperature and humidity levels. Ideal for industrial enclosures and climate-sensitive applications.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -1039,6 +1099,119 @@ const seoData = [
       },
     ],
   },
+
+  {
+  id: "ELECTRONIC-HYGROSTAT",
+  seoInfo: [
+    {
+      title: "Electronic Hygrostat ESFR-012 – Humidity Control for Enclosures",
+      description:
+        "The ESFR-012 Electronic Hygrostat efficiently controls relative humidity in electrical enclosures, preventing condensation with LED status indication and temperature compensation. Ideal for industrial control panels.",
+      keywords:
+        "Electronic hygrostat, ESFR-012, condensation prevention, humidity controller for enclosures, industrial hygrostat, electrical cabinet humidity control, Saiego humidity sensor, LED hygrostat, enclosure moisture protection",
+      siteName: "Saiegotherm India.",
+      url: "https://yourwebsite.com/products/electronic-hygrostat",
+      product: {
+        name: "Electronic Hygrostat ESFR-012",
+        description:
+          "The ESFR-012 is an electronic hygrostat designed to monitor and control humidity inside enclosures. It activates a heater at a predefined humidity level to prevent condensation, featuring an LED operation indicator and temperature compensation.",
+        brand: "Saiegotherm India.",
+        price: "Contact for pricing",
+        currency: "INR",
+        availability: "InStock",
+      },
+      breadcrumb: [
+        { name: "Home", url: "https://yourwebsite.com/" },
+        { name: "Products", url: "https://yourwebsite.com/products" },
+        {
+          name: "Electronic Hygrostat",
+          url: "https://yourwebsite.com/products/electronic-hygrostat",
+        },
+      ],
+      faqs: [
+        {
+          question: "What does the ESFR-012 electronic hygrostat do?",
+          answer:
+            "It controls the relative humidity inside enclosures by activating a heater when moisture levels rise, preventing condensation that could damage sensitive components.",
+        },
+        {
+          question: "How does the LED indicator on the ESFR-012 work?",
+          answer:
+            "The LED indicator lights up when the connected heater is operating, providing a clear visual status of humidity control.",
+        },
+        {
+          question: "Where is the electronic hygrostat typically used?",
+          answer:
+            "It's used in enclosures with electronic or electrical components, such as control panels, switchgear, and automation systems to prevent moisture buildup.",
+        },
+        {
+          question: "Is the humidity setting adjustable?",
+          answer:
+            "Yes, the ESFR-012 offers both adjustable and pre-set relative humidity options to suit various applications.",
+        },
+        {
+          question: "What mounting options are available?",
+          answer:
+            "The ESFR-012 supports clip fixing, making it easy to install in different types of enclosure setups.",
+        },
+      ],
+    },
+  ],
+},
+  //SUNSIM
+  {
+    id: "SUNSIM",
+    seoInfo: [
+      {
+        title: "SUNSIM Energy Regulators - Heavy Duty Heat Control | Saiego",
+        description:
+          "‘Saiego’ SUNSIM Energy Regulators offer smooth heat control for industrial and commercial heating equipment. Ideal for OTG, drying cabinets, panel boards, and more.",
+        keywords:
+          "energy regulators, Saiego SUNSIM, heavy duty energy controller, OTG heat controller, industrial heat regulator, heating panel regulator, commercial energy controller",
+        siteName: "Saiego - Energy Heating Solutions",
+        url: "https://yourwebsite.com/products/sunsim-energy-regulators",
+        product: {
+          name: "SUNSIM Energy Regulator (Heavy Duty Model)",
+          description:
+            "Saiego’s SUNSIM Energy Regulators are designed to control heat from zero to full through a simple knob, with applications in industrial and commercial heating systems.",
+          brand: "Saiego",
+          price: "Contact for pricing",
+          currency: "INR",
+          availability: "InStock",
+        },
+        breadcrumb: [
+          { name: "Home", url: "https://yourwebsite.com/" },
+          { name: "Products", url: "https://yourwebsite.com/products" },
+          {
+            name: "SUNSIM Energy Regulators",
+            url: "https://yourwebsite.com/products/sunsim-energy-regulators",
+          },
+        ],
+        faqs: [
+          {
+            question: "What is the SUNSIM Energy Regulator used for?",
+            answer:
+              "The SUNSIM regulator controls heat output in OTGs, drying cabinets, hot plates, boilers, switchgear, panel boards, and more.",
+          },
+          {
+            question: "How does the SUNSIM regulator work?",
+            answer:
+              "It uses a snap-action switch to alternate the load circuit, varying the ON/OFF time to smoothly regulate heat.",
+          },
+          {
+            question: "Is the SUNSIM suitable for heavy-duty applications?",
+            answer:
+              "Yes, it is built with all-brass terminals and heavy-duty contacts for reliable performance in industrial environments.",
+          },
+          {
+            question: "Can it handle voltage fluctuations?",
+            answer:
+              "Yes, it compensates for voltage variations up to 15% and ambient temperatures up to 85°C automatically.",
+          },
+        ],
+      },
+    ],
+  },
   // ELECTRONIC DC THERMOSTAT data
   {
     id: "ELECTRONIC-DC-THERMOSTAT",
@@ -1050,13 +1223,13 @@ const seoData = [
           "High-performance Electronic DC Thermostat (EST-011) for precise temperature regulation in 24V DC applications. Features low hysteresis, adjustable temperature, and DIN rail mounting.",
         keywords:
           "electronic DC thermostat, EST-011, 24V DC thermostat, low hysteresis thermostat, temperature control, DIN rail mounted thermostat, industrial thermostat",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/electronic-dc-thermostat",
         product: {
           name: "Electronic DC Thermostat",
           description:
             "ET 011 electronic thermostat precisely regulates 24V DC heating, cooling, and signal devices with low hysteresis and change-over contact.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -1113,13 +1286,13 @@ const seoData = [
           "High-performance electronic thermostat for precise temperature regulation in industrial environments. Features adjustable temperature settings, LED status indicator, and high switching capacity.",
         keywords:
           "electronic thermostat, ESTR-011, industrial thermostat, temperature controller, DIN rail thermostat, heater control thermostat",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/electronic-thermostat",
         product: {
           name: "Electronic Thermostat",
           description:
             "An advanced electronic thermostat designed for industrial heating applications. Provides precise temperature control with an LED status indicator and high switching capacity.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -1172,13 +1345,13 @@ const seoData = [
           "Compact mechanical thermostat designed for hazardous environments, ensuring precise temperature control for heaters in control panels and transmitter cabinets.",
         keywords:
           "hazardous area thermostat, explosion-proof thermostat, SREX-011, industrial thermostat, temperature control, hazardous environment heating",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/hazardous-area-thermostat",
         product: {
           name: "Hazardous Area Thermostat",
           description:
             "A compact thermostat for monitoring and regulating heaters in hazardous areas, featuring high accuracy, long lifespan, and direct heater control.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -1232,13 +1405,13 @@ const seoData = [
           "Tamper-proof mechanical thermostats for regulating heaters and cooling devices. SFTO-011 (NC) for heating control, SFTS-011 (NO) for cooling control.",
         keywords:
           "mechanical thermostat, tamper-proof thermostat, SFTO-011, SFTS-011, temperature control, industrial thermostat",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/tp-m-thermostat",
         product: {
           name: "Temper-Proof Mechanical Thermostat",
           description:
             "A compact, tamper-proof thermostat available in SFTO-011 (NC) for heaters and SFTS-011 (NO) for cooling devices.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -1292,13 +1465,13 @@ const seoData = [
           "The SFTD-011 dual thermostat features separate NO & NC contacts in one casing for independent control of heaters and cooling devices.",
         keywords:
           "dual thermostat, NO-NC thermostat, SFTD-011, temperature control, tamper-proof thermostat, industrial thermostat",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/tp-dual-no-nc-thermostat",
         product: {
           name: "Temper-Proof Dual NO-NC Thermostat",
           description:
             "A dual thermostat with separate NO & NC contacts in one casing, designed for independent heating and cooling control in industrial enclosures.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -1351,13 +1524,13 @@ const seoData = [
           "The SKR-3118 electronic hygrostat and thermostat regulate temperature and humidity in enclosures, preventing condensation and ensuring safe operations.",
         keywords:
           "electronic hygrostat, SKR-3118, humidity control, temperature regulation, industrial enclosures, anti-condensation hygrostat",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/electronic-hygrostat-skr-3118",
         product: {
           name: "Electronic Hygrostat SKR-3118",
           description:
             "A compact and tamper-proof electronic hygrostat with thermostat functionality, designed to prevent condensation in electrical enclosures.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -1411,13 +1584,13 @@ const seoData = [
           "SCRex-011 compact mechanical thermostat for heater regulation in hazardous areas. Offers precise temperature control, high switching capacity, and long durability.",
         keywords:
           "hazardous area thermostat, SCRex-011, explosion-proof thermostat, industrial temperature control, thermostat for hazardous locations",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/hazardous-area-thermostat",
         product: {
           name: "Hazardous Area Thermostat",
           description:
             "A compact, high-accuracy mechanical thermostat for regulating heaters in hazardous areas such as transmitter cabinets and control panels.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -1465,13 +1638,13 @@ const seoData = [
           "Protect enclosures from dust, humidity, and pressure variations with the SDA-084/SDA-284 pressure compensation plug. Ensures reliable enclosure protection.",
         keywords:
           "pressure compensation device, waterproof enclosure plug, SDA-084, SDA-284, IP66 protection plug, enclosure pressure regulation",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/pressure-compensation-device",
         product: {
           name: "Pressure Compensation Device",
           description:
             "A high-protection enclosure accessory that regulates internal pressure, prevents dust and humidity ingress, and ensures a stable environment for electrical components.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -1520,13 +1693,13 @@ const seoData = [
           "High-quality ABS document pocket for enclosures and cabinets. Easy to install, durable, and ideal for holding wiring diagrams, user guides, and important documents.",
         keywords:
           "document pocket for enclosures, enclosure accessories, ABS document holder, wiring diagram pocket, cabinet document storage",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/document-pocket-for-enclosure",
         product: {
           name: "Document Pocket for Enclosure",
           description:
             "A secure and easy-to-install ABS document pocket designed for enclosures and cabinets, ensuring safe storage of wiring diagrams, user guides, and certifications.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -1576,13 +1749,13 @@ const seoData = [
           "High-performance LED light for panelboards and switchgear. Compact T5 fluorescent cabinet lamp with high brightness, long service life, and energy-saving features.",
         keywords:
           "LED panel light, switchgear LED light, T5 fluorescent cabinet lamp, energy-saving LED, non-flicker LED, high brightness LED for panels",
-        siteName: "Girish Ego Controls",
+        siteName: "Saiegotherm India.",
         url: "https://yourwebsite.com/products/led-light-panelboard-switchgear",
         product: {
           name: "LED Light for Panelboard & Switchgear",
           description:
             "Compact and energy-efficient T5 fluorescent cabinet lamp designed for panelboards and switchgear, ensuring reliable performance with long service life.",
-          brand: "Girish Ego Controls",
+          brand: "Saiegotherm India.",
           price: "Contact for pricing",
           currency: "INR",
           availability: "InStock",
@@ -1616,6 +1789,373 @@ const seoData = [
             question: "Is the installation of this LED light simple?",
             answer:
               "Yes, it is designed for easy installation in panelboards and switchgear setups.",
+          },
+        ],
+      },
+    ],
+  },
+
+  // SUNTEK
+  {
+    id: "SUNTEK",
+    seoInfo: [
+      {
+        title:
+          "SUNTEK Energy Regulators - Heavy Duty Industrial Heat Controller | Saiego",
+        description:
+          "Saiego's SUNTEK Energy Regulators offer precise, smooth heat control for commercial and industrial heating applications like panel boards, OTGs, boilers, and more.",
+        keywords:
+          "Suntek energy regulators, Saiego heat controller, heavy duty energy regulator, industrial heating regulator, panel board energy controller, OTG heating control, thermoplastic heater regulator",
+        siteName: "Saiego - Energy Heating Solutions",
+        url: "https://yourwebsite.com/products/suntek-energy-regulators",
+        product: {
+          name: "SUNTEK Energy Regulator (Heavy Duty Model)",
+          description:
+            "The SUNTEK Energy Regulator by Saiego ensures zero-to-full heat control through a knob mechanism. Ideal for OTGs, grills, boilers, and industrial heating equipment.",
+          brand: "Saiego",
+          price: "Contact for pricing",
+          currency: "INR",
+          availability: "InStock",
+        },
+        breadcrumb: [
+          { name: "Home", url: "https://yourwebsite.com/" },
+          { name: "Products", url: "https://yourwebsite.com/products" },
+          {
+            name: "SUNTEK Energy Regulators",
+            url: "https://yourwebsite.com/products/suntek-energy-regulators",
+          },
+        ],
+        faqs: [
+          {
+            question: "What is the SUNTEK Energy Regulator used for?",
+            answer:
+              "The SUNTEK regulator controls heat in equipment such as OTGs, dryers, boilers, switchgear, and panel boards in industrial and commercial setups.",
+          },
+          {
+            question: "How does the SUNTEK regulator control heat?",
+            answer:
+              "It uses a snap-action switch to alternate the load circuit and regulate the average heat output by adjusting the ON/OFF time ratio.",
+          },
+          {
+            question:
+              "What makes the SUNTEK regulator suitable for heavy-duty use?",
+            answer:
+              "It is designed with all-brass terminals, extra heavy contacts, and a thermoplastic base, ensuring long-lasting performance in demanding environments.",
+          },
+          {
+            question: "Can the SUNTEK regulator handle voltage fluctuations?",
+            answer:
+              "Yes, it automatically compensates for voltage variations up to 15% and ambient temperatures up to 85°C.",
+          },
+          {
+            question: "Is SUNTEK different from SUNSIM energy regulators?",
+            answer:
+              "Both offer similar functionality but may differ in construction aesthetics or model-specific applications depending on control panel design.",
+          },
+        ],
+      },
+    ],
+  },
+  // SUMO
+  {
+    id: "SUMO",
+    seoInfo: [
+      {
+        title:
+          "SUMO Energy Regulator - Heavy Duty Heat Controller with Porcelain Base | Saiego",
+        description:
+          "Saiego's SUMO Energy Regulator features a robust design, porcelain base, and large control knob, perfect for industrial heat regulation in boilers, grills, and panel boards.",
+        keywords:
+          "Sumo energy regulators, Saiego energy regulator, porcelain base heat regulator, industrial heating controller, heavy duty energy regulator, OTG heat control, panel board regulator",
+        siteName: "Saiego - Industrial Heating Solutions",
+        url: "https://yourwebsite.com/products/sumo-energy-regulators",
+        product: {
+          name: "SUMO Energy Regulator (Heavy Duty Model)",
+          description:
+            "The SUMO Energy Regulator from Saiego offers reliable heat control using a snap-action switch, mounted on a durable porcelain base, ideal for commercial and industrial heating applications.",
+          brand: "Saiego",
+          price: "Contact for pricing",
+          currency: "INR",
+          availability: "InStock",
+        },
+        breadcrumb: [
+          { name: "Home", url: "https://yourwebsite.com/" },
+          { name: "Products", url: "https://yourwebsite.com/products" },
+          {
+            name: "SUMO Energy Regulators",
+            url: "https://yourwebsite.com/products/sumo-energy-regulators",
+          },
+        ],
+        faqs: [
+          {
+            question: "What is unique about the SUMO Energy Regulator?",
+            answer:
+              "The SUMO regulator features a porcelain base, large dial, and robust components, designed for heavy-duty industrial applications.",
+          },
+          {
+            question: "What kind of equipment is the SUMO regulator used for?",
+            answer:
+              "It’s used for OTGs, boiling rings, drying cabinets, switchgear, and heating machines in industrial and commercial settings.",
+          },
+          {
+            question: "How does the SUMO regulator manage heat levels?",
+            answer:
+              "It uses a time-based ON/OFF cycle controlled by a snap-action switch, offering smooth regulation of average heat output.",
+          },
+          {
+            question:
+              "Is the SUMO regulator resistant to voltage fluctuations?",
+            answer:
+              "Yes, it automatically compensates for voltage variations up to 15% and ambient temperature changes up to 85°C.",
+          },
+          {
+            question:
+              "Can the SUMO regulator be easily mounted on control panels?",
+            answer:
+              "Yes, it includes a threaded bush and registering lugs for secure and flexible panel installation.",
+          },
+        ],
+      },
+    ],
+  },
+  //COMPAQ
+  {
+    id: "COMPAQ",
+    seoInfo: [
+      {
+        title:
+          "COMPAQ Capillary Thermostat - Precise Temperature Controller for Industrial & Home Use | Saiego",
+        description:
+          "Saiego’s COMPAQ Capillary Thermostat offers compact design, fast response time, and accurate temperature control—ideal for appliances like fryers, ovens, boilers, and lab equipment.",
+        keywords:
+          "Capillary thermostat, COMPAQ thermostat, precise temperature controller, Saiego thermostat, thermostat for fryer, commercial thermostat, thermostat for boiler, panel board thermostat",
+        siteName: "Saiego - Trusted Heating Components",
+        url: "https://yourwebsite.com/products/compaq-capillary-thermostat",
+        product: {
+          name: "COMPAQ Capillary Thermostat (IS:4165 Compliant)",
+          description:
+            "COMPAQ thermostats are engineered for accurate and responsive temperature control using a capillary and phial mechanism, perfect for domestic, commercial, and industrial use.",
+          brand: "Saiego",
+          price: "Contact for pricing",
+          currency: "INR",
+          availability: "InStock",
+        },
+        breadcrumb: [
+          { name: "Home", url: "https://yourwebsite.com/" },
+          { name: "Products", url: "https://yourwebsite.com/products" },
+          {
+            name: "COMPAQ Capillary Thermostats",
+            url: "https://yourwebsite.com/products/compaq-capillary-thermostat",
+          },
+        ],
+        faqs: [
+          {
+            question: "What is the COMPAQ Capillary Thermostat used for?",
+            answer:
+              "It is used in appliances like washing machines, fryers, boilers, cookers, ovens, laboratory instruments, and industrial heating systems.",
+          },
+          {
+            question: "How does the COMPAQ thermostat operate?",
+            answer:
+              "It uses liquid expansion in a capillary tube to actuate a phial assembly, breaking the electrical circuit at a preset temperature.",
+          },
+          {
+            question: "What materials are used in its construction?",
+            answer:
+              "It includes copper or stainless steel capillary tubes, a liquid-filled diaphragm, DMC switch base, and a durable thermosetting housing.",
+          },
+          {
+            question: "Is the temperature adjustable?",
+            answer:
+              "Yes, the thermostat includes an ABS knob with a clearly marked dial calibrated in °C to set the desired temperature.",
+          },
+          {
+            question: "What mounting options are available?",
+            answer:
+              "It is installed on panels using two M4 screws with a center distance of 28mm.",
+          },
+        ],
+      },
+    ],
+  },
+  //SUN
+  {
+    id: "SUN",
+    seoInfo: [
+      {
+        title:
+          "SUN Capillary Thermostat with Metallic Housing | Accurate Temperature Controller - Saiego",
+        description:
+          "SUN Capillary Thermostat from Saiego delivers precise temperature control with a compact metallic housing. Ideal for appliances like boilers, fryers, ovens, and lab equipment.",
+        keywords:
+          "SUN thermostat, Capillary thermostat, temperature controller, Saiego thermostat, compact thermostat, metallic thermostat, thermostat for oven, dishwasher thermostat, panel thermostat",
+        siteName: "Saiego - Reliable Heating Components",
+        url: "https://yourwebsite.com/products/sun-capillary-thermostat",
+        product: {
+          name: "SUN Capillary Thermostat (IS:4165 Compliant)",
+          description:
+            "SUN model Capillary Thermostats are designed with a durable metallic housing and fast response mechanism, ideal for industrial, commercial, and domestic heating systems.",
+          brand: "Saiego",
+          price: "Contact for pricing",
+          currency: "INR",
+          availability: "InStock",
+        },
+        breadcrumb: [
+          { name: "Home", url: "https://yourwebsite.com/" },
+          { name: "Products", url: "https://yourwebsite.com/products" },
+          {
+            name: "SUN Capillary Thermostat",
+            url: "https://yourwebsite.com/products/sun-capillary-thermostat",
+          },
+        ],
+        faqs: [
+          {
+            question: "What is the SUN Capillary Thermostat used for?",
+            answer:
+              "It is used in fryers, coffee machines, boilers, ovens, hot water systems, incubators, and laboratory and kitchen equipment.",
+          },
+          {
+            question: "What makes the SUN thermostat different?",
+            answer:
+              "It features a plated M.S. metallic housing for enhanced durability, with wide temperature range compatibility and quick thermal response.",
+          },
+          {
+            question: "How does the SUN thermostat work?",
+            answer:
+              "It uses the expansion of liquid in a capillary tube to activate a phial assembly, opening or closing electrical contacts based on temperature.",
+          },
+          {
+            question: "Can I adjust the temperature manually?",
+            answer:
+              "Yes, it comes with an ABS knob and a clear temperature dial calibrated in °C for manual control.",
+          },
+          {
+            question: "What installation method does it support?",
+            answer:
+              "It can be panel mounted using two M4 screws spaced 28mm apart.",
+          },
+        ],
+      },
+    ],
+  },
+  // SUPER deluxe
+  {
+    id: "Super-Deluxe",
+    seoInfo: [
+      {
+        title:
+          "Super Deluxe Capillary Thermostat (SDLX) | High-Precision Thermostat by Saiego",
+        description:
+          "Super Deluxe Capillary Thermostat (SDLX) offers precise temperature control for a wide range of heating equipment. Ideal for domestic, commercial, and industrial use.",
+        keywords:
+          "Super Deluxe thermostat, SDLX thermostat, Capillary thermostat, temperature controller, IS:4165 thermostat, Saiego thermostat, oven thermostat, heating equipment controller, metallic bezel thermostat",
+        siteName: "Saiego - Experts in Heating Solutions",
+        url: "https://yourwebsite.com/products/super-deluxe-capillary-thermostat",
+        product: {
+          name: "Super Deluxe Capillary Thermostat (SDLX, IS:4165 Compliant)",
+          description:
+            "SDLX Super Deluxe Capillary Thermostats from Saiego ensure fast, accurate temperature control using a robust copper/SS capillary, ABS knob, and clear dial. Suitable for a wide range of industrial and household appliances.",
+          brand: "Saiego",
+          price: "Contact for pricing",
+          currency: "INR",
+          availability: "InStock",
+        },
+        breadcrumb: [
+          { name: "Home", url: "https://yourwebsite.com/" },
+          { name: "Products", url: "https://yourwebsite.com/products" },
+          {
+            name: "Super Deluxe Capillary Thermostat",
+            url: "https://yourwebsite.com/products/super-deluxe-capillary-thermostat",
+          },
+        ],
+        faqs: [
+          {
+            question:
+              "What is the Super Deluxe (SDLX) Capillary Thermostat used for?",
+            answer:
+              "It is used in domestic and industrial appliances such as boilers, fryers, ovens, hot water systems, dishwashers, and lab equipment.",
+          },
+          {
+            question: "How is the Super Deluxe thermostat constructed?",
+            answer:
+              "It uses a copper or stainless steel capillary and sensing bulb, fixed on a thermoset switch base with a plated M.S. housing, and comes with a plastic or metallic bezel.",
+          },
+          {
+            question: "Can I get Normally Open Contact (NOC) in this model?",
+            answer:
+              "Yes, optional Normally Open Contacts (NOC) are available along with the standard Normally Closed contacts.",
+          },
+          {
+            question:
+              "Is the Super Deluxe model compliant with IS:4165 standards?",
+            answer:
+              "Yes, this thermostat conforms to IS:4165 standards for performance and safety.",
+          },
+          {
+            question: "What is the mounting mechanism for the SDLX thermostat?",
+            answer:
+              "It can be mounted on a panel using two M4 screws at a 30mm center distance.",
+          },
+        ],
+      },
+    ],
+  },
+  // SAI
+  {
+    id: "SAI",
+    seoInfo: [
+      {
+        title:
+          "SAI Capillary Thermostat | Reliable Temperature Control by Saiego",
+        description:
+          "SAI Capillary Thermostat provides precise temperature control for a variety of heating applications. Perfect for domestic, commercial, and industrial use, with a classic design and fast response time.",
+        keywords:
+          "SAI thermostat, Capillary thermostat, temperature controller, IS:4165 thermostat, Saiego thermostat, industrial thermostat, classic thermostat, heating control, precision thermostat",
+        siteName: "Saiego - Experts in Heating Solutions",
+        url: "https://yourwebsite.com/products/sai-capillary-thermostat",
+        product: {
+          name: "SAI Capillary Thermostat (IS:4165 Compliant)",
+          description:
+            "SAI Capillary Thermostat from Saiego is designed for reliable and precise temperature control in a wide range of domestic, commercial, and industrial applications. It features a classic design with an ABS plastic knob and a clear temperature scale.",
+          brand: "Saiego",
+          price: "Contact for pricing",
+          currency: "INR",
+          availability: "InStock",
+        },
+        breadcrumb: [
+          { name: "Home", url: "https://yourwebsite.com/" },
+          { name: "Products", url: "https://yourwebsite.com/products" },
+          {
+            name: "SAI Capillary Thermostat",
+            url: "https://yourwebsite.com/products/sai-capillary-thermostat",
+          },
+        ],
+        faqs: [
+          {
+            question: "What is the SAI Capillary Thermostat used for?",
+            answer:
+              "It is used in various appliances like washing machines, coffee vending machines, dishwashers, fryers, and industrial heating systems.",
+          },
+          {
+            question: "How does the SAI Capillary Thermostat work?",
+            answer:
+              "It works by the expansion of liquid in a capillary tube in response to temperature changes, which opens and closes electrical contacts to regulate heating.",
+          },
+          {
+            question:
+              "Can I get Normally Open Contact (NOC) for the SAI model?",
+            answer:
+              "Yes, optional Normally Open Contacts (NOC) are available, in addition to the standard Normally Closed contacts.",
+          },
+          {
+            question: "Is the SAI thermostat compliant with IS:4165 standards?",
+            answer:
+              "Yes, the SAI Capillary Thermostat is fully compliant with IS:4165 standards for performance and safety.",
+          },
+          {
+            question: "What is the installation method for the SAI thermostat?",
+            answer:
+              "The SAI thermostat can be mounted on a panel using two M4 screws at a 45mm center distance.",
           },
         ],
       },
