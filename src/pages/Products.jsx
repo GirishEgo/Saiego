@@ -1,40 +1,68 @@
-
-import { useNavigate, useParams } from "react-router-dom";
 import Products from "../Data/Products";
-import Control from "../Data/Control";
+import React, { useEffect, useState } from "react";
+import ProductCard from "../components/products/ProductCard";
+
 const Product = () => {
-  const { productId } = useParams();
+  const [resolvedProducts, setResolvedProducts] = useState([]);
 
-  
+  useEffect(() => {
+    const loadImages = async () => {
+      const resolved = await Promise.all(
+        Products.map(async (pro) => {
+          if (!Array.isArray(pro.subProduct)) return pro;
 
-  const Productcategory = Products.find((prod) => prod.id === productId);
-  if (!Productcategory) {
-    return (
-      <div>
-        <h1>product catogary not found </h1>
-      </div>
-    );
-  } else {
-    console.log("product found", Productcategory);
+          const subProductWithImg = await Promise.all(
+            pro.subProduct.map(async (sub) => {
+              const resolvedImg =
+                typeof sub.productImg === "function"
+                  ? await sub.productImg()
+                  : sub.productImg;
+
+              return {
+                ...sub,
+                resolvedImg,
+              };
+            })
+          );
+
+          return {
+            ...pro,
+            subProduct: subProductWithImg,
+          };
+        })
+      );
+
+      setResolvedProducts(resolved);
+    };
+
+    loadImages();
+  }, []);
+
+  if (resolvedProducts.length === 0) {
+    return <div>Loading products...</div>;
   }
-
-  const navigate = useNavigate();
-
-  const handleNavigation = (id) => {
-    navigate(`/products/${productId}/${id}`);
-    // console.log(productId, id);
-  };
 
   return (
     <div>
-      {Productcategory.subProduct.map((pro, proi) => (
-        <div key={proi}>
-          <div
-            onClick={() => handleNavigation(pro.id)}
-            style={{ cursor: "pointer" }}
-          >
-            <p>click here - {pro.id}</p>
-          </div>
+      {resolvedProducts.map((pro, proi) => (
+        <div className="All_products-holder" key={proi}>
+          <h1>{pro.name}</h1>
+
+          {Array.isArray(pro.subProduct) && pro.subProduct.length > 0 ? (
+            <div className="AllProductdisplay">
+              {pro.subProduct.map((alsub, alsubI) => (
+                <ProductCard
+                  key={alsubI}
+                  to={`/products/${pro.id}/${alsub.id}`}
+                  img={alsub.resolvedImg}
+                  title={alsub.title}
+                  description= {alsub.description}
+                />
+              ))}
+            </div>
+          ) : (
+            <h4>No products</h4>
+          )}
         </div>
       ))}
     </div>

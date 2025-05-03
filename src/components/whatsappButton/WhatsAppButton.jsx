@@ -15,6 +15,9 @@ const WhatsAppButton = () => {
         <img
           src="/whatsapp.png"
           alt="WhatsApp"
+          loading="eager"
+          width="auto"
+          height="auto"
           className="whatsapp-logo"
           title="Contact us on WhatsApp"
         />
