@@ -60,7 +60,7 @@ const Control = [
         subHeading: "Energy Regulator",
         subProducts: [
           {
-            id: "SUNSIM",
+            id:"SUNSIM",
             title: "Sunsim",
 },
           {
