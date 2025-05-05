@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 30px;
-  background: linear-gradient(135deg, #577D73 0%, #405d55 100%);
+  background: linear-gradient(135deg, #31443f 0%, #405d55 100%);
   color: #E5D0CF;
   font-family: "Poppins", sans-serif;
   position: relative;
@@ -16,9 +16,14 @@
 .logo-container {
   display: flex;
   align-items: center;
+  width: 15%;
   a{
     text-decoration: none;
+    img{
+      width: 10rem;
+    }
   }
+  
 }
 
 .brand {
