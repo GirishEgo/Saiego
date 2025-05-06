@@ -33,7 +33,7 @@ const itemVariants = {
 //     className="product-card"
 //     variants={itemVariants}
 //     initial="hidden"
-//     animate="visible"
+//     animatevisible"
 //   >
 //     <Link to={to} className="product-link">
 //       {img && <LazyImage src={img} alt={title} className="product-image" />}

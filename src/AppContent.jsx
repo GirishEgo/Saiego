@@ -10,6 +10,7 @@ import SEO from "./components/SEO/SEO";
 import { getSEODataByPath } from "./components/SEO/getSEOData";
 import { seoPagesData } from "./components/SEO/seoPagesData";
 import Erroe404 from "./pages/404/Erroe404";
+import KeyWords from "./pages/KeyWords"
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -88,6 +89,8 @@ const AppContent = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/products" element={<Allproducts />} />
+          <Route path="/keywords" element={<KeyWords />} />
+
           <Route path="/products/:productId" element={<DisplaySubproducts />} />
           <Route
             path="/products/:productId/:subProductId"

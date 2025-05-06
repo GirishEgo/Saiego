@@ -71,7 +71,10 @@ const Navbar = () => {
 
       <div className="logo-container">
         <Link to={"/"}>
-          <p className="brand">Saiego</p>
+          {/* <p className="brand">Saiego</p> */}
+          {/* <img src="Logo.png" alt="LOGO" /> */}
+          <img src="/Logo2.png" alt="LOGO" loading="eager" width={"auto"} height={"auto"} />
+
         </Link>
       </div>
 

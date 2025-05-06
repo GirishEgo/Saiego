@@ -7,6 +7,6 @@ export const getSEODataByPath = (seoPagesData, pathname) => {
         return seoData;
     }
 
-    console.warn("No Page found for path:", pathname);
+    // console.warn("No Page found for path:", pathname);
     return seoPagesData.find((page) => page.path === "/")?.seoInfo?.[0]; // fallback to home page
 };

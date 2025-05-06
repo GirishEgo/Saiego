@@ -73,7 +73,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <motion.div className="footer-logo" {...fadeUp(0.1)}>
-        <img style={{width:"10rem"}} src="Logo.png" alt="" />
+        <img style={{width:"10rem"}} width={"auto"} height={"auto"} src="/Logo.png" alt="footer Saiego logo" loading="eager" />
       </motion.div>
 
       <motion.p className="footer-tagline" {...fadeUp(0.2)}>
