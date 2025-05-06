@@ -1,5 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import Erroe404 from "./404/Erroe404";
 
 const Resources = () => {
   return (
@@ -9,6 +10,7 @@ const Resources = () => {
       {/* <Link to="heat-calculator">Heat Calculator</Link> */}
 
       {/* Where nested content will render */}
+      {/* <Erroe404/> */}
       <Outlet />
     </div>
   );

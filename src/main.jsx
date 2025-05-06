@@ -1,17 +1,19 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
-import './index.css'
-import App from './App.jsx'
-import { LoaderProvider } from './context/LoaderContext.jsx';
+import "./index.css";
+import App from "./App.jsx";
+// import { LoaderProvider } from './context/LoaderContext.jsx';
+import { HelmetProvider } from "react-helmet-async";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* <LoaderProvider> */}
-      <BrowserRouter>
+    <BrowserRouter>
+      <HelmetProvider>
         <App />
-      </BrowserRouter>
-    {/* </LoaderProvider> */}
+      </HelmetProvider>
+    </BrowserRouter>
+    
   </StrictMode>
 );

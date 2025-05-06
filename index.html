@@ -1,13 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <!-- Charset should always be first -->
+  <meta charset="UTF-8" />
+
+  <!-- Viewport for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title (will be overridden by React Helmet but still useful for SEO fallback) -->
+  <title>Saiegotherm India – Heating Elements & Energy Regulators</title>
+
+  <!-- Description (can be overridden by Helmet) -->
+  <meta name="description"
+    content="Saiegotherm India specializes in high-quality heating elements, energy regulators, and industrial heating solutions. Trusted worldwide." />
+
+  <!-- Keywords (can be overridden) -->
+  <meta name="keywords"
+    content="Saiegotherm, heating elements, energy regulators, industrial heaters, electric heating, India heating company" />
+
+  <!-- Author -->
+  <meta name="author" content="Saiegotherm India" />
+
+  <!-- Favicon (fixed MIME type) -->
+  <link rel="icon" type="image/svg+xml" href="Logoq.jpeg" />
+
+  <!-- Canonical link (can be overridden dynamically by React Helmet) -->
+  <link rel="canonical" href="https://www.saiego.com" />
+
+  <!-- Open Graph default -->
+  <meta property="og:title" content="Saiegotherm India – Heating Elements & Energy Regulators" />
+  <meta property="og:description"
+    content="Explore Saiegotherm's premium range of heating solutions for domestic and industrial applications." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.saiego.com" />
+  <meta property="og:image" content="https://www.saiego.com/og-image.png" />
+  <meta property="og:site_name" content="Saiegotherm India" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Saiegotherm India – Heating Elements & Energy Regulators" />
+  <meta name="twitter:description"
+    content="Discover our industry-leading heating products and innovative energy solutions." />
+  <meta name="twitter:image" content="https://www.saiego.com/twitter-image.png" />
+  <meta name="twitter:site" content="@SaiegothermIndia" />
+
+  <!-- Optional static schema for Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Saiegotherm India",
+    "url": "https://www.saiego.com",
+    "logo": "https://www.saiego.com/logo.png",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+91 22 22068032",
+      "contactType": "Customer Service",
+      "areaServed": "IN",
+      "availableLanguage": ["English", "Hindi"]
+    }],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "31, Tavawala Building, 147, Lohar Chawl, Kalbadevi",
+      "addressLocality": "Mumbai",
+      "addressRegion": "Maharashtra",
+      "postalCode": "400002",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <!--  JavaScript should always be at the bottom of <body> for better loading performance -->
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+
 </html>

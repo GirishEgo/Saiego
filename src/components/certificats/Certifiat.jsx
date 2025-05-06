@@ -28,20 +28,30 @@ const Certifiat = () => {
       viewport={{ once: true }}
     >
       <div className="line"></div>
-      <h1 style={{  textTransform: "uppercase" }}>
+      <h2
+        style={{
+          fontSize: "50px",
+          color: "#284328",
+          textTransform: "uppercase",
+        }}
+      >
         Certification
-      </h1>
+      </h2>
       <div className="line"></div>
 
       <div className="certoficat_holder">
         <div className="certfict_imgsvontainer">
           <div className="Certificat-img">
             {certificates.map(({ src, name }, index) => (
-              <div
-                key={name}
-                className="certificate-item"
-              >
-                <img src={src} alt={name} title={name} loading="lazy" />
+              <div key={name} className="certificate-item">
+                <img
+                  src={src}
+                  alt={name}
+                  title={name}
+                  loading="lazy"
+                  width={"auto"}
+                  height={"auto"}
+                />
               </div>
             ))}
           </div>

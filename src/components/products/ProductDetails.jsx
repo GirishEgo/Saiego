@@ -6,6 +6,7 @@ import "./csss2.css";
 import Loader from "../Loader";
 import SEO from "../SEO/SEO";
 import seoData from "../SEO/SeoData";
+import useSeoInfo from "../hooks/useSeoInfo";
 
 const ProductDetails = () => {
   const { productId, subProductId } = useParams(); // ✅ Get both category & subProduct ID
@@ -13,18 +14,10 @@ const ProductDetails = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [activeImage, setActiveImage] = useState(null);
-  const [seoInfo, setSeoInfo] = useState("Not Found");
-// console.log("Products Data:", Products);
-// console.log("ProductId:", productId, "SubProductId:", subProductId);
-// console.log("erroe",error);
+  const [breadcrumb, setBreadcrumb] = useState([]);
+ 
 
-useEffect(() => {
-  const matchedSeo = seoData.find((seo) => seo.id === subProductId);
-  setSeoInfo(matchedSeo?.seoInfo?.[0] ?? "Not Found");
-}, [productId, subProductId]);
-
-console.log("this is SEOIFO ", seoInfo);
-
+  const seoInfo = useSeoInfo(seoData, subProductId);
 
   useEffect(() => {
     const loadData = async () => {
@@ -32,22 +25,18 @@ console.log("this is SEOIFO ", seoInfo);
         setLoading(true);
         setError(null);
 
-        // ✅ Find the correct product category
+        // ✅ Find and validate selected product
         const selectedProduct = Products.find(
           (product) => String(product.id) === String(productId)
         );
-
         if (!selectedProduct) {
           throw new Error(`No product category found with ID: ${productId}`);
         }
 
-        // ✅ Find the correct subProduct
+        // ✅ Find and validate selected subProduct
         const selectedSubProduct = selectedProduct.subProduct.find(
           (sub) => String(sub.id) === String(subProductId)
         );
-        console.log(selectedSubProduct);
-        
-
         if (!selectedSubProduct) {
           throw new Error(`No subProduct found with ID: ${subProductId}`);
         }
@@ -68,7 +57,7 @@ console.log("this is SEOIFO ", seoInfo);
           })
         );
 
-        // ✅ Set state with selected subProduct
+        // ✅ Update subProduct state
         setSubProduct({
           ...selectedSubProduct,
           productImg,
@@ -76,8 +65,7 @@ console.log("this is SEOIFO ", seoInfo);
         });
       } catch (err) {
         setError(err.message);
-        console.log(error);
-        
+        console.error(err);
       } finally {
         setLoading(false);
       }
@@ -85,6 +73,18 @@ console.log("this is SEOIFO ", seoInfo);
 
     loadData();
   }, [productId, subProductId]);
+
+  //bread crumes
+  useEffect(() => {
+    const pathnames = location.pathname.split("/").filter((x) => x); // Remove empty strings
+    const breadcrumbArray = pathnames.map((value, index) => ({
+      name: decodeURIComponent(value.replace(/-/g, " ")), // Convert hyphens to spaces
+      url: `/${pathnames.slice(0, index + 1).join("/")}`,
+    }));
+
+    // Add "Home" at the start
+    setBreadcrumb([{ name: "Home", url: "/" }, ...breadcrumbArray]);
+  }, [location]);
 
   if (loading)
     return (
@@ -95,21 +95,18 @@ console.log("this is SEOIFO ", seoInfo);
   if (error) return <div className="error">{error}</div>;
   if (!subProduct) return <div className="error">Product not found.</div>;
 
-  
-
   return (
     <>
-      {/* <SEO
-        title={seoInfo.title}
-        description={seoInfo.description}
-        keywords={seoInfo.keywords}
-        siteName={seoInfo.siteName}
-        image={subProduct[0]?.productImg}
-        // url={seoInfo.url}
+      <SEO
+        title={seoInfo.title || "Default Title"}
+        description={seoInfo.description || "No description available."}
+        keywords={seoInfo.keywords || "default, keywords"}
+        siteName={seoInfo.siteName || "Your Site Name"}
+        image={subProduct.productImg}
         product={seoInfo.product}
-        // breadcrumb={breadcrumb}
         faqs={seoInfo.faqs}
-      /> */}
+        breadcrumb={breadcrumb}
+      />
       <div className="product-details">
         {/* ✅ Heading and Models */}
         <div className="header-section">

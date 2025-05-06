@@ -1880,7 +1880,7 @@ const Products = [
 
       // SUNSIm
       {
-        id: "SUNSIM",
+        id:"SUNSIM",
         title: "SUNSIM",
         productImg: async () =>
           (
