@@ -178,6 +178,8 @@ body {
 } */
 
 /* ✅ Overlay for Fullscreen Image */
+
+
 .image-overlay {
   position: fixed;
   top: 0;

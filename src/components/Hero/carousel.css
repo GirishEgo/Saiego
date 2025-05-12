@@ -1,144 +1,122 @@
 .carousel {
   position: relative;
+  z-index: 99999;
   width: 100%;
-  height: 450px;
+  height: auto;
   overflow: hidden;
-  /* border-radius: 14px; */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  font-family: "Inter", sans-serif;
+  margin: 0 auto;
 }
 
-/* Slide */
-.slide {
+.image-container {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: relative;
 }
 
 .carousel-image {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   object-fit: cover;
-  filter: brightness(0.85);
-  transition: transform 0.8s ease;
 }
-
-.slide:hover .carousel-image {
-  transform: scale(1.03);
-}
-
-/* Gradient Overlay */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  /* Black gradient from top left fading out toward bottom right */
-  background: linear-gradient(
-    to bottom right,
-    rgba(17, 17, 17, 0.773) 15%, /* Strong black at top left */
-    rgba(0, 0, 0, 0.692) 30%, 
-    rgba(0, 0, 0, 0.256)60%, 
-    rgba(0, 0, 0, 0) 100% /* Clean at bottom right */
-  );
-
-  z-index: 1;
-}
-
-/* Text Overlay */
 .text-overlay {
   position: absolute;
-  top: 30%;
-  left: 10%;
-  color: #e5d0cf;
-  z-index: 2;
-  padding: 20px 30px;
-  border-radius: 8px;
-  /* max-width: 500px; */
+  width: 50%;
+  font-size: 24px; /* Average size */
+  font-weight: bold;
+  text-align: center;
+  /* padding: 10px 20px; */
+  border-radius: 5px;
+  text-shadow: 3px 3px 6px rgba(121, 121, 121, 0.8); /* Stronger text shadow */
 }
 
-.carousel-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 12px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
+/* Text Positions */
+@keyframes slideFromright {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px); /* Start from the left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Move to its normal position */
+  }
 }
 
-.carousel-description {
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: #f0f0f0;
-  margin-bottom: 16px;
+.top-left {
+  position: absolute;
+  top: 20px;
+  /* width: 50%; */
+  left: 130px;
+  color: rgb(23, 39, 177); /* Dark blue for contrast */
+  text-align: center;
+   background: rgba(255, 255, 255, 0.4); /* Slight white background */
+  animation: slideFromright 1s ease-in-out;
+  
 }
 
-/* Input Styling */
-.carousel-input {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  background-color: #ffffff;
-  color: #333;
-  font-size: 1rem;
-  box-shadow: 0 4px 8px rgba(35, 31, 31, 0.2);
-  outline: none;
-  transition: background 0.3s ease;
+.top-right {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  color: rgb(2, 15, 120); /* Deep blue for clarity */
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4); /* Slight white background */
+  animation: slideFromLeft 1s ease-in-out;
+}
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(30px); /* Start from the left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Move to normal position */
+  }
 }
 
-.carousel-input:focus {
-  background-color: #f0f0f0;
+
+.bottom-center {
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(255, 255, 255); /* White for best contrast on dark areas */
+  animation: floatUp 1s ease-in-out;
+}
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 20px); /* Start slightly below */
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0); /* Move to normal position */
+  }
 }
 
-/* Hover Effects */
-.slide:hover .text-overlay {
-  transform: translateY(-5px);
-  transition: transform 0.3s ease;
-}
-
-/* Responsive Styling */
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .carousel {
-    height: 320px;
-  }
-
   .text-overlay {
-    padding: 15px 20px;
-    width: 70%;
+    width: 80%; /* Increase width for smaller screens */
+    font-size: 28px; /* Reduce text size */
   }
 
-  .carousel-title {
-    font-size: 2rem;
+  .top-left {
+    top: 15px;
+    left: 20px; /* Adjust position slightly */
   }
 
-  .carousel-description {
-    font-size: 1rem;
+  .top-right {
+    top: 15px;
+    right: 20px; /* Adjust position slightly */
+  }
+
+  .bottom-center {
+    bottom: 15px;
   }
 }
 
 @media (max-width: 480px) {
-  .carousel {
-    height: 240px;
-  }
-
   .text-overlay {
-    padding: 12px;
-    width: 90%;
+    font-size: 16px; /* Make text smaller for mobile */
   }
 
-  .carousel-title {
-    font-size: 1.5rem;
-  }
-
-  .carousel-description {
-    font-size: 0.85rem;
-  }
-
-  .carousel-input {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
 }
