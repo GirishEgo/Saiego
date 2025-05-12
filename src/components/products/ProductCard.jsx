@@ -15,30 +15,31 @@ const itemVariants = {
 
 const ProductCard = ({ to, img, title, description }) => (
   <motion.div
-    className="product-card"
-    variants={itemVariants}
-    initial="hidden"
-    animate="visible"
-  >
-    <div style={{ textAlign: "left" }}>
-      <img src="/Logo2.png" alt={title} style={{ width: "6rem" }} />
-    </div>
+  className="product-card"
+  variants={itemVariants}
+  initial="hidden"
+  animate="visible"
+>
+  <div className="product-logo">
+    <img src="/Logo2.png" alt={title} width={"100rem"}/>
+  </div>
+  
+  <Link to={to} className="product-link">
+    {img && <LazyImage src={img} alt={title} className="product-image" />}
+    <h4>{title}</h4>
+    <p>
+      {description ? (
+        <>
+          {description.split(" ").slice(0, 20).join(" ")}...
+          <span className="read-more"> Read more</span>
+        </>
+      ) : (
+        <span className="click-here-button">Click here</span>
+      )}
+    </p>
+  </Link>
+</motion.div>
 
-    <Link to={to} className="product-link">
-      {img && <LazyImage src={img} alt={title} className="product-image" />}
-      <h4>{title}</h4>
-      <p>
-        {description ? (
-          <>
-            {description.split(" ").slice(0, 20).join(" ")}...
-            <span className="read-more"> Read more</span>
-          </>
-        ) : (
-          <span className="click-here-button">Click here</span>
-        )}
-      </p>
-    </Link>
-  </motion.div>
 );
 
 
