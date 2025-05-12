@@ -18,7 +18,7 @@ const Carousel = () => {
   //   "CLIMATE CONTROL SOLUTIONS FOR ENCLOSURES, MARSHALLING BOXES & CABINETS",
   // ];
 
-  const positions = ["top-left", "top-right", "bottom-center"];
+  // const positions = ["top-left", "top-right", "bottom-center"];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -37,6 +37,7 @@ const Carousel = () => {
           src={images[currentIndex]}
           alt={`Slide ${currentIndex + 1}`}
           className="carousel-image"
+          loading="eager"
         />
         {/* <div className={`text-overlay ${positions[currentIndex]}`}>
           {texts[currentIndex]}
