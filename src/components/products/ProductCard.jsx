@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import LazyImage from "../LazyImage";
+import { TbHandClick } from "react-icons/tb";
 
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -26,7 +27,7 @@ const ProductCard = ({ to, img, title, description }) => (
 
     <Link to={to} className="product-link">
       {img && <LazyImage src={img} alt={title} className="product-image" />}
-      <h4>{title}</h4>
+      <h3>{title}</h3>
       <p>
         {description ? (
           <>
@@ -34,7 +35,9 @@ const ProductCard = ({ to, img, title, description }) => (
             <span className="read-more"> Read more</span>
           </>
         ) : (
-          <span className="click-here-button">Click here</span>
+          <span style={{textAlign:"end"}} className="click-here-button">
+            <TbHandClick />
+          </span>
         )}
       </p>
     </Link>
