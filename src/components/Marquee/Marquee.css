@@ -2,9 +2,9 @@
   display: flex;
   align-items: center;
   width: 100%;
-  top: -4px;
-  background: linear-gradient(to right, #0a4312, #006629); /* Dark blue gradient */
-  color: #d3d3d3; /* Light gray text */
+  top: -7px;
+  background: linear-gradient(to right, #a3a113, #d7d400); /* Dark blue gradient */
+  color: #ffffff; /* Light gray text */
   padding: 12px 0;
   overflow: hidden;
   position: relative;

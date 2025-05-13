@@ -8,17 +8,39 @@ import HomeAboutSection from "../components/Homepage/HomeAboutSection";
 import Marquee from "../components/Marquee/Marquee";
 
 const Home = () => {
+  const [pageReady, setPageReady] = useState(false);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      // Wait a bit to allow React animations to finish (optional)
+      setTimeout(() => {
+        setPageReady(true);
+      }, 300);
+    };
+
+    // Listen to full page load (including images/fonts)
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
+  }, []);
 
   return (
-    <div>
-      <Carousel />
-      <Marquee/>
-      {/* <h1>{data.title}</h1>
-      <p>{data.body}</p> */}
-      <HomepaeCard />
-      <Certifiat />
-      <HomeAboutSection/>
-    </div>
+    <>
+      {!pageReady ? (
+        <Loader />
+      ) : (
+        <div>
+          <Carousel />
+          <Marquee />
+          <HomepaeCard />
+          <Certifiat />
+          <HomeAboutSection />
+        </div>
+      )}
+    </>
   );
 };
 
