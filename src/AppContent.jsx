@@ -11,8 +11,8 @@ import { getSEODataByPath } from "./components/SEO/getSEOData";
 import { seoPagesData } from "./components/SEO/seoPagesData";
 import Erroe404 from "./pages/404/Erroe404";
 import KeyWords from "./pages/KeyWords"
-
-const Home = lazy(() => import("./pages/Home"));
+import Home from "./pages/Home";
+// const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Resources = lazy(() => import("./pages/Resources"));
