@@ -57,7 +57,7 @@ const Footer = () => {
   ];
 
   const address = [
-    "Saiegotherm India.",
+    "Sai Egotherm India.",
     "31, Tavawala Building, 147, Lohar Chawl, Kalbadevi, Mumbai, Maharashtra 400002",
   ];
 
@@ -73,7 +73,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <motion.div className="footer-logo" {...fadeUp(0.1)}>
-        <img style={{width:"10rem"}} width={"auto"} height={"auto"} src="/Logo.png" alt="footer Saiego logo" loading="eager" />
+        <img style={{width:"10rem"}} width={"auto"} height={"auto"} src="/logo.PNG" alt="footer Saiego logo" loading="eager" />
       </motion.div>
 
       <motion.p className="footer-tagline" {...fadeUp(0.2)}>
@@ -126,7 +126,7 @@ const Footer = () => {
       {/* ✅ Fixed: Animation added here */}
       <motion.div className="footer-copyright" {...fadeUp(0.6)}>
         <p>
-          &copy; {new Date().getFullYear()} Saiegotherm India. All rights
+          &copy; {new Date().getFullYear()} Sai Egotherm India. All rights
           reserved.
         </p>
       </motion.div>
