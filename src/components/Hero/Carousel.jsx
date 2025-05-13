@@ -1,37 +1,38 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import "./carousel.css";
+import demoSlide from "/sliders/1.png"; // Fallback image
+
+// Image imports
 import slid1 from "/sliders/1-min.png";
 import slid2 from "/sliders/2-min.png";
 import slid3 from "/sliders/3-min.png";
 import slid4 from "/sliders/4-min.png";
 import slid5 from "/sliders/5-min.png";
 import slid6 from "/sliders/6-min.png";
-import demoSlide from "/sliders/1.png"; // Add a demo fallback image
 
 const Carousel = () => {
-  const images = [slid1, slid2, slid3, slid4, slid5, slid6];
-
+  const images = useMemo(() => [slid1, slid2, slid3, slid4, slid5, slid6], []);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [loadedImages, setLoadedImages] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() => {
-    images.forEach((src, index) => {
-      const img = new Image();
-      img.src = src;
-      img.onload = () => {
-        setLoadedImages((prev) => [...prev, index]);
-      };
-    });
-  }, []);
-
+  // Auto-slide
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setIsLoaded(false); // Reset loading flag when image changes
     }, 3000);
+
     return () => clearInterval(interval);
   }, [images.length]);
 
-  const isLoaded = loadedImages.includes(currentIndex);
+  // Preload only current image (more efficient than all)
+  useEffect(() => {
+    const img = new Image();
+    img.src = images[currentIndex];
+    img.onload = () => {
+      setIsLoaded(true);
+    };
+  }, [currentIndex, images]);
 
   return (
     <div className="carousel">
@@ -40,7 +41,8 @@ const Carousel = () => {
           src={isLoaded ? images[currentIndex] : demoSlide}
           alt={`Slide ${currentIndex + 1}`}
           className={`carousel-image ${isLoaded ? "loaded" : "loading"}`}
-          // loading="eager"
+          loading="eager"
+          // decoding="async"
         />
       </div>
     </div>
