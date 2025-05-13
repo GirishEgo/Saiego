@@ -29,9 +29,6 @@ const Home = () => {
 
   return (
     <>
-      {!pageReady ? (
-        <Loader />
-      ) : (
         <div>
           <Carousel />
           <Marquee />
@@ -39,7 +36,6 @@ const Home = () => {
           <Certifiat />
           <HomeAboutSection />
         </div>
-      )}
     </>
   );
 };

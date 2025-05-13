@@ -10,9 +10,9 @@ import SEO from "./components/SEO/SEO";
 import { getSEODataByPath } from "./components/SEO/getSEOData";
 import { seoPagesData } from "./components/SEO/seoPagesData";
 import Erroe404 from "./pages/404/Erroe404";
-import KeyWords from "./pages/KeyWords"
-import Home from "./pages/Home";
-// const Home = lazy(() => import("./pages/Home"));
+// import KeyWords from "./pages/KeyWords"
+// import Home from "./pages/Home";
+const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Resources = lazy(() => import("./pages/Resources"));
@@ -38,7 +38,8 @@ const AppContent = () => {
   const [showFooter, setShowFooter] = useState(false);
 
   const seoInfo = getSEODataByPath(seoPagesData, location.pathname); // 👈 dynamic SEO info
-  
+
+
   
   const hideFooterRoutes = [
     "/resources/heat-calculator",
@@ -47,7 +48,6 @@ const AppContent = () => {
   ];
 
   const shouldShowFooter = !hideFooterRoutes.includes(location.pathname);
-
 
   useEffect(() => {
     setShowFooter(false);
@@ -89,7 +89,7 @@ const AppContent = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/products" element={<Allproducts />} />
-          <Route path="/keywords" element={<KeyWords />} />
+          {/* <Route path="/keywords" element={<KeyWords />} /> */}
 
           <Route path="/products/:productId" element={<DisplaySubproducts />} />
           <Route
