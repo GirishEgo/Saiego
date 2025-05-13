@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLoader } from "../context/LoaderContext";
-import Loader from "../components/Loader";
+import { motion } from "framer-motion";
 import Carousel from "../components/Hero/Carousel";
 import HomepaeCard from "../components/Homepage/HomepaeCard";
 import Certifiat from "../components/certificats/Certifiat";
@@ -8,35 +7,64 @@ import HomeAboutSection from "../components/Homepage/HomeAboutSection";
 import Marquee from "../components/Marquee/Marquee";
 
 const Home = () => {
-  const [pageReady, setPageReady] = useState(false);
+  const [showCarousel, setShowCarousel] = useState(false);
+  const [showMarquee, setShowMarquee] = useState(false);
+  const [showCards, setShowCards] = useState(false);
+  const [showCertifiat, setShowCertifiat] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
 
   useEffect(() => {
-    const handleLoad = () => {
-      // Wait a bit to allow React animations to finish (optional)
-      setTimeout(() => {
-        setPageReady(true);
-      }, 300);
+    const loadComponents = () => {
+      setShowCarousel(true);
+
+      setTimeout(() => setShowMarquee(true), 400);
+      setTimeout(() => setShowCards(true), 800);
+      setTimeout(() => setShowCertifiat(true), 1200);
+      setTimeout(() => setShowAbout(true), 1600);
     };
 
-    // Listen to full page load (including images/fonts)
     if (document.readyState === "complete") {
-      handleLoad();
+      loadComponents();
     } else {
-      window.addEventListener("load", handleLoad);
-      return () => window.removeEventListener("load", handleLoad);
+      window.addEventListener("load", loadComponents);
+      return () => window.removeEventListener("load", loadComponents);
     }
   }, []);
 
+  const fadeInProps = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 },
+  };
+
   return (
-    <>
-        <div>
+    <div>
+      {showCarousel && (
+        <motion.div {...fadeInProps}>
           <Carousel />
+        </motion.div>
+      )}
+      {showMarquee && (
+        <motion.div {...fadeInProps}>
           <Marquee />
+        </motion.div>
+      )}
+      {showCards && (
+        <motion.div {...fadeInProps}>
           <HomepaeCard />
+        </motion.div>
+      )}
+      {showCertifiat && (
+        <motion.div {...fadeInProps}>
           <Certifiat />
+        </motion.div>
+      )}
+      {showAbout && (
+        <motion.div {...fadeInProps}>
           <HomeAboutSection />
-        </div>
-    </>
+        </motion.div>
+      )}
+    </div>
   );
 };
 
