@@ -5,13 +5,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  h1 {
-    /* width: 30vw; */
-    color: rgb(23, 87, 51);
-  }
-  .line {
-    background: rgb(0, 173, 253);
-  }
+}
+
+.cartificate-Container h1,
+.cartificate-Container h2 {
+  color: rgb(23, 87, 51);
+  text-align: center;
+}
+
+.cartificate-Container .line {
+  width: 100px;
+  height: 2px;
+  background: rgb(0, 173, 253);
+  margin: 10px 0;
 }
 
 .certoficat_holder {
@@ -37,21 +43,27 @@
   justify-content: center;
 }
 
-.Certificat-img div {
+.Certificat-img .certificate-item {
+  width: 200px;
   text-align: center;
-  width: auto; /* Adjust as needed */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.Certificat-img img {
+.Certificat-img .certificate-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.Certificat-img .certificate-item img {
   width: 100%;
-  height: 150px; /* Keeps all images the same height */
+  height: 150px;
   object-fit: contain;
   mix-blend-mode: multiply;
   border-radius: 5px;
 }
 
 @media (max-width: 375px) {
-  .Certificat-img div {
+  .Certificat-img .certificate-item {
     width: 40%;
   }
 }
