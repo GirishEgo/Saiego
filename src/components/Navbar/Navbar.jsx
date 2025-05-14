@@ -73,7 +73,7 @@ const Navbar = () => {
         <Link to={"/"}>
           {/* <p className="brand">Saiego</p> */}
           {/* <img src="Logo.png" alt="LOGO" /> */}
-          <img src="/logo.PNG" alt="LOGO" loading="eager" width={"auto"} height={"auto"} />
+          <img src="/logo.png" alt="LOGO" loading="eager" width={"auto"} height={"auto"} />
 
         </Link>
       </div>
