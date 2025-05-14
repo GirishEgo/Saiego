@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 import defaultImage from "../../assets/hompage-cardimgs/2.png";
-import defaultLogo from "/logo.png";
+// import defaultLogo from "/logo.png";
 import { checkTitleMatch } from "../checkTitleMatch";
 
 const SEO = ({
@@ -31,7 +31,7 @@ const SEO = ({
   const location = useLocation();
   const fullURL = `${window.location.origin}${location.pathname}${location.search}${location.hash}`;
   const validatedImage = image || defaultImage;
-  const validatedLogo = defaultLogo;
+  const validatedLogo = "/logo.png";
 
   // Set meta tags manually for hydration consistency
   useEffect(() => {
