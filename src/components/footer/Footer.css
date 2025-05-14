@@ -97,3 +97,9 @@ font-size: 30px;
   padding-top: 1rem;
   /* color: #333; or something visibleo */
 }
+
+@media(max-width:470px){
+  .contact-footerholder{
+    border-right: none;
+  }
+}
