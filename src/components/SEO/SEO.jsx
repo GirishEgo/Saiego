@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 import defaultImage from "../../assets/hompage-cardimgs/2.png";
-import defaultLogo from "../../assets/hompage-cardimgs/1.png";
+import defaultLogo from "/logo.png";
 import { checkTitleMatch } from "../checkTitleMatch";
 
 const SEO = ({

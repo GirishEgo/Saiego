@@ -22,7 +22,7 @@ const ProductCard = ({ to, img, title, description }) => (
     animate="visible"
   >
     <div style={{ textAlign: "left" }}>
-      <img src="/logo.PNG" alt={title} style={{ width: "6rem" }} />
+      <img src="/logo.png" alt={title} style={{ width: "6rem" }} />
     </div>
 
     <Link to={to} className="product-link">
