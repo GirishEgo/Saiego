@@ -45,20 +45,17 @@ const Footer = () => {
     {
       id: 3,
       label: "Email",
-      value: "sales@saiego.com",
-      link: "mailto:sales@saiego.com",
+      values: [
+        { value: "sales@saiego.com", link: "mailto:sales@saiego.com" },
+        { value: "info@saiego.com", link: "mailto:info@saiego.com" },
+      ],
     },
-    {
-      id: 4,
-      label: "Email",
-      value: "info@saiego.com",
-      link: "mailto:info@saiego.com",
-    },
+    
   ];
 
   const address = [
-    "Sai Egotherm India.",
-    "31, Tavawala Building, 147, Lohar Chawl, Kalbadevi, Mumbai, Maharashtra 400002",
+    "Sai Egotherm India ",
+"38 Pathakwadi, 31Tavawala bldg, Lohar chawl, Mumbai 400002"
   ];
 
   const fadeUp = (delay = 0) => ({
@@ -73,11 +70,18 @@ const Footer = () => {
   return (
     <footer className="footer">
       <motion.div className="footer-logo" {...fadeUp(0.1)}>
-        <img style={{width:"10rem"}} width={"auto"} height={"auto"} src="/logo.png" alt="footer Saiego logo" loading="eager" />
+        <img
+          style={{ width: "10rem" }}
+          width={"auto"}
+          height={"auto"}
+          src="/logo.png"
+          alt="footer Saiego logo"
+          loading="eager"
+        />
       </motion.div>
 
       <motion.p className="footer-tagline" {...fadeUp(0.2)}>
-        We are trusted for more than 45 years +
+        We are trusted for more than 35 years
       </motion.p>
 
       <motion.nav className="footer-nav" {...fadeUp(0.3)}>
@@ -99,18 +103,24 @@ const Footer = () => {
       <motion.div className="footer-contact" {...fadeUp(0.5)}>
         {contactInfo.map((info) => (
           <div key={info.id} className="contact-footerholder">
-            {info.label}:
             {info.values ? (
-              info.values.map((phone, idx) => (
-                <p key={idx}>
-                  <a href={phone.link} className="phone-link">
-                    {phone.number}
-                  </a>
-                  {","}
-                </p>
-              ))
+              <p>
+                {info.label}:{" "}
+                {info.values.map((item, idx) => (
+                  <React.Fragment key={idx}>
+                    <a
+                      href={item.link}
+                      className={`${info.label.toLowerCase()}-link`}
+                    >
+                      {item.value || item.number}
+                    </a>
+                    {idx < info.values.length - 1 && " / "}
+                  </React.Fragment>
+                ))}
+              </p>
             ) : (
               <p>
+                {info.label}:{" "}
                 <a
                   href={info.link}
                   className={`${info.label.toLowerCase()}-link`}
