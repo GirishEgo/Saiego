@@ -4,9 +4,9 @@ import Form from "../Form/Form";
 import { useCall } from "../../context/CallContext";
 
 const ContactForm = () => {
-  const {isMobile}=useCall()
+  const { isMobile } = useCall();
   // console.log(isMobile);
-  
+
   const formFields = [
     { type: "text", name: "name", placeholder: "Your Name" },
     { type: "email", name: "email", placeholder: "Your Email" },
@@ -17,12 +17,13 @@ const ContactForm = () => {
       rows: 5,
     },
   ];
- 
+
   const contactDetails = [
     {
       title: "Address",
       content: [
-        "31, Tavawala Building, 147, Lohar Chawl, Kalbadevi, Mumbai, Maharashtra 400002",
+        "Sai Egotherm India",
+        " 38 Pathakwadi, 31Tavawala bldg, Lohar chawl, Mumbai 400002",
       ],
       email: [],
     },
@@ -33,8 +34,8 @@ const ContactForm = () => {
         { text: "+91 22 22083857", link: "tel:+912222083857" },
       ],
       email: [
-        { text: "Sales@saiego.com", link: "mailto:Sales@saiego.com" },
-        { text: "Info@saiego.com", link: "mailto:Info@saiego.com" },
+        { text: "sales@girishego.com", link: "mailto:sales@girishego.com" },
+        { text: "info@saiego.com", link: "mailto:info@saiego.com" },
         {
           text: "WhatsApp :+91 9769281724",
           link: "https://wa.me/919769281724",
@@ -42,6 +43,7 @@ const ContactForm = () => {
       ],
     },
   ];
+  //  sales@girishego.com / info@saiego.com
 
   return (
     <div className="contact-container">
@@ -74,14 +76,13 @@ const ContactForm = () => {
         <div className="contact-map">
           <iframe
             title="Google Map"
-            src ="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.690869479464!2d72.830795!3d18.9465631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce23745e6ad9%3A0x55726ae59ead3c60!2sSai%20Egotherm%20(India)!5e1!3m2!1sen!2sin!4v1745817534754!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.690869479464!2d72.830795!3d18.9465631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce23745e6ad9%3A0x55726ae59ead3c60!2sSai%20Egotherm%20(India)!5e1!3m2!1sen!2sin!4v1745817534754!5m2!1sen!2sin"
             width="100%"
             height="250"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
           ></iframe>
-          
         </div>
       </div>
       <div className="contact-rightSide">
@@ -120,7 +121,9 @@ const ContactForm = () => {
           formheading="Send us your Query "
           formbutton="Send"
           formFields={formFields}
-          popupMessage={`Sorry for the inconvenience. Kindly ${isMobile? "Call":"Mail"} us for a better experience.`}
+          popupMessage={`Sorry for the inconvenience. Kindly ${
+            isMobile ? "Call" : "Mail"
+          } us for a better experience.`}
           onSubmit={(data) => data}
         />
       </div>
