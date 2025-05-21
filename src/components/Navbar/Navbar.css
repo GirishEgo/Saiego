@@ -4,7 +4,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 30px;
-  background: linear-gradient(135deg, #fff133 0%, #fff700 100%);
+  /* background: #c5e6c1; */
+  background: #c8c817;
   color: #ebefeb;
   font-family: "Poppins", sans-serif;
   position: relative;
@@ -22,6 +23,7 @@
     img{
       width: 10rem;
       height: auto;
+      /* filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));  */
     }
   }
   
@@ -50,6 +52,7 @@
 /* Updated for active state on nav-item */
 .nav-item {
   color: #30583c;
+  /* color: #f8e1e1; */
   font-size: 1.2rem;
   padding: 12px 18px;
   border-radius: 12px;
