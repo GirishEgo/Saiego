@@ -73,17 +73,22 @@ const Navbar = () => {
         <Link to={"/"}>
           {/* <p className="brand">Saiego</p> */}
           {/* <img src="Logo.png" alt="LOGO" /> */}
-          <img src="/logo.png" alt="LOGO" loading="eager" width={"auto"} height={"auto"} />
-
+          <img
+            src="/logo.png"
+            alt="LOGO"
+            loading="eager"
+            width={"auto"}
+            height={"auto"}
+          />
         </Link>
       </div>
 
       {/* Hamburger Menu */}
       <div className="hamburger" onClick={toggleMenu}>
         {menuOpen ? (
-          <FiX size={30} color="#E5D0CF" />
+          <FiX size={30} color="#04833c" />
         ) : (
-          <FiMenu size={30} color="#E5D0CF" />
+          <FiMenu size={30} color="#04833c" />
         )}
       </div>
 

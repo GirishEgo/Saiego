@@ -67,9 +67,10 @@ font-size: 30px;
 
 }
 /* Ensure the last .contact-footerholder in .footer-contact does not have a border */
-.footer-contact > div:last-child .contact-footerholder {
+.footer-contact .contact-footerholder:last-child {
   border-right: none;
 }
+
 .footer-contact div {
   /* margin: 5px 5px; */
   /* padding: 10px; */

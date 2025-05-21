@@ -3,8 +3,8 @@
   align-items: center;
   width: 100%;
   top: -7px;
-  background: linear-gradient(to right, #a3a113, #d7d400); /* Dark blue gradient */
-  color: #ffffff; /* Light gray text */
+  background:#D3D208;; /* Dark blue gradient */
+  color: #006c14; /* Light gray text */
   padding: 12px 0;
   overflow: hidden;
   position: relative;
@@ -13,7 +13,7 @@
 
 .update-label {
   background: #ffcc0000; /* Yellow background for visibility */
-  color: #ffffff; /* Dark text for contrast */
+  color: #008236; /* Dark text for contrast */
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 5px 0 0 5px; /* Rounded left side */
